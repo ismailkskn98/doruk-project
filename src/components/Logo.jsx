@@ -1,10 +1,21 @@
+import { cn } from "@/lib/utils";
+
 export default function Logo({ large = false }) {
     return (
-        <div className={large ? 'text-white leading-[0.9]' : 'text-black leading-[0.9]'}>
-            <div className={large ? 'text-[42px] font-light' : 'text-[18px] font-light'}>
+        <div className={cn('flex items-center gap-1.5 font-bold leading-[0.9]', {
+            'text-white': large,
+            'text-black': !large,
+        })}>
+            <div className={cn('font-light', {
+                'text-[42px]': large,
+                'text-[32px]': !large,
+            })}>
                 STUDIO
             </div>
-            <div className={large ? 'text-[56px] font-bold' : 'text-[28px] font-bold'}>
+            <div className={cn('', {
+                'text-[56px]': large,
+                'text-[32px]': !large,
+            })}>
                 DORUK BICER
             </div>
         </div>
