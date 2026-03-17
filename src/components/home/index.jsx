@@ -15,13 +15,10 @@ export default function HomeMain() {
         const overlay = overlayRef.current;
 
         if (!logo || !logoContainer || !overlay) return;
-
-        // Sayfa scroll olmasın
         document.body.style.overflow = 'hidden';
 
         // Logonun şu anki yeri
         const logoBox = logo.getBoundingClientRect();
-
         // Logonun dönmesi gereken hedef alan
         const containerBox = logoContainer.getBoundingClientRect();
 
@@ -38,8 +35,6 @@ export default function HomeMain() {
             color: '#fff',
             margin: 0,
             transformOrigin: 'top left',
-            flexDirection: 'column',
-            alignItems: 'start',
             color: '#fff',
         });
 
