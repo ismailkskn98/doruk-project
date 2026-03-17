@@ -1,15 +1,16 @@
 'use client'
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { Link } from '@/i18n/navigation'
+import { Link, useRouter } from '@/i18n/navigation'
+import { useSidebarStore } from '@/store/sidebarStore'
 
 const navItems = [
     {
         name: 'About',
         href: '/about',
         children: [
-            { name: 'Doruk Bicer', href: '/about/doruk-bicer' },
-            { name: 'Studio', href: '/about/studio' },
+            { name: 'Doruk Bicer', href: '/doruk-bicer' },
+            { name: 'Studio', href: '/studio' },
         ],
     },
     {
@@ -27,7 +28,9 @@ const navItems = [
 ]
 
 export default function SideNavbar() {
-    const [openItem, setOpenItem] = useState(null)
+    const [openItem, setOpenItem] = useState(null);
+    const setSidebarOpen = useSidebarStore(state => state.setSidebarOpen);
+    const router = useRouter();
 
     const toggleItem = (name) => {
         setOpenItem(prev => prev === name ? null : name)
@@ -38,13 +41,20 @@ export default function SideNavbar() {
             {navItems.map((item) => (
                 <div key={item.name}>
                     {item.children ? (
-                        <button onClick={() => toggleItem(item.name)} className='uppercase font-bold text-2xl w-full text-left cursor-pointer'>
+                        <button type='button' onClick={() => toggleItem(item.name)} className='uppercase font-bold text-2xl w-full text-left cursor-pointer'>
                             {item.name}
                         </button>
                     ) : (
-                        <Link href={item.href} className='uppercase font-bold text-2xl block'>
+                        <button
+                            type='button'
+                            onClick={() => {
+                                setSidebarOpen(false);
+                                setTimeout(() => router.push(item.href), 200);
+                            }}
+                            className='uppercase font-bold text-2xl block'
+                        >
                             {item.name}
-                        </Link>
+                        </button>
                     )}
 
                     <AnimatePresence initial={false}>
@@ -58,7 +68,16 @@ export default function SideNavbar() {
                             >
                                 <div className='flex flex-col gap-2.5 pl-5 py-5'>
                                     {item.children.map((child) => (
-                                        <Link key={child.name} href={child.href} className='uppercase text-2xl font-light text-black'>
+                                        <Link
+                                            key={child.name}
+                                            href={child.href}
+                                            onClick={() => {
+                                                setSidebarOpen(false);
+                                                setTimeout(() => router.push(child.href), 200);
+
+                                            }}
+                                            className='uppercase text-2xl font-light text-black'
+                                        >
                                             {child.name}
                                         </Link>
                                     ))}

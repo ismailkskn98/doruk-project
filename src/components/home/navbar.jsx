@@ -4,7 +4,7 @@ import { Link } from '@/i18n/navigation';
 export default function Navbar() {
 
     const navItems = [
-        { name: "About", href: "/about" },
+        { name: "About", href: "/doruk-bicer" },
         { name: "Work", href: "/works" },
         { name: "Contact", href: "/contact" },
         { name: "Search", href: "/search" },

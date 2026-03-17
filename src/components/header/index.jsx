@@ -13,7 +13,7 @@ export default function Header() {
 
     return (
         <header className="relative z-40 flex items-center justify-between h-30">
-            <div id="logo-container">
+            <a href="/" id="logo-container">
                 <motion.div
                     className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[32px]"
                     initial={{ opacity: 0 }}
@@ -22,9 +22,9 @@ export default function Header() {
                 >
                     <Logo />
                 </motion.div>
-            </div>
+            </a>
             <article className='flex items-center gap-2.5'>
-                <p className='text-2xl font-bold'><span className='font-light'>{lightTitle}</span>{title}</p>
+                <p className='text-2xl font-bold uppercase -mb-1'><span className='font-light'>{lightTitle} </span>{title}</p>
                 <SidebarOpenButton />
             </article>
         </header>
