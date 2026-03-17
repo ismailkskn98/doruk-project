@@ -21,7 +21,6 @@ export default function HomeMain() {
         gsap.set(logo, {
             position: 'fixed',
             color: '#fff',
-            color: '#fff',
             flexDirection: 'column',
             alignItems: 'start',
         });
@@ -47,7 +46,7 @@ export default function HomeMain() {
         const tl = gsap.timeline({
             onComplete: () => {
                 document.body.style.overflow = ''
-                gsap.set(logo, { clearProps: 'all' })
+                gsap.set(logo, { clearProps: 'all', delay: 0.5 })
             },
         });
 
@@ -59,23 +58,17 @@ export default function HomeMain() {
             opacity: 0,
             duration: 1,
             ease: 'power1.out',
-        }, 1);
+        }, 1.5);
 
         // Logo kendi yerine dönsün
         tl.to(logo, {
-            left: logoBox.left,
-            top: logoBox.top,
+            left: containerBox.left,
+            top: containerBox.top,
             scale: 1,
             color: '#000',
             duration: 1,
             ease: 'power1.out',
-        }, 1);
-
-        // tl.to(logo, {
-        //     flexDirection: 'row',
-        //     alignItems: 'center',
-        //     fontSize: '32px',
-        // })
+        }, 1.75);
 
     }, { scope: containerRef })
 
