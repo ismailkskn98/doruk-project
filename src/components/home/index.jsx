@@ -17,25 +17,31 @@ export default function HomeMain() {
         if (!logo || !logoContainer || !overlay) return;
         document.body.style.overflow = 'hidden';
 
+        const scale = 2.6;
+        gsap.set(logo, {
+            position: 'fixed',
+            color: '#fff',
+            margin: 0,
+            color: '#fff',
+            flexDirection: 'column',
+            alignItems: 'start',
+        });
+
         // Logonun şu anki yeri
         const logoBox = logo.getBoundingClientRect();
         // Logonun dönmesi gereken hedef alan
         const containerBox = logoContainer.getBoundingClientRect();
 
         // Ekranın tam ortası için left / top hesapla
-        const startLeft = window.innerWidth / 2 - logoBox.width / 2;
-        const startTop = window.innerHeight / 2 - logoBox.height / 2;
+        const startLeft = window.innerWidth / 2 - (logoBox.width * scale) / 2;
+        const startTop = window.innerHeight / 2 - (logoBox.height * scale) / 2;
 
         // İlk durumda logoyu ortaya al
         gsap.set(logo, {
-            position: 'fixed',
+            scale,
             left: startLeft,
             top: startTop,
-            scale: 2.2,
-            color: '#fff',
-            margin: 0,
             transformOrigin: 'top left',
-            color: '#fff',
         });
 
         // Animasyon başlat
@@ -47,38 +53,30 @@ export default function HomeMain() {
         });
 
         // Biraz bekle
-        tl.to({}, { duration: 0.8 });
+        tl.to({}, { duration: 1 });
 
         // Overlay kaybolsun
-        tl.to(
-            overlay,
-            {
-                opacity: 0,
-                duration: 1,
-                ease: 'power3.inOut',
-            },
-            0.8
-        );
+        tl.to(overlay, {
+            opacity: 0,
+            duration: 1,
+            ease: 'power3.inOut',
+        }, 1);
 
         // Logo kendi yerine dönsün
-        tl.to(
-            logo,
-            {
-                left: containerBox.left,
-                top: containerBox.top,
-                scale: 1,
-                color: '#000',
-                duration: 1,
-                ease: 'power3.inOut',
-            },
-            0.8
-        );
+        tl.to(logo, {
+            left: containerBox.left,
+            top: containerBox.top,
+            scale: 1,
+            color: '#000',
+            duration: 1,
+            ease: 'power3.inOut',
+        }, 1);
 
-        return () => {
-            tl.kill()
-            document.body.style.overflow = ''
-            gsap.set(logo, { clearProps: 'all' })
-        };
+        tl.to(logo, {
+            flexDirection: 'row',
+            alignItems: 'center',
+            fontSize: '32px',
+        })
 
     }, { scope: containerRef })
 

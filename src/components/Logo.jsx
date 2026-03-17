@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 export default function Logo() {
     return (
         <>
-            <div className={cn('font-light text-[32px]')}>
+            <div className={cn('font-light')}>
                 STUDIO
             </div>
-            <div className={cn('text-[32px]')}>
+            <div className={cn('')}>
                 DORUK BICER
             </div>
         </>
