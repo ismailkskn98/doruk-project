@@ -21,7 +21,6 @@ export default function HomeMain() {
         gsap.set(logo, {
             position: 'fixed',
             color: '#fff',
-            margin: 0,
             color: '#fff',
             flexDirection: 'column',
             alignItems: 'start',
@@ -59,24 +58,24 @@ export default function HomeMain() {
         tl.to(overlay, {
             opacity: 0,
             duration: 1,
-            ease: 'power3.inOut',
+            ease: 'power1.out',
         }, 1);
 
         // Logo kendi yerine dönsün
         tl.to(logo, {
-            left: containerBox.left,
-            top: containerBox.top,
+            left: logoBox.left,
+            top: logoBox.top,
             scale: 1,
             color: '#000',
             duration: 1,
-            ease: 'power3.inOut',
+            ease: 'power1.out',
         }, 1);
 
-        tl.to(logo, {
-            flexDirection: 'row',
-            alignItems: 'center',
-            fontSize: '32px',
-        })
+        // tl.to(logo, {
+        //     flexDirection: 'row',
+        //     alignItems: 'center',
+        //     fontSize: '32px',
+        // })
 
     }, { scope: containerRef })
 
