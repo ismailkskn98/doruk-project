@@ -1,14 +1,18 @@
-import React from 'react'
+'use client'
+
 import { RxHamburgerMenu } from 'react-icons/rx'
+import Logo from '../Logo'
 
 export default function Header() {
     return (
-        <header className='flex items-center justify-between h-30'>
-            <h1 className='text-[32px] font-bold'>
-                <span className='font-light'>STUDIO </span>
-                DORUK BICER
-            </h1>
-            <RxHamburgerMenu className='text-3xl' />
+        <header className="relative z-40 flex items-center justify-between px-8 py-8">
+            <div id="logo-slot" className="relative">
+                <div id="site-logo" className="inline-block relative z-40">
+                    <Logo />
+                </div>
+            </div>
+
+            <RxHamburgerMenu className="text-2xl" />
         </header>
     )
 }
