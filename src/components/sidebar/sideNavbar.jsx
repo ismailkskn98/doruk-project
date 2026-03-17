@@ -1,0 +1,73 @@
+'use client'
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+import { Link } from '@/i18n/navigation'
+
+const navItems = [
+    {
+        name: 'About',
+        href: '/about',
+        children: [
+            { name: 'Doruk Bicer', href: '/about/doruk-bicer' },
+            { name: 'Studio', href: '/about/studio' },
+        ],
+    },
+    {
+        name: 'Works',
+        href: '/works',
+        children: [
+            { name: 'Art', href: '/works/art' },
+            { name: 'Design', href: '/works/design' },
+            { name: 'Architecture', href: '/works/architecture' },
+            { name: 'Graphic', href: '/works/graphic' },
+        ],
+    },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Search', href: '/search' },
+]
+
+export default function SideNavbar() {
+    const [openItem, setOpenItem] = useState(null)
+
+    const toggleItem = (name) => {
+        setOpenItem(prev => prev === name ? null : name)
+    }
+
+    return (
+        <nav className='flex flex-col gap-2.5 px-5 py-10'>
+            {navItems.map((item) => (
+                <div key={item.name}>
+                    {item.children ? (
+                        <button onClick={() => toggleItem(item.name)} className='uppercase font-bold text-2xl w-full text-left cursor-pointer'>
+                            {item.name}
+                        </button>
+                    ) : (
+                        <Link href={item.href} className='uppercase font-bold text-2xl block'>
+                            {item.name}
+                        </Link>
+                    )}
+
+                    <AnimatePresence initial={false}>
+                        {item.children && openItem === item.name && (
+                            <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                className='overflow-hidden'
+                            >
+                                <div className='flex flex-col gap-2.5 pl-5 py-5'>
+                                    {item.children.map((child) => (
+                                        <Link key={child.name} href={child.href} className='uppercase text-2xl font-light text-black'>
+                                            {child.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            ))}
+        </nav>
+    )
+}

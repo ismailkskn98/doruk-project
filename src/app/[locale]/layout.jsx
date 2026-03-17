@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import SideBar from "@/components/sidebar";
+import MainContent from "@/components/mainContent";
 
 const formaDJRDisplay = localFont({
   src: [
@@ -43,11 +44,11 @@ export default async function RootLayout({ children, params }) {
     <html lang={locale}>
       <body className={`${helveticaNeue.variable} ${formaDJRDisplay.variable} font-forma-djr-display antialiased w-full flex`}>
         <NextIntlClientProvider>
-          <div className="w-full gridContainer">
+          <MainContent>
             <Header />
             {children}
             <Footer />
-          </div>
+          </MainContent>
           <SideBar />
         </NextIntlClientProvider>
       </body>

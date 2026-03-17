@@ -60,6 +60,7 @@ export default function HomeMain() {
             color: '#000',
             duration: 1,
             ease: 'power1.out',
+            fontSize: '32px',
         }, 1.75)
 
         tl.call(() => {
@@ -74,11 +75,11 @@ export default function HomeMain() {
         <main ref={containerRef} className="w-full fluid gridContainer">
             <div
                 ref={overlayRef}
-                className="fixed inset-0 bg-black z-30 pointer-events-none"
+                className="fixed fluid inset-0 bg-black z-30 pointer-events-none"
             />
             <div
                 ref={introLogoRef}
-                className="fixed top-0 left-0 z-50 flex flex-col leading-[0.9] font-bold text-[32px] pointer-events-none opacity-0"
+                className="fixed fluid top-0 left-0 z-50 flex flex-col leading-[0.9] font-bold text-[70px] pointer-events-none opacity-0"
             >
                 <Logo />
             </div>
