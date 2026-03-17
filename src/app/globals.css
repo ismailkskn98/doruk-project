@@ -28,5 +28,6 @@ body {
 
 @theme inline {
   --font-forma-djr-display: var(--font-forma-djr-display);
+  --font-helvetica-neue: var(--font-helvetica-neue);
   --color-custom-gray: #d9d9d9;
 }
