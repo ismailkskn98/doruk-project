@@ -27,7 +27,7 @@ export default function HomeMain() {
             left: slotRect.left,
             top: slotRect.top,
             margin: 0,
-            display: 'flex',
+            flexDirection: 'column',
             alignItems: 'start',
         })
 
