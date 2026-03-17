@@ -1,15 +1,23 @@
 'use client'
 
+import { motion } from 'motion/react'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import Logo from '../Logo'
+import { useIntroStore } from '@/store/introStore'
 
 export default function Header() {
+    const introComplete = useIntroStore(state => state.introComplete)
     return (
         <header className="relative z-40 flex items-center justify-between px-8 py-8 h-30">
-            <div id="logo-container" className="relative">
-                <div id="site-logo" className="relative z-40 flex gap-1.5 font-bold leading-[0.9] text-[32px]">
+            <div id="logo-container">
+                <motion.div
+                    className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[32px]"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: introComplete ? 1 : 0 }}
+                    transition={{ duration: 0.25, ease: 'easeOut' }}
+                >
                     <Logo />
-                </div>
+                </motion.div>
             </div>
             <RxHamburgerMenu className="text-2xl" />
         </header>

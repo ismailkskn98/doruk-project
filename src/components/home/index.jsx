@@ -4,71 +4,69 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import HomeHero from './homeHero'
+import Logo from '../Logo'
+import { useIntroStore } from '@/store/introStore'
 
 export default function HomeMain() {
-    const containerRef = useRef(null);
-    const overlayRef = useRef(null);
+    const containerRef = useRef(null)
+    const overlayRef = useRef(null)
+    const introLogoRef = useRef(null)
+    const setIntroComplete = useIntroStore(s => s.setIntroComplete)
 
     useGSAP(() => {
-        const logo = document.getElementById('site-logo');
-        const logoContainer = document.getElementById('logo-container');
-        const overlay = overlayRef.current;
+        const introLogo = introLogoRef.current
+        const logoContainer = document.getElementById('logo-container')
+        const overlay = overlayRef.current
 
-        if (!logo || !logoContainer || !overlay) return;
-        document.body.style.overflow = 'hidden';
+        if (!introLogo || !logoContainer || !overlay) return
+        document.body.style.overflow = 'hidden'
 
-        const scale = 2.6;
-        gsap.set(logo, {
-            position: 'fixed',
+        const scale = 2.6
+
+        // Proxy logo'nun doğal boyutu (scale 1'deyken)
+        const logoBox = introLogo.getBoundingClientRect()
+        // Header'daki logo container'ın pozisyonu (hedef)
+        const containerBox = logoContainer.getBoundingClientRect()
+
+        // Proxy'yi ekran ortasına, büyütülmüş şekilde yerleştir
+        const startLeft = window.innerWidth / 2 - (logoBox.width * scale) / 2
+        const startTop = window.innerHeight / 2 - (logoBox.height * scale) / 2
+
+        gsap.set(introLogo, {
+            opacity: 1,
             color: '#fff',
-            flexDirection: 'column',
-            alignItems: 'start',
-        });
-
-        // Logonun şu anki yeri
-        const logoBox = logo.getBoundingClientRect();
-        // Logonun dönmesi gereken hedef alan
-        const containerBox = logoContainer.getBoundingClientRect();
-
-        // Ekranın tam ortası için left / top hesapla
-        const startLeft = window.innerWidth / 2 - (logoBox.width * scale) / 2;
-        const startTop = window.innerHeight / 2 - (logoBox.height * scale) / 2;
-
-        // İlk durumda logoyu ortaya al
-        gsap.set(logo, {
             scale,
             left: startLeft,
             top: startTop,
             transformOrigin: 'top left',
-        });
+        })
 
-        // Animasyon başlat
-        const tl = gsap.timeline({
-            onComplete: () => {
-                document.body.style.overflow = ''
-                gsap.set(logo, { clearProps: 'all', delay: 0.5 })
-            },
-        });
+        const tl = gsap.timeline()
 
-        // Biraz bekle
-        tl.to({}, { duration: 1 });
+        tl.to({}, { duration: 1 })
 
-        // Overlay kaybolsun
+        // Siyah overlay kaybolsun
         tl.to(overlay, {
             opacity: 0,
             duration: 1,
             ease: 'power1.out',
-        }, 1.5);
+        }, 1.5)
 
-        // Logo kendi yerine dönsün
-        tl.to(logo, {
+        // Proxy logo header'daki yerine gitsin
+        tl.to(introLogo, {
             left: containerBox.left,
             top: containerBox.top,
             scale: 1,
             color: '#000',
             duration: 1,
             ease: 'power1.out',
-        }, 1.75);
+        }, 1.75)
+
+        tl.call(() => {
+            document.body.style.overflow = ''
+            setIntroComplete()
+            gsap.to(introLogo, { opacity: 0, duration: 0.25 })
+        })
 
     }, { scope: containerRef })
 
@@ -78,6 +76,12 @@ export default function HomeMain() {
                 ref={overlayRef}
                 className="fixed inset-0 bg-black z-30 pointer-events-none"
             />
+            <div
+                ref={introLogoRef}
+                className="fixed top-0 left-0 z-50 flex flex-col leading-[0.9] font-bold text-[32px] pointer-events-none opacity-0"
+            >
+                <Logo />
+            </div>
             <HomeHero />
         </main>
     )
