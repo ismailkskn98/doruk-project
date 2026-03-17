@@ -3,6 +3,8 @@ import localFont from 'next/font/local';
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const formaDJRDisplay = localFont({
   src: [
@@ -64,8 +66,12 @@ export default async function RootLayout({ children, params }) {
   }
   return (
     <html lang={locale}>
-      <body className={`${formaDJRDisplay.variable} font-forma-djr-display antialiased`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      <body className={`${formaDJRDisplay.variable} font-forma-djr-display antialiased gridContainer`}>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
