@@ -5,7 +5,6 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import LayoutTransitionProvider from "@/components/layoutTransitionProvider";
 
 const formaDJRDisplay = localFont({
   src: [
@@ -42,13 +41,11 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <body className={`${helveticaNeue.variable} ${formaDJRDisplay.variable} font-forma-djr-display antialiased gridContainer`}>
-        <LayoutTransitionProvider>
-          <NextIntlClientProvider>
-            <Header />
-            {children}
-            <Footer />
-          </NextIntlClientProvider>
-        </LayoutTransitionProvider>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

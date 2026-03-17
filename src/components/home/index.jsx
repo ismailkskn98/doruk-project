@@ -6,69 +6,93 @@ import gsap from 'gsap'
 import HomeHero from './homeHero'
 
 export default function HomeMain() {
-    const container = useRef(null);
+    const containerRef = useRef(null);
+    const overlayRef = useRef(null);
 
     useGSAP(() => {
         const logo = document.getElementById('site-logo');
-        const slot = document.getElementById('logo-slot');
-        const overlay = document.getElementById('intro-overlay');
+        const logoContainer = document.getElementById('logo-container');
+        const overlay = overlayRef.current;
 
-        if (!logo || !slot || !overlay) return;
+        if (!logo || !logoContainer || !overlay) return;
+
+        // Sayfa scroll olmasın
         document.body.style.overflow = 'hidden';
 
-        const slotRect = slot.getBoundingClientRect();
-        const logoRect = logo.getBoundingClientRect();
+        // Logonun şu anki yeri
+        const logoBox = logo.getBoundingClientRect();
 
-        const centerLeft = window.innerWidth / 2 - logoRect.width / 2;
-        const centerTop = window.innerHeight / 2 - logoRect.height / 2;
+        // Logonun dönmesi gereken hedef alan
+        const containerBox = logoContainer.getBoundingClientRect();
 
+        // Ekranın tam ortası için left / top hesapla
+        const startLeft = window.innerWidth / 2 - logoBox.width / 2;
+        const startTop = window.innerHeight / 2 - logoBox.height / 2;
+
+        // İlk durumda logoyu ortaya al
         gsap.set(logo, {
             position: 'fixed',
-            left: slotRect.left,
-            top: slotRect.top,
+            left: startLeft,
+            top: startTop,
+            scale: 2.2,
+            color: '#fff',
             margin: 0,
+            transformOrigin: 'top left',
             flexDirection: 'column',
             alignItems: 'start',
-        })
+            color: '#fff',
+        });
 
-        gsap.set(logo, {
-            left: centerLeft,
-            top: centerTop,
-            scale: 2.2,
-            transformOrigin: 'top left',
-        })
-
+        // Animasyon başlat
         const tl = gsap.timeline({
             onComplete: () => {
-                gsap.set(logo, { clearProps: 'all' })
                 document.body.style.overflow = ''
+                gsap.set(logo, { clearProps: 'all' })
             },
         });
 
-        tl.to({}, { duration: 0.8 })
-            .to(overlay, {
+        // Biraz bekle
+        tl.to({}, { duration: 0.8 });
+
+        // Overlay kaybolsun
+        tl.to(
+            overlay,
+            {
                 opacity: 0,
-                duration: 1.1,
+                duration: 1,
                 ease: 'power3.inOut',
-            }, 'start')
-            .to(logo, {
-                left: slotRect.left,
-                top: slotRect.top,
+            },
+            0.8
+        );
+
+        // Logo kendi yerine dönsün
+        tl.to(
+            logo,
+            {
+                left: containerBox.left,
+                top: containerBox.top,
                 scale: 1,
-                duration: 1.1,
+                color: '#000',
+                duration: 1,
                 ease: 'power3.inOut',
-            }, 'start')
+            },
+            0.8
+        );
 
         return () => {
             tl.kill()
             document.body.style.overflow = ''
             gsap.set(logo, { clearProps: 'all' })
-        }
-    }, { scope: container })
+        };
+
+    }, { scope: containerRef })
 
     return (
-        <main ref={container} className='w-full fluid gridContainer'>
-            <div id="intro-overlay" className='fixed inset-0 bg-black/50 z-30 pointer-events-none' />
+        <main ref={containerRef} className="w-full fluid gridContainer">
+            <div
+                ref={overlayRef}
+                className="fixed inset-0 bg-black z-30 pointer-events-none"
+            />
             <HomeHero />
         </main>
     )
