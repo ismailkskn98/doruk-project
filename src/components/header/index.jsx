@@ -4,10 +4,12 @@ import { motion } from 'motion/react'
 import Logo from '../Logo';
 import { useIntroStore } from '@/store/introStore';
 import SidebarOpenButton from '../common/sidebarOpenButton';
+import { useHeaderStore } from '@/store/headerStore';
 
 export default function Header() {
     const introComplete = useIntroStore(state => state.introComplete);
-
+    const title = useHeaderStore(state => state.title);
+    const lightTitle = useHeaderStore(state => state.lightTitle);
 
     return (
         <header className="relative z-40 flex items-center justify-between h-30">
@@ -21,7 +23,10 @@ export default function Header() {
                     <Logo />
                 </motion.div>
             </div>
-            <SidebarOpenButton />
+            <article className='flex items-center gap-2.5'>
+                <p className='text-2xl font-bold'><span className='font-light'>{lightTitle}</span>{title}</p>
+                <SidebarOpenButton />
+            </article>
         </header>
     )
 }
