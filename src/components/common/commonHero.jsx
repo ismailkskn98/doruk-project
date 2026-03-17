@@ -1,12 +1,13 @@
+import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
 
-export default function CommonHero({ image, alt, title, subtitle, description, sideInfo = [] }) {
+export default function CommonHero({ image, alt, title, subtitle, description, sideInfo = [], imageClassName = '' }) {
 
     return (
         <main className='w-full flex flex-col items-start'>
             <section className='w-full py-12.5'>
-                <Image src={image} alt={alt} width={1360} height={700} className='w-full object-cover object-[50%_42%] max-h-175' />
+                <Image src={image} alt={alt} width={1360} height={700} className={cn("w-full object-cover object-[50%_42%] max-h-175", imageClassName)} />
             </section>
             <section className='w-full flex items-start justify-between py-12.5 gap-12 font-helvetica-neue'>
                 <article className='flex flex-col items-start gap-12.5'>

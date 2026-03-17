@@ -3,14 +3,15 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Link, useRouter } from '@/i18n/navigation'
 import { useSidebarStore } from '@/store/sidebarStore'
+import SearchMain from '../common/search'
 
 const navItems = [
     {
         name: 'About',
         href: '/about',
         children: [
-            { name: 'Doruk Bicer', href: '/doruk-bicer' },
-            { name: 'Studio', href: '/studio' },
+            { name: 'Doruk BICER', href: '/doruk-bicer' },
+            { name: 'STUDIO', href: '/studio' },
         ],
     },
     {
@@ -24,7 +25,6 @@ const navItems = [
         ],
     },
     { name: 'Contact', href: '/contact' },
-    { name: 'Search', href: '/search' },
 ]
 
 export default function SideNavbar() {
@@ -51,7 +51,7 @@ export default function SideNavbar() {
                                 setSidebarOpen(false);
                                 setTimeout(() => router.push(item.href), 200);
                             }}
-                            className='uppercase font-bold text-2xl block'
+                            className='uppercase font-bold text-2xl block cursor-pointer'
                         >
                             {item.name}
                         </button>
@@ -76,7 +76,7 @@ export default function SideNavbar() {
                                                 setTimeout(() => router.push(child.href), 200);
 
                                             }}
-                                            className='uppercase text-2xl font-light text-black'
+                                            className='uppercase text-2xl font-light text-black cursor-pointer'
                                         >
                                             {child.name}
                                         </Link>
@@ -87,6 +87,11 @@ export default function SideNavbar() {
                     </AnimatePresence>
                 </div>
             ))}
+            <SearchMain>
+                <button type='button' className='uppercase font-bold text-2xl w-full text-left cursor-pointer'>
+                    Search
+                </button>
+            </SearchMain>
         </nav>
     )
 }

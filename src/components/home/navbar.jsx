@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from '@/i18n/navigation';
+import SearchMain from '../common/search';
 
 export default function Navbar() {
 
@@ -7,7 +8,6 @@ export default function Navbar() {
         { name: "About", href: "/doruk-bicer" },
         { name: "Work", href: "/works" },
         { name: "Contact", href: "/contact" },
-        { name: "Search", href: "/search" },
     ]
 
     return (
@@ -17,6 +17,11 @@ export default function Navbar() {
                     {item.name}
                 </Link>
             ))}
+            <SearchMain>
+                <button className='uppercase font-bold text-2xl cursor-pointer'>
+                    Search
+                </button>
+            </SearchMain>
         </nav>
     )
 }
