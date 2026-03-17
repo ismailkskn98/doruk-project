@@ -1,14 +1,16 @@
 'use client'
 
 import { motion } from 'motion/react'
-import { RxHamburgerMenu } from 'react-icons/rx'
-import Logo from '../Logo'
-import { useIntroStore } from '@/store/introStore'
+import Logo from '../Logo';
+import { useIntroStore } from '@/store/introStore';
+import SidebarOpenButton from '../common/sidebarOpenButton';
 
 export default function Header() {
-    const introComplete = useIntroStore(state => state.introComplete)
+    const introComplete = useIntroStore(state => state.introComplete);
+
+
     return (
-        <header className="relative z-40 flex items-center justify-between px-8 py-8 h-30">
+        <header className="relative z-40 flex items-center justify-between h-30">
             <div id="logo-container">
                 <motion.div
                     className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[32px]"
@@ -19,7 +21,7 @@ export default function Header() {
                     <Logo />
                 </motion.div>
             </div>
-            <RxHamburgerMenu className="text-2xl" />
+            <SidebarOpenButton />
         </header>
     )
 }
