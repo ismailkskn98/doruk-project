@@ -25,8 +25,16 @@ const formaDJRDisplay = localFont({
 const helveticaNeue = localFont({
   src: [
     { path: '../../fonts/HelveticaNeueLight.woff2', weight: '300', style: 'normal' },
+    { path: '../../fonts/HelveticaNeueBold.woff2', weight: '700', style: 'normal' },
   ],
   variable: '--font-helvetica-neue',
+});
+
+const minionPro = localFont({
+  src: [
+    { path: '../../fonts/MinionPro-Regular.woff2', weight: '400', style: 'normal' },
+  ],
+  variable: '--font-minion-pro',
 });
 
 export const metadata = {
@@ -42,7 +50,7 @@ export default async function RootLayout({ children, params }) {
   }
   return (
     <html lang={locale}>
-      <body className={`${helveticaNeue.variable} ${formaDJRDisplay.variable} font-forma-djr-display antialiased w-full flex`}>
+      <body className={`${helveticaNeue.variable} ${minionPro.variable} ${formaDJRDisplay.variable} font-forma-djr-display antialiased w-full flex`}>
         <NextIntlClientProvider>
           <MainContent>
             <Header />

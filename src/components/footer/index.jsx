@@ -6,7 +6,7 @@ export default function Footer() {
             <main className='w-full fluid gridContainer bg-custom-gray p-12.5 min-h-75'>
                 <section className='w-full h-full flex items-start justify-between gap-5'>
                     <article className='w-fit h-full flex flex-col items-start justify-between'>
-                        <h2 className='text-[32px] font-bold font-forma-djr-display'><span className='font-light'>Studio</span> Doruk Bicer</h2>
+                        <h2 className='text-[32px] font-bold font-forma-djr-display uppercase'><span className='font-light'>Studıo</span> Doruk Bıcer</h2>
                         <div className='flex flex-col items-start gap-2.5 font-helvetica-neue font-light leading-4'>
                             <a href="mailto:info@dorukbicer.com">info@dorukbicer.com</a>
                             <p className=''>Via Giovanni Pastorelli 4 <br />Milan / Italy</p>
