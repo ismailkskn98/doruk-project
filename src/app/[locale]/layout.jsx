@@ -1,17 +1,54 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
+import localFont from 'next/font/local';
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const formaDJRDisplay = localFont({
+  src: [
+    {
+      path: '../../fonts/FormaDJRDisplay-Thin.woff2',
+      weight: '100',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/FormaDJRDisplay-ExtraLight.woff2',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/FormaDJRDisplay-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/FormaDJRDisplay-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/FormaDJRDisplay-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/FormaDJRDisplay-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/FormaDJRDisplay-ExtraBold.woff2',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/FormaDJRDisplay-Black.woff2',
+      weight: '900',
+      style: 'normal',
+    },
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  ],
+  variable: '--font-forma-djr-display'
 });
 
 export const metadata = {
@@ -27,7 +64,7 @@ export default async function RootLayout({ children, params }) {
   }
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${formaDJRDisplay.variable} font-forma-djr-display antialiased`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
