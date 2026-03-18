@@ -7,6 +7,7 @@ import { useIntroStore } from '@/store/introStore';
 import Image from 'next/image';
 import React, { useEffect } from 'react'
 import SoundChart from './soundChart';
+import CommonDetailCarousel from '@/components/common/commonDetailCarousel';
 
 export default function DesilightDetail() {
     const setTitle = useHeaderStore((state) => state.setTitle);
@@ -125,6 +126,80 @@ export default function DesilightDetail() {
                 </article>
             </section>
 
+            <section className='w-full pt-18.75'>
+                <article className='w-full flex items-start justify-end gap-12.5'>
+                    <div className='flex flex-col items-end text-end gap-10'>
+                        <h3 className='font-helvetica-neue text-[40px] font-bold leading-10'>
+                            Solution:<br /><span className='font-light'>See The <br />Voice</span>
+                        </h3>
+                        <p className='font-minion-pro text-[20px] leading-7 max-w-79.5'>
+                            A collection of table lamps designed to interact with users, creating comfortable public
+                            spaces. The lights on the bottom respond to the sound level of each table, allowing
+                            users to become aware of their volume.
+                        </p>
+                    </div>
+                    <div className='relative w-full max-w-163.75 flex-1 h-163.75'>
+                        <Image src="/images/projects/desilight-detail-3.png" alt="desilight-detail-3" fill className='object-cover object-center h-full w-full' />
+                    </div>
+                </article>
+                <article className='w-full flex items-end justify-start gap-12.5 -mt-30'>
+                    <div className='relative w-full max-w-163.75 flex-1 h-163.75'>
+                        <Image src="/images/projects/desilight-detail-4.png" alt="desilight-detail-4" fill className='object-cover object-left h-full w-full' />
+                    </div>
+                    <div className='flex flex-col items-start text-start gap-10'>
+                        <h3 className='font-helvetica-neue text-[32px] font-bold leading-10'>
+                            DesiLight<br /><span className='font-light'>Picky</span>
+                        </h3>
+                        <p className='font-minion-pro text-[20px] leading-7 max-w-79.5'>
+                            The product is made from a bead-blasted stainless steel
+                            body and a frosted satin glass diffuser, available in two different colors. While providing
+                            comfortable lighting, the lights located on the bottom part interact with the user by
+                            pulsing in sync with the sound level at the table.
+                        </p>
+                    </div>
+                </article>
+                <article className='w-full flex items-start justify-end gap-12.5 mt-25'>
+                    <div className='flex flex-col items-end text-end gap-10'>
+                        <h3 className='font-helvetica-neue text-[40px] font-bold leading-10'>
+                            DesiLight<br /><span className='font-light'>Biggy</span>
+                        </h3>
+                        <p className='font-minion-pro text-[20px] leading-7 max-w-79.5'>
+                            Designed for better durability, the product is made
+                            from a cast polyethylene (PE) body and a frosted acrylic (PMMA) diffuser, available in three different colors.
+                        </p>
+                    </div>
+                    <div className='relative w-full max-w-163.75 flex-1 h-163.75'>
+                        <Image src="/images/projects/desilight-detail-5.png" alt="desilight-detail-5" fill className='object-cover object-left h-full w-full' />
+                    </div>
+                </article>
+
+                <main className='flex flex-col items-start'>
+                    <h2 className='font-helvetica-neue text-[40px] font-bold'>
+                        Approach:<br /><span className='font-light'>Make It Visable</span>
+                    </h2>
+                    <section className='w-full py-18.75'>
+                        {/* burası yapılacak */}
+                    </section>
+                </main>
+                <main className='w-full py-18.75 grid grid-cols-2 place-content-stretch gap-18.75'>
+                    <article className='flex-1 max-w-132.5 w-full flex flex-col items-start gap-10'>
+                        <div className='relative w-full h-full'>
+                            <Image src="/images/projects/desilight-detail-6.png" alt="desilight-detail-6" fill className='object-cover object-center w-full h-full' />
+                        </div>
+                    </article>
+                    <CommonDetailCarousel
+                        initialImage="/images/projects/desilight-detail-carousel/image-1.jpg"
+                        miniImageClassName='h-45 object-bottom'
+                        classNames="max-w-180"
+                        images={[
+                            "/images/projects/desilight-detail-carousel/image-1.jpg",
+                            "/images/projects/desilight-detail-carousel/image-2.jpg",
+                            "/images/projects/desilight-detail-carousel/image-3.jpg",
+                            "/images/projects/desilight-detail-carousel/image-4.jpg",
+                        ]}
+                    />
+                </main>
+            </section>
         </main>
     )
 }
