@@ -43,13 +43,7 @@ export default function SideNavbar() {
                     {item.children ? (
                         <button
                             type='button'
-                            onClick={() => {
-                                toggleItem(item.name);
-                                if (item.href && item.href.length > 0) {
-                                    setSidebarOpen(false);
-                                    setTimeout(() => router.push(item.href), 200);
-                                }
-                            }}
+                            onClick={() => toggleItem(item.name)}
                             className='uppercase font-bold text-2xl w-full text-left cursor-pointer'
                         >
                             {item.name}
@@ -59,7 +53,10 @@ export default function SideNavbar() {
                             type='button'
                             onClick={() => {
                                 setSidebarOpen(false);
-                                setTimeout(() => router.push(item.href), 200);
+                                setTimeout(() => {
+                                    router.push(item.href);
+                                    setOpenItem(null);
+                                }, 200);
                             }}
                             className='uppercase font-bold text-2xl block cursor-pointer'
                         >
@@ -83,8 +80,10 @@ export default function SideNavbar() {
                                             href={child.href}
                                             onClick={() => {
                                                 setSidebarOpen(false);
-                                                setTimeout(() => router.push(child.href), 200);
-
+                                                setTimeout(() => {
+                                                    router.push(child.href);
+                                                    setOpenItem(null);
+                                                }, 200);
                                             }}
                                             className='uppercase text-2xl font-light text-black cursor-pointer'
                                         >
