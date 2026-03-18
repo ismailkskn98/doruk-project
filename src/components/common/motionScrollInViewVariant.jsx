@@ -1,6 +1,7 @@
 'use client';
 import React, { Children } from 'react';
 import { motion, stagger } from 'motion/react';
+import { cn } from '@/lib/utils';
 
 export default function MotionScrollInViewVariant({ children, className, childClassname }) {
     const container = {
@@ -19,14 +20,14 @@ export default function MotionScrollInViewVariant({ children, className, childCl
 
     return (
         <motion.main
-            className={className}
+            className={cn('', className)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
             variants={container}
         >
             {React.Children.map(children, (child, i) => (
-                <motion.section key={i} variants={item} className={childClassname} style={{ willChange: 'transform, opacity' }} >
+                <motion.section key={i} variants={item} className={cn('', childClassname)} style={{ willChange: 'transform, opacity' }} >
                     {child}
                 </motion.section>
             ))}
