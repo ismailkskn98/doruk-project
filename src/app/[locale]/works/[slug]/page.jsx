@@ -1,4 +1,4 @@
-import ModularHomeDetail from '@/components/works/slug/deney';
+import ModularHomeDetail from '@/components/works/slug/modularHomeDetail';
 import RivaDetail from '@/components/works/slug/rivaDetail';
 import { notFound } from 'next/navigation';
 import React from 'react'
