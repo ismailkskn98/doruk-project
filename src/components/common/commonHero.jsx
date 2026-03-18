@@ -1,16 +1,17 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
-import MotionScrollInViewOpacity from './motionScrollInViewOpacity'
+import MotionLeftView from './motionLeftView'
+import MotionRightView from './motionRightView'
 
 export default function CommonHero({ image, alt, title, subtitle, description, sideInfo = [], imageClassName = '' }) {
 
     return (
         <main className='w-full flex flex-col items-start'>
-            <MotionScrollInViewOpacity className="w-full py-12.5">
+            <MotionLeftView className="w-full py-12.5">
                 <Image src={image} alt={alt} width={1360} height={700} className={cn("w-full object-cover object-[50%_42%] max-h-175", imageClassName)} />
-            </MotionScrollInViewOpacity>
-            <section className='w-full flex items-start justify-between py-12.5 gap-12 font-helvetica-neue'>
+            </MotionLeftView>
+            <MotionRightView className='w-full flex items-start justify-between py-12.5 gap-12 font-helvetica-neue'>
                 <article className='flex flex-col items-start gap-12.5'>
                     <div className='flex flex-col items-start gap-2.5'>
                         <h2 className='font-bold text-[32px] leading-7'>{title}</h2>
@@ -28,7 +29,7 @@ export default function CommonHero({ image, alt, title, subtitle, description, s
                         </div>
                     ))}
                 </article>
-            </section>
+            </MotionRightView>
         </main>
     )
 }
