@@ -19,9 +19,10 @@ export default function RivaDetail() {
     return (
         <main className='w-full fluid gridContainer'>
             <CommonHero
-                video="/images/projects/riva-937.png"
+                image="/images/projects/riva-937.png"
                 alt="Riva 937"
                 title="Riva 937"
+                lightTitle="Details"
                 subtitle="Private Villa"
                 description="The private summer residence located in the seaside of Istanbul, Turkey.  The site’s  sharp slope and view shaped both the architectural approach and the spatial organization of the villa. The residence offers 550 m² enclosed living space, including three bedrooms and two living areas. The studio was responsible for the interior and exterior architectural design, collaborating with contractor firms during construction and fabrication while overseeing the process to ensure quality."
                 sideInfo={[

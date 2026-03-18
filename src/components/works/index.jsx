@@ -62,14 +62,14 @@ export default function WorksMain() {
                 <TabsContent value="design" className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
                     <h2 className='uppercase text-2xl font-bold'>DESIGN</h2>
                     <section className='grid grid-cols-2 place-content-stretch justify-items-stretch gap-13'>
-                        <article className='flex flex-col items-start gap-5'>
+                        <Link href="/works/desilight" className='flex flex-col items-start gap-5'>
                             <div className='relative h-137.5 w-137.5 overflow-hidden cursor-pointer group'>
                                 <Image src="/images/projects/desilight-2025.png" alt="desiglight-2025" fill className='object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500' />
                             </div>
                             <h3 className='text-[32px] font-bold font-helvetica-neue'>
                                 DesiLight <span className='font-light'>2025</span>
                             </h3>
-                        </article>
+                        </Link>
                         <article className='flex flex-col items-start gap-5'>
                             <div className='relative h-137.5 w-137.5 overflow-hidden cursor-pointer group'>
                                 <Image src="/images/projects/viberon-2025.png" alt="viberon-2025" fill className='object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500' />

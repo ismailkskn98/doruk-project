@@ -4,7 +4,7 @@ import React from 'react'
 import MotionLeftView from './motionLeftView'
 import MotionRightView from './motionRightView'
 
-export default function CommonHero({ video, image, alt, title, subtitle, description, sideInfo = [], imageClassName = '' }) {
+export default function CommonHero({ video, image, alt, title, lightTitle, subtitle, description, sideInfo = [], imageClassName = '' }) {
 
     return (
         <main className='w-full flex flex-col items-start'>
@@ -22,7 +22,7 @@ export default function CommonHero({ video, image, alt, title, subtitle, descrip
             <MotionRightView className='w-full flex items-start justify-between py-12.5 gap-12 font-helvetica-neue'>
                 <article className='flex flex-col items-start gap-12.5'>
                     <div className='flex flex-col items-start gap-2.5'>
-                        <h2 className='font-bold text-[32px] leading-7'>{title}</h2>
+                        <h2 className='font-bold text-[32px] leading-7'>{title} {lightTitle && <span className='font-light'>{lightTitle}</span>}</h2>
                         <p className='font-light text-2xl leading-7'>{subtitle}</p>
                     </div>
                     <p className='max-w-175 text-[20px] font-minion-pro leading-7'>
