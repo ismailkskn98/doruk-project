@@ -19,6 +19,7 @@ export default function HomeMain() {
         const overlay = overlayRef.current;
 
         if (!introLogo || !logoContainer || !overlay) return;
+        document.documentElement.style.overflow = 'hidden';
         document.body.style.overflow = 'hidden';
 
         const scale = 2.6;
@@ -64,9 +65,10 @@ export default function HomeMain() {
         }, 1.75)
 
         tl.call(() => {
-            document.body.style.overflow = ''
-            setIntroComplete()
-            gsap.to(introLogo, { opacity: 0, duration: 0.25 })
+            document.documentElement.style.overflow = '';
+            document.body.style.overflow = '';
+            setIntroComplete();
+            gsap.to(introLogo, { opacity: 0, duration: 0.25 });
         })
 
     }, { scope: containerRef })
