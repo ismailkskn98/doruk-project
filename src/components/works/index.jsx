@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
+import { Link } from '@/i18n/navigation';
 
 const categories = [{ key: 'art', value: 'ART' }, { key: 'design', value: 'DESIGN' }, { key: 'architecture', value: 'ARCHITECTURE' }, { key: 'graphic', value: 'GRAPHIC' }];
 
@@ -39,7 +40,7 @@ export default function WorksMain() {
                 <TabsContent value="art" className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
                     <h2 className='uppercase text-2xl font-bold'>ART</h2>
                     <section className='grid grid-cols-2 place-content-stretch justify-items-stretch gap-13'>
-                        <article className='flex flex-col items-start gap-5'>
+                        <Link href="works/the-modular-home" className='flex flex-col items-start gap-5'>
                             <div className='relative h-137.5 w-137.5 overflow-hidden cursor-pointer group'>
                                 <Image src="/images/projects/the-modular-home.jpg" alt="the-modular-home" fill className='object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500' />
                                 <Image src="/images/projects/the-modular-home-absolute.jpg" alt="the-modular-home-absolute" width={150} height={70} className='absolute left-6 top-6 z-20 object-cover object-center w-33.25 h-17' />
@@ -47,7 +48,7 @@ export default function WorksMain() {
                             <h3 className='text-[32px] font-bold font-helvetica-neue'>
                                 The Modular Home <span className='font-light'>2026</span>
                             </h3>
-                        </article>
+                        </Link>
                         <article className='flex flex-col items-start gap-5'>
                             <div className='relative h-137.5 w-137.5 overflow-hidden cursor-pointer group'>
                                 <Image src="/images/projects/riva-937.png" alt="riva-937" fill className='object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500' />

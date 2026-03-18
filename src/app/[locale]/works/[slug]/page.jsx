@@ -1,10 +1,11 @@
+import ModularHomeDetail from '@/components/works/slug/ModularHomeDetail';
 import { notFound } from 'next/navigation';
 import React from 'react'
 
 const detailPages = {
-    //   desilight: DesilightDetail,
+    "the-modular-home": ModularHomeDetail,
+    //   "desilight": DesilightDetail,
     //   "riva-937": RivaDetail,
-    //   "the-modular-home": ModularHomeDetail,
 };
 
 
