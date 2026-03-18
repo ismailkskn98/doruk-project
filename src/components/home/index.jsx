@@ -8,29 +8,29 @@ import Logo from '../Logo'
 import { useIntroStore } from '@/store/introStore'
 
 export default function HomeMain() {
-    const containerRef = useRef(null)
-    const overlayRef = useRef(null)
-    const introLogoRef = useRef(null)
-    const setIntroComplete = useIntroStore(s => s.setIntroComplete)
+    const containerRef = useRef(null);
+    const overlayRef = useRef(null);
+    const introLogoRef = useRef(null);
+    const setIntroComplete = useIntroStore(state => state.setIntroComplete);
 
     useGSAP(() => {
-        const introLogo = introLogoRef.current
-        const logoContainer = document.getElementById('logo-container')
-        const overlay = overlayRef.current
+        const introLogo = introLogoRef.current;
+        const logoContainer = document.getElementById('logo-container');
+        const overlay = overlayRef.current;
 
-        if (!introLogo || !logoContainer || !overlay) return
-        document.body.style.overflow = 'hidden'
+        if (!introLogo || !logoContainer || !overlay) return;
+        document.body.style.overflow = 'hidden';
 
-        const scale = 2.6
+        const scale = 2.6;
 
         // Proxy logo'nun doğal boyutu (scale 1'deyken)
-        const logoBox = introLogo.getBoundingClientRect()
+        const logoBox = introLogo.getBoundingClientRect();
         // Header'daki logo container'ın pozisyonu (hedef)
-        const containerBox = logoContainer.getBoundingClientRect()
+        const containerBox = logoContainer.getBoundingClientRect();
 
         // Proxy'yi ekran ortasına, büyütülmüş şekilde yerleştir
-        const startLeft = window.innerWidth / 2 - (logoBox.width * scale) / 2
-        const startTop = window.innerHeight / 2 - (logoBox.height * scale) / 2
+        const startLeft = window.innerWidth / 2 - (logoBox.width * scale) / 2;
+        const startTop = window.innerHeight / 2 - (logoBox.height * scale) / 2;
 
         gsap.set(introLogo, {
             opacity: 1,
@@ -41,9 +41,9 @@ export default function HomeMain() {
             transformOrigin: 'top left',
         })
 
-        const tl = gsap.timeline()
+        const tl = gsap.timeline();
 
-        tl.to({}, { duration: 1 })
+        tl.to({}, { duration: 1 });
 
         // Siyah overlay kaybolsun
         tl.to(overlay, {
