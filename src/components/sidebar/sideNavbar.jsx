@@ -8,7 +8,7 @@ import SearchMain from '../common/search'
 const navItems = [
     {
         name: 'About',
-        href: '/about',
+        href: null,
         children: [
             { name: 'Doruk BICER', href: '/doruk-bicer' },
             { name: 'STUDIO', href: '/studio' },
@@ -41,7 +41,17 @@ export default function SideNavbar() {
             {navItems.map((item) => (
                 <div key={item.name}>
                     {item.children ? (
-                        <button type='button' onClick={() => toggleItem(item.name)} className='uppercase font-bold text-2xl w-full text-left cursor-pointer'>
+                        <button
+                            type='button'
+                            onClick={() => {
+                                toggleItem(item.name);
+                                if (item.href && item.href.length > 0) {
+                                    setSidebarOpen(false);
+                                    setTimeout(() => router.push(item.href), 200);
+                                }
+                            }}
+                            className='uppercase font-bold text-2xl w-full text-left cursor-pointer'
+                        >
                             {item.name}
                         </button>
                     ) : (

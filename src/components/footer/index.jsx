@@ -14,13 +14,13 @@ export default function Footer() {
                     </article>
                     <article className='w-fit h-full flex items-end'>
                         <div className='flex items-center gap-5 font-light font-helvetica-neue'>
-                            <a href="https://www.instagram.com/dorukbicer/" target="_blank" rel="noopener noreferrer" className=''>
+                            <a href="https://www.instagram.com/dorukbicer/" target="_blank" rel="noopener noreferrer" className='hover:underline transition-all duration-200'>
                                 Instagram
                             </a>
-                            <a href="https://www.behance.net/dorukbicer" target="_blank" rel="noopener noreferrer" className=''>
+                            <a href="https://www.behance.net/dorukbicer" target="_blank" rel="noopener noreferrer" className='hover:underline transition-all duration-200'>
                                 beHance
                             </a>
-                            <a href="https://www.linkedin.com/in/dorukbicer/" target="_blank" rel="noopener noreferrer" className=''>
+                            <a href="https://www.linkedin.com/in/dorukbicer/" target="_blank" rel="noopener noreferrer" className='hover:underline transition-all duration-200'>
                                 LinkedIn
                             </a>
                         </div>
