@@ -7,6 +7,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import SideBar from "@/components/sidebar";
 import MainContent from "@/components/mainContent";
+import { ScrollToTop } from "@/components/scrollToTop";
 
 const formaDJRDisplay = localFont({
   src: [
@@ -51,6 +52,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <body className={`${helveticaNeue.variable} ${minionPro.variable} ${formaDJRDisplay.variable} font-forma-djr-display antialiased w-full flex`}>
+        <ScrollToTop />
         <NextIntlClientProvider>
           <MainContent>
             <Header />
