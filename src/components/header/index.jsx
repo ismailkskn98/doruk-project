@@ -12,7 +12,7 @@ export default function Header() {
     const lightTitle = useHeaderStore(state => state.lightTitle);
 
     return (
-        <header className="relative z-40 flex items-center justify-between h-30!">
+        <header className="relative z-40 flex items-center justify-between min-h-30 max-h-30 overflow-hidden">
             <a href="/" id="logo-container">
                 <motion.div
                     className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[32px]"

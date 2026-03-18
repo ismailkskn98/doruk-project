@@ -51,7 +51,7 @@ export default async function RootLayout({ children, params }) {
   }
   return (
     <html lang={locale}>
-      <body className={`${helveticaNeue.variable} ${minionPro.variable} ${formaDJRDisplay.variable} font-forma-djr-display antialiased w-full flex`}>
+      <body className={`${helveticaNeue.variable} ${minionPro.variable} ${formaDJRDisplay.variable} font-forma-djr-display antialiased w-full`}>
         <ScrollToTop />
         <NextIntlClientProvider>
           <MainContent>
