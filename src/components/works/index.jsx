@@ -74,22 +74,22 @@ export default function WorksMain() {
                                     DesiLight <span className='font-light'>2025</span>
                                 </h3>
                             </Link>
-                            <article className='flex flex-col items-start gap-5'>
+                            <Link href="/works/viberon" className='flex flex-col items-start gap-5'>
                                 <div className='relative h-137.5 w-137.5 overflow-hidden cursor-pointer group'>
                                     <Image src="/images/projects/viberon-2025.png" alt="viberon-2025" fill className='object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500' />
                                 </div>
                                 <h3 className='text-[32px] font-bold font-helvetica-neue'>
                                     Viberon <span className='font-light'>2025</span>
                                 </h3>
-                            </article>
-                            <article className='flex flex-col items-start gap-5'>
+                            </Link>
+                            {/* <article className='flex flex-col items-start gap-5'>
                                 <div className='relative h-137.5 w-137.5 overflow-hidden cursor-pointer group'>
                                     <Image src="/images/projects/viberon-2025.png" alt="viberon-2025" fill className='object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500' />
                                 </div>
                                 <h3 className='text-[32px] font-bold font-helvetica-neue'>
                                     DesiLight <span className='font-light'>2025</span>
                                 </h3>
-                            </article>
+                            </article> */}
                             <article className='flex flex-col items-start gap-5'>
                                 <div className='relative h-137.5 w-137.5 overflow-hidden cursor-pointer group'>
                                     <Image src="/images/projects/colosseum-name.png" alt="colosseum-name" fill className='object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500 rotate-90' />

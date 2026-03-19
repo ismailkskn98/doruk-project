@@ -17,8 +17,8 @@ export default function DesilightDetail() {
     const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
 
     useEffect(() => {
-        setLightTitle('Contact');
-        setTitle('Doruk BICER');
+        setLightTitle('DesiLight');
+        setTitle('Works');
         setIntroComplete(true);
     }, [setTitle, setLightTitle, setIntroComplete])
 

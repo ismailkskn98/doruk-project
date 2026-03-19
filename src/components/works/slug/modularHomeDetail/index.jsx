@@ -14,8 +14,8 @@ export default function ModularHomeDetail() {
     const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
 
     useEffect(() => {
-        setLightTitle('Contact');
-        setTitle('Doruk BICER');
+        setLightTitle('The Modular Home');
+        setTitle('Works');
         setIntroComplete(true);
     }, [setTitle, setLightTitle, setIntroComplete])
 
