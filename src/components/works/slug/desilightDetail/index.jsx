@@ -8,6 +8,7 @@ import Image from 'next/image';
 import React, { useEffect } from 'react'
 import SoundChart from './soundChart';
 import CommonDetailCarousel from '@/components/common/commonDetailCarousel';
+import ReactCompareImage from 'react-compare-image';
 
 export default function DesilightDetail() {
     const setTitle = useHeaderStore((state) => state.setTitle);
@@ -184,7 +185,7 @@ export default function DesilightDetail() {
                 <main className='w-full py-18.75 grid grid-cols-2 place-content-stretch gap-18.75'>
                     <article className='flex-1 max-w-132.5 w-full flex flex-col items-start gap-10'>
                         <div className='relative w-full h-full'>
-                            <Image src="/images/projects/desilight-detail-6.png" alt="desilight-detail-6" fill className='object-cover object-center w-full h-full' />
+                            <ReactCompareImage leftImage="/images/projects/desilight-detail-6-lower.png" rightImage="/images/projects/desilight-detail-6.png" />;
                         </div>
                     </article>
                     <CommonDetailCarousel
