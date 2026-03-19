@@ -21,11 +21,11 @@ export default function CommonDetailCarousel({ images, initialImage, time = 2500
     return (
         <main className={cn('flex-1 w-full flex flex-col items-center gap-2.5', classNames)}>
             <div
-                className='relative h-125 overflow-hidden w-full'
+                className={cn('relative h-125 overflow-hidden w-full', bigImageClassName)}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <Image src={selectedImage} alt="Detail Carousel Image" fill className={cn('object-cover object-center w-full h-full', bigImageClassName)} />
+                <Image src={selectedImage} alt="Detail Carousel Image" fill className={cn('object-cover object-center w-full h-full')} />
             </div>
             <article className='w-full flex items-center justify-between gap-2.5'>
                 {images.map((image, index) => (

@@ -2,13 +2,7 @@ import { cn } from "@/lib/utils";
 
 function Segment({ active = true, className }) {
     return (
-        <div
-            // className={[
-            //     "h-3 border border-[#9a9a9a]",
-            //     active ? "bg-linear-to-r from-yellow-300 to-transparent" : "bg-[#f3f3f3]",
-            // ].join(" ")}
-            className={cn('h-3 border border-[#9a9a9a]', active ? 'bg-linear-to-r from-yellow-300 to-transparent' : 'bg-[#f3f3f3]', className)}
-        />
+        <div className={cn('h-3 border border-[#9a9a9a]', active ? 'bg-linear-to-r from-yellow-300 to-transparent' : 'bg-white', className)} />
     );
 }
 
@@ -81,7 +75,7 @@ function Mode4() {
 
 export default function ModeBar() {
     return (
-        <main className="flex min-h-screen items-start justify-center bg-[#ececec] p-6">
+        <main className="w-full flex items-start justify-center p-6">
             <div className="w-full max-w-5xl">
                 <div className="grid grid-cols-[60px_1fr] items-end gap-4 sm:grid-cols-[70px_1fr]">
                     <div />

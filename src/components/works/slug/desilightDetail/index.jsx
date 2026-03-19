@@ -179,20 +179,72 @@ export default function DesilightDetail() {
                     <h2 className='font-helvetica-neue text-[40px] font-bold'>
                         Approach:<br /><span className='font-light'>Make It Visable</span>
                     </h2>
-                    <section className='w-full py-18.75'>
-                        {/* burası yapılacak */}
+                    <section className='w-full flex flex-col items-center gap-12.5 py-18.75'>
+                        <main className='w-full grid grid-cols-4 gap-y-6'>
+                            <article className='flex flex-col items-start border-b border-black pb-12 p-1'>
+                                <h4 className='font-light font-helvetica-neue'>Turn on the product & select a mode.</h4>
+                                <div className='relative w-full max-w-85 h-58.5 border-r-2 border-black p-5'>
+                                    <Image src="/images/projects/desilight-detail-7-approach-1.png" alt="desilight-detail-7-approach-1" fill className='object-fit object-center h-full w-full' />
+                                </div>
+                            </article>
+                            <article className='flex flex-col items-start border-b border-black pb-12 p-1'>
+                                <h4 className='font-light font-helvetica-neue'>Ensure the microphone on top is not covered.</h4>
+                                <div className='relative w-full max-w-85 h-58.5 border-r-2 border-black p-5'>
+                                    <Image src="/images/projects/desilight-detail-7-approach-2.png" alt="desilight-detail-7-approach-2" fill className='object-fit object-center h-full w-full' />
+                                </div>
+                            </article>
+                            <section className='col-span-2 w-full'>
+                                <article className='flex flex-col items-start border-b border-black pb-12 p-1'>
+                                    <h4 className='font-light font-helvetica-neue'>The light located on the body will pulse in sync with the sound level of the conversation.</h4>
+                                    <div className='w-full flex items-start justify-between'>
+                                        <div className='relative w-full max-w-85 h-58.5'>
+                                            <Image src="/images/projects/desilight-detail-7-approach-3.png" alt="desilight-detail-7-approach-3" fill className='object-fit object-center h-full w-full' />
+                                        </div>
+                                        <div className='relative w-full max-w-85 h-58.5'>
+                                            <Image src="/images/projects/desilight-detail-7-approach-4.png" alt="desilight-detail-7-approach-4" fill className='object-fit object-center h-full w-full' />
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+                            {/*  */}
+                            <article className='flex flex-col items-start p-1'>
+                                <h4 className='font-light font-helvetica-neue'>When the sound level remains at extreme, the main light will blink.</h4>
+                                <div className='relative w-full max-w-85 h-58.5 border-r-2 border-black'>
+                                    <Image src="/images/projects/desilight-detail-7-approach-5.png" alt="desilight-detail-7-approach-5" fill className='object-fit object-center h-full w-full' />
+                                </div>
+                            </article>
+                            <article className='flex flex-col items-start p-1'>
+                                <h4 className='font-light font-helvetica-neue'>If the sound level does not decrease, the lights will turn off.</h4>
+                                <div className='relative w-full max-w-85 h-58.5 border-r-2 border-black'>
+                                    <Image src="/images/projects/desilight-detail-7-approach-6.png" alt="desilight-detail-7-approach-6" fill className='object-fit object-center h-full w-full' />
+                                </div>
+                            </article>
+                            <article className='flex flex-col items-start p-1'>
+                                <h4 className='font-light font-helvetica-neue'>When the sound level normalise, the lights will turn back to normal.</h4>
+                                <div className='relative w-full max-w-85 h-58.5 border-r-2 border-black'>
+                                    <Image src="/images/projects/desilight-detail-7-approach-7.png" alt="desilight-detail-7-approach-7" fill className='object-fit object-center h-full w-full' />
+                                </div>
+                            </article>
+                            <article className='flex flex-col items-start p-1'>
+                                <h4 className='font-light font-helvetica-neue'>The product need to be charged after 12 hours.</h4>
+                                <div className='relative w-full max-w-85 h-58.5'>
+                                    <Image src="/images/projects/desilight-detail-7-approach-8.png" alt="desilight-detail-7-approach-8" fill className='object-fit object-center h-full w-full' />
+                                </div>
+                            </article>
+                        </main>
                         <ModeBar />
                     </section>
                 </main>
                 <main className='w-full py-18.75 grid grid-cols-2 place-content-stretch gap-18.75'>
                     <article className='flex-1 max-w-132.5 w-full flex flex-col items-start gap-10'>
                         <div className='relative w-full h-full'>
-                            <ReactCompareImage leftImage="/images/projects/desilight-detail-6-lower.png" rightImage="/images/projects/desilight-detail-6.png" />;
+                            <ReactCompareImage leftImage="/images/projects/desilight-detail-6-lower.png" rightImage="/images/projects/desilight-detail-6.png" />
                         </div>
                     </article>
                     <CommonDetailCarousel
                         initialImage="/images/projects/desilight-detail-carousel/image-1.jpg"
                         miniImageClassName='h-45 object-bottom'
+                        bigImageClassName="flex-1"
                         classNames="max-w-180"
                         images={[
                             "/images/projects/desilight-detail-carousel/image-1.jpg",
