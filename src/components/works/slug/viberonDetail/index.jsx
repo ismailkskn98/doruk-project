@@ -11,7 +11,7 @@ export default function ViberonDetail() {
     const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
 
     useEffect(() => {
-        setLightTitle('Viberon');
+        setLightTitle('VIBERON');
         setTitle('Works');
         setIntroComplete(true);
     }, [setTitle, setLightTitle, setIntroComplete])

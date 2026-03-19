@@ -11,7 +11,7 @@ export default function RivaDetail() {
     const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
 
     useEffect(() => {
-        setLightTitle('Riva 937');
+        setLightTitle('RIVA 937');
         setTitle('Works');
         setIntroComplete(true);
     }, [setTitle, setLightTitle, setIntroComplete])
