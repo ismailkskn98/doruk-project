@@ -9,6 +9,7 @@ import React, { useEffect } from 'react'
 import SoundChart from './soundChart';
 import CommonDetailCarousel from '@/components/common/commonDetailCarousel';
 import ReactCompareImage from 'react-compare-image';
+import ModeBar from './modeBar';
 
 export default function DesilightDetail() {
     const setTitle = useHeaderStore((state) => state.setTitle);
@@ -180,6 +181,7 @@ export default function DesilightDetail() {
                     </h2>
                     <section className='w-full py-18.75'>
                         {/* burası yapılacak */}
+                        <ModeBar />
                     </section>
                 </main>
                 <main className='w-full py-18.75 grid grid-cols-2 place-content-stretch gap-18.75'>
