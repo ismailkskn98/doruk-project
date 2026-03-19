@@ -1,4 +1,6 @@
+import ColosseumNameDetail from '@/components/works/slug/colosseumNameDetail';
 import DesilightDetail from '@/components/works/slug/desilightDetail';
+import ExtreamityDetail from '@/components/works/slug/extreamityDetail';
 import FuanteiDetail from '@/components/works/slug/FuanteiDetail';
 import ModularHomeDetail from '@/components/works/slug/modularHomeDetail';
 import RivaDetail from '@/components/works/slug/rivaDetail';
@@ -11,7 +13,9 @@ const detailPages = {
     "riva-937": RivaDetail,
     "desilight": DesilightDetail,
     "viberon": ViberonDetail,
-    "fuantei": FuanteiDetail
+    "fuantei": FuanteiDetail,
+    "colosseum-name": ColosseumNameDetail,
+    "extreamity": ExtreamityDetail,
 };
 
 
