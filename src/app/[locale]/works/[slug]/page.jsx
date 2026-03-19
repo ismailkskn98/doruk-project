@@ -1,4 +1,5 @@
 import DesilightDetail from '@/components/works/slug/desilightDetail';
+import FuanteiDetail from '@/components/works/slug/FuanteiDetail';
 import ModularHomeDetail from '@/components/works/slug/modularHomeDetail';
 import RivaDetail from '@/components/works/slug/rivaDetail';
 import ViberonDetail from '@/components/works/slug/viberonDetail';
@@ -9,7 +10,8 @@ const detailPages = {
     "the-modular-home": ModularHomeDetail,
     "riva-937": RivaDetail,
     "desilight": DesilightDetail,
-    "viberon": ViberonDetail
+    "viberon": ViberonDetail,
+    "fuantei": FuanteiDetail
 };
 
 

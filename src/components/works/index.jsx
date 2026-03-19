@@ -82,14 +82,14 @@ export default function WorksMain() {
                                     Viberon <span className='font-light'>2025</span>
                                 </h3>
                             </Link>
-                            {/* <article className='flex flex-col items-start gap-5'>
+                            <Link href="/works/fuantei" className='flex flex-col items-start gap-5'>
                                 <div className='relative h-137.5 w-137.5 overflow-hidden cursor-pointer group'>
-                                    <Image src="/images/projects/viberon-2025.png" alt="viberon-2025" fill className='object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500' />
+                                    <Image src="/images/projects/fuantei.jpg" alt="fuantei" fill className='object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500' />
                                 </div>
                                 <h3 className='text-[32px] font-bold font-helvetica-neue'>
-                                    DesiLight <span className='font-light'>2025</span>
+                                    Fuantei <span className='font-light'>2020</span>
                                 </h3>
-                            </article> */}
+                            </Link>
                             <article className='flex flex-col items-start gap-5'>
                                 <div className='relative h-137.5 w-137.5 overflow-hidden cursor-pointer group'>
                                     <Image src="/images/projects/colosseum-name.png" alt="colosseum-name" fill className='object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500 rotate-90' />
