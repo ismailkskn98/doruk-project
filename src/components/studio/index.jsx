@@ -1,7 +1,7 @@
 "use client";
 import { useHeaderStore } from "@/store/headerStore";
 import { useIntroStore } from "@/store/introStore";
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import CommonHero from "../common/commonHero";
 
 export default function StudioMain() {
@@ -9,7 +9,7 @@ export default function StudioMain() {
   const setLightTitle = useHeaderStore((state) => state.setLightTitle);
   const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setLightTitle("About");
     setTitle("STUDIO");
     setIntroComplete(true);

@@ -1,7 +1,7 @@
 "use client";
 import { useHeaderStore } from "@/store/headerStore";
 import { useIntroStore } from "@/store/introStore";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
@@ -23,7 +23,7 @@ export default function WorksMain() {
   const setLightTitle = useHeaderStore((state) => state.setLightTitle);
   const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setLightTitle("WORKS");
     setIntroComplete(true);
   }, [setTitle, setLightTitle, setIntroComplete]);
