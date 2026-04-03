@@ -25,6 +25,7 @@ export default function WorksMain() {
 
   useEffect(() => {
     setLightTitle("WORKS");
+    setTitle("");
     setIntroComplete(true);
   }, [setTitle, setLightTitle, setIntroComplete]);
 
