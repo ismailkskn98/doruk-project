@@ -1,5 +1,5 @@
 import "../globals.css";
-import localFont from 'next/font/local';
+import localFont from "next/font/local";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
@@ -10,31 +10,29 @@ import { ScrollToTop } from "@/components/scrollToTop";
 
 const formaDJRDisplay = localFont({
   src: [
-    { path: '../../fonts/FormaDJRDisplay-Thin.woff2', weight: '100', style: 'normal' },
-    { path: '../../fonts/FormaDJRDisplay-ExtraLight.woff2', weight: '200', style: 'normal' },
-    { path: '../../fonts/FormaDJRDisplay-Light.woff2', weight: '300', style: 'normal' },
-    { path: '../../fonts/FormaDJRDisplay-Regular.woff2', weight: '400', style: 'normal' },
-    { path: '../../fonts/FormaDJRDisplay-Medium.woff2', weight: '500', style: 'normal' },
-    { path: '../../fonts/FormaDJRDisplay-Bold.woff2', weight: '700', style: 'normal' },
-    { path: '../../fonts/FormaDJRDisplay-ExtraBold.woff2', weight: '800', style: 'normal' },
-    { path: '../../fonts/FormaDJRDisplay-Black.woff2', weight: '900', style: 'normal' },
+    { path: "../../fonts/FormaDJRDisplay-Thin.woff2", weight: "100", style: "normal" },
+    { path: "../../fonts/FormaDJRDisplay-ExtraLight.woff2", weight: "200", style: "normal" },
+    { path: "../../fonts/FormaDJRDisplay-Light.woff2", weight: "300", style: "normal" },
+    { path: "../../fonts/FormaDJRDisplay-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../../fonts/FormaDJRDisplay-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/FormaDJRDisplay-Bold.woff2", weight: "700", style: "normal" },
+    { path: "../../fonts/FormaDJRDisplay-ExtraBold.woff2", weight: "800", style: "normal" },
+    { path: "../../fonts/FormaDJRDisplay-Black.woff2", weight: "900", style: "normal" },
   ],
-  variable: '--font-forma-djr-display'
+  variable: "--font-forma-djr-display",
 });
 
 const helveticaNeue = localFont({
   src: [
-    { path: '../../fonts/HelveticaNeueLight.woff2', weight: '300', style: 'normal' },
-    { path: '../../fonts/HelveticaNeueBold.woff2', weight: '700', style: 'normal' },
+    { path: "../../fonts/HelveticaNeueLight.woff2", weight: "300", style: "normal" },
+    { path: "../../fonts/HelveticaNeueBold.woff2", weight: "700", style: "normal" },
   ],
-  variable: '--font-helvetica-neue',
+  variable: "--font-helvetica-neue",
 });
 
 const minionPro = localFont({
-  src: [
-    { path: '../../fonts/MinionPro-Regular.woff2', weight: '400', style: 'normal' },
-  ],
-  variable: '--font-minion-pro',
+  src: [{ path: "../../fonts/MinionPro-Regular.woff2", weight: "400", style: "normal" }],
+  variable: "--font-minion-pro",
 });
 
 export const metadata = {
@@ -50,7 +48,9 @@ export default async function RootLayout({ children, params }) {
   }
   return (
     <html lang={locale}>
-      <body className={`${helveticaNeue.variable} ${minionPro.variable} ${formaDJRDisplay.variable} font-forma-djr-display antialiased w-full`}>
+      <body
+        className={`${helveticaNeue.variable} ${minionPro.variable} ${formaDJRDisplay.variable} font-forma-djr-display antialiased w-full overflow-x-hidden`}
+      >
         <ScrollToTop />
         <NextIntlClientProvider>
           <main className="w-full min-h-screen gridContainer">

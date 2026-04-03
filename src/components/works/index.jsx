@@ -1,12 +1,13 @@
 "use client";
 import { useHeaderStore } from "@/store/headerStore";
 import { useIntroStore } from "@/store/introStore";
-import React, { useEffect, useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React, { useEffect, useRef, useState } from "react";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import MotionScrollInViewOpacity from "../common/motionScrollInViewOpacity";
+import { AnimatePresence, motion } from "motion/react";
 
 const categories = [
   { key: "art", value: "ART" },
@@ -15,10 +16,170 @@ const categories = [
   { key: "graphic", value: "GRAPHIC" },
 ];
 
+const slideVariants = {
+  enter: (direction) => ({ x: direction > 0 ? "60%" : "-60%", opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (direction) => ({ x: direction > 0 ? "-60%" : "60%", opacity: 0 }),
+};
+
+const categoryContent = {
+  art: (
+    <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
+      <h2 className="uppercase text-2xl font-bold">ART</h2>
+      <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
+        <Link href="/works/the-modular-home" className="flex flex-col items-start gap-5">
+          <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image
+              src="/images/projects/the-modular-home.jpg"
+              alt="the-modular-home"
+              fill
+              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
+            <Image
+              src="/images/projects/the-modular-home-absolute.jpg"
+              alt="the-modular-home-absolute"
+              width={150}
+              height={70}
+              className="absolute left-6 top-6 z-20 object-cover object-center w-33.25 h-17"
+            />
+          </div>
+          <h3 className="text-[32px] font-bold font-helvetica-neue">
+            The Modular Home <span className="font-light">2026</span>
+          </h3>
+        </Link>
+        <Link href="/works/riva-937" className="flex flex-col items-start gap-5">
+          <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image
+              src="/images/projects/riva-937.png"
+              alt="riva-937"
+              fill
+              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
+          </div>
+          <h3 className="text-[32px] font-bold font-helvetica-neue">
+            Riva 937 <span className="font-light">2024</span>
+          </h3>
+        </Link>
+        <Link href="/works/extreamity" className="flex flex-col items-start gap-5">
+          <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image
+              src="/images/projects/extreamity.png"
+              alt="extreamity"
+              fill
+              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
+          </div>
+          <h3 className="text-[32px] font-bold font-helvetica-neue">Extreamity</h3>
+        </Link>
+      </section>
+    </MotionScrollInViewOpacity>
+  ),
+  design: (
+    <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
+      <h2 className="uppercase text-2xl font-bold">DESIGN</h2>
+      <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
+        <Link href="/works/desilight" className="flex flex-col items-start gap-5">
+          <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image
+              src="/images/projects/desilight-2025.png"
+              alt="desiglight-2025"
+              fill
+              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
+          </div>
+          <h3 className="text-[32px] font-bold font-helvetica-neue">
+            DesiLight <span className="font-light">2025</span>
+          </h3>
+        </Link>
+        <Link href="/works/viberon" className="flex flex-col items-start gap-5">
+          <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image
+              src="/images/projects/viberon-2025.png"
+              alt="viberon-2025"
+              fill
+              className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
+          </div>
+          <h3 className="text-[32px] font-bold font-helvetica-neue">
+            Viberon <span className="font-light">2025</span>
+          </h3>
+        </Link>
+        <Link href="/works/fuantei" className="flex flex-col items-start gap-5">
+          <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image
+              src="/images/projects/fuantei.jpg"
+              alt="fuantei"
+              fill
+              className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
+          </div>
+          <h3 className="text-[32px] font-bold font-helvetica-neue">
+            Fuantei <span className="font-light">2020</span>
+          </h3>
+        </Link>
+        <Link href="/works/colosseum-name" className="flex flex-col items-start gap-5">
+          <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image
+              src="/images/projects/colosseum-name.png"
+              alt="colosseum-name"
+              fill
+              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500 rotate-90"
+            />
+          </div>
+          <h3 className="text-[32px] font-bold font-helvetica-neue">
+            Colosseum Name <span className="font-light">2021</span>
+          </h3>
+        </Link>
+      </section>
+    </MotionScrollInViewOpacity>
+  ),
+  architecture: (
+    <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
+      <h2 className="uppercase text-2xl font-bold">ARCHITECTURE</h2>
+      <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
+        <Link href="/works/desilight" className="flex flex-col items-start gap-5">
+          <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image
+              src="/images/projects/desilight-2025.png"
+              alt="desiglight-2025"
+              fill
+              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
+          </div>
+          <h3 className="text-[32px] font-bold font-helvetica-neue">
+            DesiLight <span className="font-light">2025</span>
+          </h3>
+        </Link>
+      </section>
+    </MotionScrollInViewOpacity>
+  ),
+  graphic: (
+    <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
+      <h2 className="uppercase text-2xl font-bold">GRAPHIC</h2>
+      <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
+        <Link href="/works/viberon" className="flex flex-col items-start gap-5">
+          <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image
+              src="/images/projects/viberon-2025.png"
+              alt="viberon-2025"
+              fill
+              className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
+          </div>
+          <h3 className="text-[32px] font-bold font-helvetica-neue">
+            Viberon <span className="font-light">2025</span>
+          </h3>
+        </Link>
+      </section>
+    </MotionScrollInViewOpacity>
+  ),
+};
+
 export default function WorksMain() {
   const searchParams = useSearchParams();
   const category = searchParams.get("category") || "art";
   const [selectedCategory, setSelectedCategory] = useState(category);
+  const [direction, setDirection] = useState(1);
   const setTitle = useHeaderStore((state) => state.setTitle);
   const setLightTitle = useHeaderStore((state) => state.setLightTitle);
   const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
@@ -29,175 +190,41 @@ export default function WorksMain() {
     setIntroComplete(true);
   }, [setTitle, setLightTitle, setIntroComplete]);
 
+  const handleTabChange = (value) => {
+    const prevIndex = categories.findIndex((c) => c.key === selectedCategory);
+    const nextIndex = categories.findIndex((c) => c.key === value);
+    setDirection(nextIndex > prevIndex ? 1 : -1);
+    setSelectedCategory(value);
+    const url = new URL(window.location);
+    url.searchParams.set("category", value);
+    window.history.pushState({}, "", url);
+  };
+
   return (
-    <main className="w-full">
-      <Tabs
-        defaultValue={selectedCategory}
-        onValueChange={(value) => {
-          setSelectedCategory(value);
-          const url = new URL(window.location);
-          url.searchParams.set("category", value);
-          window.history.pushState({}, "", url);
-        }}
-        className="w-full"
-      >
+    <main className="w-full overflow-hidden">
+      <Tabs value={selectedCategory} onValueChange={handleTabChange} className="w-full">
         <TabsList variant="line" className="w-full flex justify-between py-11.5 gap-2.5 px-0">
-          {categories.map((category) => (
-            <TabsTrigger value={category.key} key={category.value} className="font-bold text-2xl max-w-fit uppercase px-0">
-              {category.value}
+          {categories.map((cat) => (
+            <TabsTrigger value={cat.key} key={cat.key} className="font-bold text-2xl max-w-fit uppercase px-0">
+              {cat.value}
             </TabsTrigger>
           ))}
         </TabsList>
-        <TabsContent value="art" className="w-full">
-          <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
-            <h2 className="uppercase text-2xl font-bold">ART</h2>
-            <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
-              <Link href="/works/the-modular-home" className="flex flex-col items-start gap-5">
-                <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-                  <Image
-                    src="/images/projects/the-modular-home.jpg"
-                    alt="the-modular-home"
-                    fill
-                    className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-                  />
-                  <Image
-                    src="/images/projects/the-modular-home-absolute.jpg"
-                    alt="the-modular-home-absolute"
-                    width={150}
-                    height={70}
-                    className="absolute left-6 top-6 z-20 object-cover object-center w-33.25 h-17"
-                  />
-                </div>
-                <h3 className="text-[32px] font-bold font-helvetica-neue">
-                  The Modular Home <span className="font-light">2026</span>
-                </h3>
-              </Link>
-              <Link href="/works/riva-937" className="flex flex-col items-start gap-5">
-                <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-                  <Image
-                    src="/images/projects/riva-937.png"
-                    alt="riva-937"
-                    fill
-                    className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-                <h3 className="text-[32px] font-bold font-helvetica-neue">
-                  Riva 937 <span className="font-light">2024</span>
-                </h3>
-              </Link>
-              <Link href="/works/extreamity" className="flex flex-col items-start gap-5">
-                <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-                  <Image
-                    src="/images/projects/extreamity.png"
-                    alt="extreamity"
-                    fill
-                    className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-                <h3 className="text-[32px] font-bold font-helvetica-neue">Extreamity</h3>
-              </Link>
-            </section>
-          </MotionScrollInViewOpacity>
-        </TabsContent>
-        <TabsContent value="design" className="w-full">
-          <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
-            <h2 className="uppercase text-2xl font-bold">DESIGN</h2>
-            <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
-              <Link href="/works/desilight" className="flex flex-col items-start gap-5">
-                <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-                  <Image
-                    src="/images/projects/desilight-2025.png"
-                    alt="desiglight-2025"
-                    fill
-                    className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-                <h3 className="text-[32px] font-bold font-helvetica-neue">
-                  DesiLight <span className="font-light">2025</span>
-                </h3>
-              </Link>
-              <Link href="/works/viberon" className="flex flex-col items-start gap-5">
-                <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-                  <Image
-                    src="/images/projects/viberon-2025.png"
-                    alt="viberon-2025"
-                    fill
-                    className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-                <h3 className="text-[32px] font-bold font-helvetica-neue">
-                  Viberon <span className="font-light">2025</span>
-                </h3>
-              </Link>
-              <Link href="/works/fuantei" className="flex flex-col items-start gap-5">
-                <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-                  <Image
-                    src="/images/projects/fuantei.jpg"
-                    alt="fuantei"
-                    fill
-                    className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-                <h3 className="text-[32px] font-bold font-helvetica-neue">
-                  Fuantei <span className="font-light">2020</span>
-                </h3>
-              </Link>
-              <Link href="/works/colosseum-name" className="flex flex-col items-start gap-5">
-                <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-                  <Image
-                    src="/images/projects/colosseum-name.png"
-                    alt="colosseum-name"
-                    fill
-                    className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500 rotate-90"
-                  />
-                </div>
-                <h3 className="text-[32px] font-bold font-helvetica-neue">
-                  Colosseum Name <span className="font-light">2021</span>
-                </h3>
-              </Link>
-            </section>
-          </MotionScrollInViewOpacity>
-        </TabsContent>
-        <TabsContent value="architecture" className="w-full">
-          <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
-            <h2 className="uppercase text-2xl font-bold">ARCHITECTURE</h2>
-            <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
-              <Link href="/works/desilight" className="flex flex-col items-start gap-5">
-                <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-                  <Image
-                    src="/images/projects/desilight-2025.png"
-                    alt="desiglight-2025"
-                    fill
-                    className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-                <h3 className="text-[32px] font-bold font-helvetica-neue">
-                  DesiLight <span className="font-light">2025</span>
-                </h3>
-              </Link>
-            </section>
-          </MotionScrollInViewOpacity>
-        </TabsContent>
-        <TabsContent value="graphic" className="w-full">
-          <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
-            <h2 className="uppercase text-2xl font-bold">GRAPHIC</h2>
-            <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
-              <Link href="/works/viberon" className="flex flex-col items-start gap-5">
-                <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-                  <Image
-                    src="/images/projects/viberon-2025.png"
-                    alt="viberon-2025"
-                    fill
-                    className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-                <h3 className="text-[32px] font-bold font-helvetica-neue">
-                  Viberon <span className="font-light">2025</span>
-                </h3>
-              </Link>
-            </section>
-          </MotionScrollInViewOpacity>
-        </TabsContent>
+        <div className="w-full overflow-hidden">
+          <AnimatePresence mode="popLayout" custom={direction}>
+            <motion.div
+              key={selectedCategory}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.25, ease: "easeOut" }}
+            >
+              {categoryContent[selectedCategory]}
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </Tabs>
     </main>
   );
