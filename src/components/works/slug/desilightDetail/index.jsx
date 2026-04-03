@@ -24,7 +24,8 @@ export default function DesilightDetail() {
   return (
     <main className="w-full fluid gridContainer">
       <CommonHero
-        image="/images/projects/desilight-2025.png"
+        image="/images/projects/desilight-detail-hero.png"
+        imageClassName="object-center"
         alt="DesiLight"
         title="DesiLight"
         lightTitle="Biggy / Picky"

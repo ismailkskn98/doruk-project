@@ -22,7 +22,8 @@ export default function ColosseumNameDetail() {
   return (
     <main className="w-full fluid gridContainer">
       <CommonHero
-        image="/images/projects/colosseum-name-rotate.png"
+        image="/images/projects/colosseum-detail-hero.png"
+        imageClassName="object-center scale-170"
         alt="Colosseum Name"
         title="Colosseum Name"
         subtitle="Motorised Mop Bucket"

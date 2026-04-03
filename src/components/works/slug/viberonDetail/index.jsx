@@ -19,8 +19,8 @@ export default function ViberonDetail() {
   return (
     <main className="w-full fluid gridContainer">
       <CommonHero
-        image="/images/projects/viberon-2025.png"
-        imageClassName="object-right"
+        image="/images/projects/viberon-detail-hero.png"
+        imageClassName="object-center scale-170"
         alt="Viberon"
         title="Viberon"
         subtitle="Iron With Vibration Heating Plate"

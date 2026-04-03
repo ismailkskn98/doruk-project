@@ -123,7 +123,7 @@ const categoryContent = {
               src="/images/projects/colosseum-name.png"
               alt="colosseum-name"
               fill
-              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500 rotate-90"
+              className="object-cover object-center h-full w-full scale-160 group-hover:scale-165 transition-all duration-500 rotate-90"
             />
           </div>
           <h3 className="text-[32px] font-bold font-helvetica-neue">
