@@ -1,28 +1,28 @@
-'use client';
-import { useHeaderStore } from '@/store/headerStore';
-import { useIntroStore } from '@/store/introStore';
-import React, { useEffect } from 'react'
-import CommonHero from '../common/commonHero';
+"use client";
+import { useHeaderStore } from "@/store/headerStore";
+import { useIntroStore } from "@/store/introStore";
+import React, { useLayoutEffect } from "react";
+import CommonHero from "../common/commonHero";
 
 export default function StudioMain() {
-    const setTitle = useHeaderStore((state) => state.setTitle);
-    const setLightTitle = useHeaderStore((state) => state.setLightTitle);
-    const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
+  const setTitle = useHeaderStore((state) => state.setTitle);
+  const setLightTitle = useHeaderStore((state) => state.setLightTitle);
+  const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
 
-    useEffect(() => {
-        setLightTitle('About');
-        setTitle('STUDIO');
-        setIntroComplete(true);
-    }, [setTitle, setLightTitle, setIntroComplete])
+  useLayoutEffect(() => {
+    setLightTitle("About");
+    setTitle("STUDIO");
+    setIntroComplete(true);
+  }, [setTitle, setLightTitle, setIntroComplete]);
 
-    return (
-        <CommonHero
-            image="/images/studio.jpg"
-            imageClassName="grayscale"
-            alt="studio"
-            title="Studio Doruk Bicer"
-            subtitle="Design Studio"
-            description="Doruk Biçer, born and raised in Istanbul. I was first impressed by the idea of shaping
+  return (
+    <CommonHero
+      image="/images/studio.jpg"
+      imageClassName="grayscale"
+      alt="studio"
+      title="Studio Doruk Bicer"
+      subtitle="Design Studio"
+      description="Doruk Biçer, born and raised in Istanbul. I was first impressed by the idea of shaping
                 material during my childhood, which I spent in my grandfather’s carpentry shop. My college years
                 started with studying a business degree, and later, I decided to follow my interests and began my
                 design adventure without knowing it would become my passion. The university education I received
@@ -33,11 +33,11 @@ export default function StudioMain() {
                 areas ranging from furniture design to exhibition design. With the end of my current internship, I want to
                 dive more into a side of the field that lies between collectible and industrial design, based on my selfreflection
                 and the interests."
-            sideInfo={[
-                { label: 'date', value: '2024' },
-                { label: 'DIMENSION', value: 'Milan, Italy' },
-                { label: 'PROJECT COUNT', value: '23' },
-            ]}
-        />
-    )
+      sideInfo={[
+        { label: "date", value: "2024" },
+        { label: "DIMENSION", value: "Milan, Italy" },
+        { label: "PROJECT COUNT", value: "23" },
+      ]}
+    />
+  );
 }
