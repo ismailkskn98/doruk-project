@@ -1,17 +1,25 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import HomeHero from "./homeHero";
 import Logo from "../Logo";
 import { useIntroStore } from "@/store/introStore";
+import { useHeaderStore } from "@/store/headerStore";
 
 export default function HomeMain() {
   const containerRef = useRef(null);
   const overlayRef = useRef(null);
   const introLogoRef = useRef(null);
   const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
+  const setTitle = useHeaderStore((state) => state.setTitle);
+  const setLightTitle = useHeaderStore((state) => state.setLightTitle);
+
+  useEffect(() => {
+    setLightTitle("");
+    setTitle("");
+  }, [setTitle, setLightTitle, setIntroComplete]);
 
   useGSAP(
     () => {
