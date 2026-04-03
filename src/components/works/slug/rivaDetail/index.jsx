@@ -20,7 +20,7 @@ export default function RivaDetail() {
     <main className="w-full fluid gridContainer">
       <CommonHero
         image="/images/projects/riva-937-detail-hero.png"
-        imageClassName="object-cover object-[50%_20%]"
+        imageClassName="object-cover"
         alt="Riva 937"
         title="Riva 937"
         lightTitle="Details"
