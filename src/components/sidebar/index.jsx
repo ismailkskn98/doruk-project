@@ -2,7 +2,7 @@
 import { useSidebarStore } from "@/store/sidebarStore";
 import React from "react";
 import SideNavbar from "./sideNavbar";
-import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
 export default function SideBar() {
   const sidebarOpen = useSidebarStore((state) => state.sidebarOpen);
@@ -15,6 +15,10 @@ export default function SideBar() {
         showCloseButton={false}
         className="p-0 border-l border-gray-200 shadow-sm xl:w-[30%]! xl:max-w-[30%]! min-[1700px]:w-[calc((100vw-1500px)/2)]! min-[1700px]:max-w-[calc((100vw-1500px)/2)]!"
       >
+        <SheetHeader className="hidden">
+          <SheetTitle></SheetTitle>
+          <SheetDescription></SheetDescription>
+        </SheetHeader>
         <SideNavbar />
       </SheetContent>
     </Sheet>
