@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef, useEffect, useLayoutEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import HomeHero from "./homeHero";
@@ -12,17 +12,25 @@ export default function HomeMain() {
   const containerRef = useRef(null);
   const overlayRef = useRef(null);
   const introLogoRef = useRef(null);
+  const introComplete = useIntroStore((state) => state.introComplete);
   const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
-  const setTitle = useHeaderStore((state) => state.setTitle);
   const setLightTitle = useHeaderStore((state) => state.setLightTitle);
+  const setTitle = useHeaderStore((state) => state.setTitle);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setLightTitle("");
     setTitle("");
-  }, [setTitle, setLightTitle, setIntroComplete]);
+
+    // sessionStorage kontrol et: intro daha önce bu tab'da gösterildi mi?
+    const alreadySeen = sessionStorage.getItem("introSeen") === "true";
+    if (alreadySeen) {
+      setIntroComplete();
+    }
+  }, [setIntroComplete, setLightTitle, setTitle]);
 
   useGSAP(
     () => {
+      if (introComplete) return;
       const introLogo = introLogoRef.current;
       const logoContainer = document.getElementById("logo-container");
       const overlay = overlayRef.current;
@@ -93,10 +101,14 @@ export default function HomeMain() {
 
   return (
     <main ref={containerRef} className="w-full fluid gridContainer">
-      <div ref={overlayRef} className="fixed fluid inset-0 bg-black z-30 pointer-events-none" />
-      <div ref={introLogoRef} className="fixed fluid top-0 left-0 z-50 flex flex-col leading-[0.9] font-bold text-[70px] pointer-events-none opacity-0">
-        <Logo />
-      </div>
+      {!introComplete && (
+        <>
+          <div ref={overlayRef} className="fixed fluid inset-0 bg-black z-30 pointer-events-none" />
+          <div ref={introLogoRef} className="fixed fluid top-0 left-0 z-50 flex flex-col leading-[0.9] font-bold text-[70px] pointer-events-none opacity-0">
+            <Logo />
+          </div>
+        </>
+      )}
       <HomeHero />
     </main>
   );

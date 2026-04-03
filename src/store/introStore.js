@@ -1,6 +1,9 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 export const useIntroStore = create((set) => ({
   introComplete: false,
-  setIntroComplete: () => set({ introComplete: true }),
+  setIntroComplete: () => {
+    sessionStorage.setItem("introSeen", "true");
+    set({ introComplete: true });
+  },
 }));
