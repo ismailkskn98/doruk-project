@@ -6,13 +6,20 @@ const userData = {
   name: "DORUK",
   surname: "BICER",
   email: "doruk@dorukbicer.com",
-  phone: "+39 123 456 7890",
+  phone: "+39 331 342 7864",
   website: "www.dorukbicer.com",
   address: "Via Giovanni Pastorelli 4, Milan, Italy",
-  photo: "/images/doruk-bicer.jpg", // public/images/doruk-bicer.jpg
+  photo: "/images/doruk-bicer.jpg",
 };
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-const QR_URL = "/api/vcard";
+const QR_URL = `${BASE_URL}/api/vcard`;
+
+function normalizeWebsite(url) {
+  if (!url) return "";
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  return `https://${url}`;
+}
 
 export default function DorukDigitalCard() {
   return (
@@ -33,10 +40,10 @@ export default function DorukDigitalCard() {
         </div>
 
         <div className="flex flex-col text-left gap-2 text-base font-helvetica-neue w-full max-w-62.5">
-          <a href={`mailto:${userData.email}`} className="text-blue-500 hover:underline truncate">
+          <a href={normalizeWebsite(userData.website)} className="text-black hover:underline truncate">
             {userData.website}
           </a>
-          <p className="text-gray-700 max-w-41.25">{userData.address}</p>
+          <p className="max-w-41.25">{userData.address}</p>
         </div>
       </article>
     </div>

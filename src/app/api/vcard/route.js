@@ -6,31 +6,53 @@ const CARD_DATA = {
   name: "DORUK",
   surname: "BICER",
   email: "doruk@dorukbicer.com",
-  phone: "+39 123 456 7890",
-  website: "www.dorukbicer.com",
-  address: "Via Giovanni Pastorelli 4, Milan, Italy",
+  phone: "+39 331 342 7864",
+  website: "https://www.dorukbicer.com",
+  address: {
+    street: "Via Giovanni Pastorelli 4",
+    city: "Milan",
+    stateProvince: "",
+    postalCode: "",
+    countryRegion: "Italy",
+    label: "Via Giovanni Pastorelli 4, Milan, Italy",
+  },
   photo: "/images/doruk-bicer.jpg",
 };
 
-async function buildVCard({ name, surname, email, phone, website, address, photo } = CARD_DATA) {
+function normalizeWebsite(url) {
+  if (!url) return "";
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  return `https://${url}`;
+}
+
+async function buildVCard(data = CARD_DATA) {
   const vCard = vCardsJS();
+
+  const { name, surname, email, phone, website, address, photo } = data;
+
   vCard.firstName = name || "";
   vCard.lastName = surname || "";
   vCard.email = email || "";
   vCard.cellPhone = phone || "";
-  vCard.url = website || "";
-  vCard.workAddress.label = address || "";
+  vCard.url = normalizeWebsite(website);
+
+  if (address) {
+    vCard.workAddress.street = address.street || "";
+    vCard.workAddress.city = address.city || "";
+    vCard.workAddress.stateProvince = address.stateProvince || "";
+    vCard.workAddress.postalCode = address.postalCode || "";
+    vCard.workAddress.countryRegion = address.countryRegion || "";
+    vCard.workAddress.label = address.label || "";
+  }
 
   if (photo) {
     try {
-      // Statik resim URL'ini public klasöründeki dosya path'ine çevir
-      const imagePath = path.join(process.cwd(), `public${photo}`);
+      const imagePath = path.join(process.cwd(), "public", photo.replace(/^\/+/, ""));
       const imageBuffer = readFileSync(imagePath);
       const base64Photo = imageBuffer.toString("base64");
 
-      // Content-Type'ı dosya extension'ından al
-      const ext = photo.split(".").pop()?.toLowerCase() || "jpeg";
-      const mediaType = ext === "jpg" || ext === "jpeg" ? "JPEG" : ext.toUpperCase();
+      const ext = photo.split(".").pop().toLowerCase();
+      const mediaType = ext === "jpg" || ext === "jpeg" ? "JPEG" : ext === "png" ? "PNG" : "JPEG";
 
       vCard.photo.embedFromString(base64Photo, mediaType);
     } catch (error) {
@@ -43,26 +65,50 @@ async function buildVCard({ name, surname, email, phone, website, address, photo
 
 export async function GET() {
   const vCardString = await buildVCard();
+
   return new Response(vCardString, {
     status: 200,
     headers: {
-      "Content-Type": "text/vcard",
+      "Content-Type": "text/vcard; charset=utf-8",
       "Content-Disposition": 'attachment; filename="doruk-bicer-contact.vcf"',
     },
   });
 }
 
 export async function POST(request) {
-  const body = await request.json();
-  const { name, surname, email, phone, website, address, photo } = body;
+  try {
+    const body = await request.json();
 
-  const vCardString = await buildVCard({ name, surname, email, phone, website, address, photo });
+    const vCardString = await buildVCard({
+      name: body.name || "",
+      surname: body.surname || "",
+      email: body.email || "",
+      phone: body.phone || "",
+      website: body.website || "",
+      address: {
+        street: body.address?.street || "",
+        city: body.address?.city || "",
+        stateProvince: body.address?.stateProvince || "",
+        postalCode: body.address?.postalCode || "",
+        countryRegion: body.address?.countryRegion || "",
+        label: body.address?.label || "",
+      },
+      photo: body.photo || "",
+    });
 
-  return new Response(vCardString, {
-    status: 200,
-    headers: {
-      "Content-Type": "text/vcard",
-      "Content-Disposition": 'attachment; filename="contact.vcf"',
-    },
-  });
+    return new Response(vCardString, {
+      status: 200,
+      headers: {
+        "Content-Type": "text/vcard; charset=utf-8",
+        "Content-Disposition": 'attachment; filename="contact.vcf"',
+      },
+    });
+  } catch (error) {
+    return new Response(JSON.stringify({ error: "Invalid request body" }), {
+      status: 400,
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    });
+  }
 }
