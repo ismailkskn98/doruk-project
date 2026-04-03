@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import MotionScrollInViewOpacity from "../common/motionScrollInViewOpacity";
 import { AnimatePresence, motion } from "motion/react";
 

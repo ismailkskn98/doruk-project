@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Search } from "lucide-react";
 import { useDebouncedCallback } from "use-debounce";
 import { searchData } from "@/lib/searchData";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import Image from "next/image";
 import { useSidebarStore } from "@/store/sidebarStore";
 
@@ -13,11 +13,7 @@ const pages = searchData.filter((item) => item.type === "page");
 
 function ResultItem({ item, onClose }) {
   return (
-    <Link
-      href={item.href}
-      onClick={onClose}
-      className="w-full flex items-center gap-3 hover:bg-gray-50 px-2 py-2 rounded-lg transition-all duration-150"
-    >
+    <Link href={item.href} onClick={onClose} className="w-full flex items-center gap-3 hover:bg-gray-50 px-2 py-2 rounded-lg transition-all duration-150">
       <div className="relative w-10 h-10 rounded-md overflow-hidden bg-gray-100 shrink-0">
         {item.image ? (
           <Image src={item.image} alt={item.title} fill className="object-cover object-center" />
@@ -57,10 +53,7 @@ export default function SearchMain({ children }) {
     const lower = value.toLowerCase();
     setResults(
       searchData.filter(
-        (item) =>
-          item.title.toLowerCase().includes(lower) ||
-          item.category.toLowerCase().includes(lower) ||
-          item.keywords.some((k) => k.includes(lower)),
+        (item) => item.title.toLowerCase().includes(lower) || item.category.toLowerCase().includes(lower) || item.keywords.some((k) => k.includes(lower)),
       ),
     );
   }, 250);
@@ -105,12 +98,8 @@ export default function SearchMain({ children }) {
         <div className="border-t border-gray-200 overflow-y-auto">
           <div className="px-4 py-4 flex flex-col gap-1">
             {/* Arama sonuçları */}
-            {results !== null && results.length === 0 && (
-              <p className="text-sm text-gray-400 py-2">No results found.</p>
-            )}
-            {results !== null && results.length > 0 && results.map((item) => (
-              <ResultItem key={item.id} item={item} onClose={handleClose} />
-            ))}
+            {results !== null && results.length === 0 && <p className="text-sm text-gray-400 py-2">No results found.</p>}
+            {results !== null && results.length > 0 && results.map((item) => <ResultItem key={item.id} item={item} onClose={handleClose} />)}
 
             {/* Boşken: Works + Pages */}
             {results === null && (

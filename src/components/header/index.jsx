@@ -5,7 +5,7 @@ import Logo from "../Logo";
 import { useIntroStore } from "@/store/introStore";
 import SidebarOpenButton from "../common/sidebarOpenButton";
 import { useHeaderStore } from "@/store/headerStore";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 
 export default function Header() {
   const introComplete = useIntroStore((state) => state.introComplete);
