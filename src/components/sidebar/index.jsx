@@ -1,26 +1,22 @@
-'use client';
-import { cn } from '@/lib/utils';
-import { useSidebarStore } from '@/store/sidebarStore';
-import React, { useEffect } from 'react'
-import SideNavbar from './sideNavbar';
+"use client";
+import { useSidebarStore } from "@/store/sidebarStore";
+import React from "react";
+import SideNavbar from "./sideNavbar";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 
 export default function SideBar() {
-    const sidebarOpen = useSidebarStore(state => state.sidebarOpen);
+  const sidebarOpen = useSidebarStore((state) => state.sidebarOpen);
+  const setSidebarOpen = useSidebarStore((state) => state.setSidebarOpen);
 
-    useEffect(() => {
-        if (sidebarOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
-    }, [sidebarOpen])
-
-    return (
-        <aside className={cn('h-screen fixed inset-y-0 right-0 w-[20%] sm:w-90 shadow-sm border-l border-gray-200 z-50 transition-transform duration-500 ease-in-out', {
-            'translate-x-0': sidebarOpen,
-            'translate-x-full': !sidebarOpen,
-        })}>
-            <SideNavbar />
-        </aside>
-    )
+  return (
+    <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
+      <SheetContent
+        side="right"
+        showCloseButton={false}
+        className="p-0 border-l border-gray-200 shadow-sm xl:w-[30%]! xl:max-w-[30%]! min-[1700px]:w-[calc((100vw-1500px)/2)]! min-[1700px]:max-w-[calc((100vw-1500px)/2)]!"
+      >
+        <SideNavbar />
+      </SheetContent>
+    </Sheet>
+  );
 }

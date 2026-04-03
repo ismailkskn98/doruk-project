@@ -21,7 +21,7 @@ body {
 
 @utility gridContainer {
   display: grid;
-  grid-template-columns: 1fr min(95%, 85rem) 1fr;
+  grid-template-columns: minmax(50px, 1fr) min(calc(100% - 100px), 1500px) minmax(50px, 1fr);
   & > * {
     grid-column: 2;
   }
