@@ -1,8 +1,10 @@
-import WorksMain from '@/components/works'
-import React from 'react'
+import WorksMain from "@/components/works";
+import React, { Suspense } from "react";
 
 export default function WorksPage() {
-    return (
-        <WorksMain />
-    )
+  return (
+    <Suspense fallback={<div></div>}>
+      <WorksMain />
+    </Suspense>
+  );
 }
