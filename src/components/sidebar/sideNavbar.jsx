@@ -46,11 +46,11 @@ export default function SideNavbar() {
   };
 
   return (
-    <nav className="flex flex-col gap-2.5 px-5 py-10">
+    <nav className="flex flex-col gap-3.5 lg:gap-2.5 px-5 py-10">
       {navItems.map((item) => (
         <div key={item.name}>
           {item.children ? (
-            <button type="button" onClick={() => toggleItem(item.name, item.href)} className="uppercase font-bold text-2xl w-full text-left cursor-pointer">
+            <button type="button" onClick={() => toggleItem(item.name, item.href)} className="uppercase font-bold text-xl lg:text-2xl w-full text-left cursor-pointer">
               {item.name}
             </button>
           ) : (
@@ -63,7 +63,7 @@ export default function SideNavbar() {
                   setOpenItem(null);
                 }, 200);
               }}
-              className="uppercase font-bold text-2xl block cursor-pointer"
+              className="uppercase font-bold text-xl lg:text-2xl block cursor-pointer"
             >
               {item.name}
             </button>
@@ -78,7 +78,7 @@ export default function SideNavbar() {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="flex flex-col gap-2.5 pl-5 py-5">
+                <div className="flex flex-col gap-2.5 pl-3.5 lg:pl-5 pb-0 pt-3 lg:pb-3 lg:pt-5">
                   {item.children.map((child) => (
                     <Link
                       key={child.name}
@@ -90,7 +90,7 @@ export default function SideNavbar() {
                           setOpenItem(null);
                         }, 200);
                       }}
-                      className="uppercase text-2xl font-light text-black cursor-pointer"
+                      className="uppercase text-xl lg:text-2xl font-light text-black cursor-pointer"
                     >
                       {child.name}
                     </Link>
@@ -102,7 +102,7 @@ export default function SideNavbar() {
         </div>
       ))}
       <SearchMain>
-        <button type="button" className="uppercase font-bold text-2xl w-full text-left cursor-pointer">
+        <button type="button" className="uppercase font-bold text-xl lg:text-2xl w-full text-left cursor-pointer">
           Search
         </button>
       </SearchMain>
