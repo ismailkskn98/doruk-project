@@ -30,7 +30,7 @@ export default function HomeMain() {
 
   useGSAP(
     () => {
-      // if (introComplete) return;
+      if (introComplete) return;
       const introLogo = introLogoRef.current;
       const logoContainer = document.getElementById("logo-container");
       const overlay = overlayRef.current;
@@ -75,14 +75,14 @@ export default function HomeMain() {
 
   return (
     <main ref={containerRef} className="w-full fluid gridContainer">
-      {/* {!introComplete && ( */}
-      <>
-        <div ref={overlayRef} className="fixed fluid inset-0 bg-black z-30 pointer-events-none" />
-        <div ref={introLogoRef} className="fixed fluid top-0 left-0 z-50 flex flex-col leading-[0.9] font-bold text-[48px] sm:text-[65px] lg:text-[90px] pointer-events-none opacity-0 ">
-          <Logo />
-        </div>
-      </>
-      {/* )} */}
+      {!introComplete && (
+        <>
+          <div ref={overlayRef} className="fixed fluid inset-0 bg-black z-30 pointer-events-none" />
+          <div ref={introLogoRef} className="fixed fluid top-0 left-0 z-50 flex flex-col leading-[0.9] font-bold text-[48px] sm:text-[65px] lg:text-[90px] pointer-events-none opacity-0 ">
+            <Logo />
+          </div>
+        </>
+      )}
       <HomeHero />
     </main>
   );
