@@ -258,7 +258,6 @@ export default function DesilightDetail() {
             miniImageDivClassName="h-45"
             miniImageClassName="object-center object-fill"
             classNames=""
-            time={500000}
             images={[
               { src: "/images/projects/desilight-detail-carousel/image-2.webp", className: "object-cover object-[50%_80%]" },
               { src: "/images/projects/desilight-detail-carousel/image-1.webp", className: "object-cover object-[50%_80%]" },
