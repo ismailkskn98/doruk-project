@@ -1,12 +1,11 @@
 "use client";
 import { useHeaderStore } from "@/store/headerStore";
 import { useIntroStore } from "@/store/introStore";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import MotionScrollInViewOpacity from "../common/motionScrollInViewOpacity";
 import { AnimatePresence, motion } from "motion/react";
 
 const categories = [
@@ -24,7 +23,7 @@ const slideVariants = {
 
 const categoryContent = {
   art: (
-    <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
+    <main className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
       <h2 className="uppercase text-2xl font-bold">ART</h2>
       <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
         <Link href="/works/the-modular-home" className="flex flex-col items-start gap-5">
@@ -57,10 +56,10 @@ const categoryContent = {
           <h3 className="text-[32px] font-bold font-helvetica-neue">Extreamity</h3>
         </Link>
       </section>
-    </MotionScrollInViewOpacity>
+    </main>
   ),
   design: (
-    <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
+    <main className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
       <h2 className="uppercase text-2xl font-bold">DESIGN</h2>
       <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
         <Link href="/works/desilight" className="flex flex-col items-start gap-5">
@@ -101,10 +100,10 @@ const categoryContent = {
           </h3>
         </Link>
       </section>
-    </MotionScrollInViewOpacity>
+    </main>
   ),
   architecture: (
-    <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
+    <main className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
       <h2 className="uppercase text-2xl font-bold">ARCHITECTURE</h2>
       <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
         <Link href="/works/desilight" className="flex flex-col items-start gap-5">
@@ -116,10 +115,10 @@ const categoryContent = {
           </h3>
         </Link>
       </section>
-    </MotionScrollInViewOpacity>
+    </main>
   ),
   graphic: (
-    <MotionScrollInViewOpacity className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
+    <main className="pt-12.5 pb-30 flex flex-col items-start gap-12.5 max-w-6xl mx-auto">
       <h2 className="uppercase text-2xl font-bold">GRAPHIC</h2>
       <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
         <Link href="/works/viberon" className="flex flex-col items-start gap-5">
@@ -131,7 +130,7 @@ const categoryContent = {
           </h3>
         </Link>
       </section>
-    </MotionScrollInViewOpacity>
+    </main>
   ),
 };
 
@@ -171,7 +170,7 @@ export default function WorksMain() {
           ))}
         </TabsList>
         <div className="w-full overflow-hidden">
-          <AnimatePresence mode="popLayout" custom={direction}>
+          <AnimatePresence mode="wait" custom={direction}>
             <motion.div key={selectedCategory} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition={{ duration: 0.25, ease: "easeOut" }}>
               {categoryContent[selectedCategory]}
             </motion.div>
