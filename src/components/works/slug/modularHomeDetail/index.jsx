@@ -38,19 +38,19 @@ export default function ModularHomeDetail() {
           { label: "AWARDS", value: "iF Design Award 2026" },
         ]}
       />
-      <section className="fluid gridContainer w-full bg-custom-gray min-h-100 py-25 px-12.5">
+      <section className="fluid gridContainer w-full bg-custom-gray lg:min-h-100 py-12 sm:py-20 md:py-25 md:px-12.5">
         <main className="w-full flex items-center justify-end">
           <article className="w-full max-w-170">
-            <p className="font-minion-pro text-[20px] leading-7">
+            <p className="font-minion-pro text-base sm:text-lg lg:text-[20px] leading-6 sm:leading-7">
               Home is; <br />A combination of objects and spaces. The only think that matters is the interaction of the human with the object. However, sometimes, the space is not enough for a good
               interaction, and this is where this project begins to merge those spaces...
             </p>
           </article>
         </main>
       </section>
-      <main className="w-full flex flex-col gap-18.75 py-18.75">
+      <main className="w-full flex flex-col gap-18.75 py-12.5 lg:py-18.75">
         <section className="w-full">
-          <article className="relative w-full h-191.25">
+          <article className="relative w-full aspect-1500/765">
             <Image src="/images/projects/the-modular-home-detail-1.webp" alt="The Modular Home Detail 1" fill className="object-cover w-full h-full" />
           </article>
         </section>
