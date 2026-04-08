@@ -9,6 +9,7 @@ import SoundChart from "./soundChart";
 import CommonDetailCarousel from "@/components/common/commonDetailCarousel";
 import ReactCompareImage from "react-compare-image";
 import ModeBar from "./modeBar";
+import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 
 export default function DesilightDetail() {
   const setTitle = useHeaderStore((state) => state.setTitle);
@@ -242,22 +243,27 @@ export default function DesilightDetail() {
             <ModeBar />
           </section>
         </main>
-        <main className="w-full py-18.75 grid grid-cols-2 place-content-stretch gap-18.75">
-          <article className="flex-1 max-w-132.5 w-full flex flex-col items-start gap-10">
-            <div className="relative w-full h-full">
-              <ReactCompareImage leftImage="/images/projects/desilight-detail-6-lower.webp" rightImage="/images/projects/desilight-detail-6.webp" />
-            </div>
+        <main className="w-full py-18.75 flex gap-25">
+          <article className="flex-1 w-full">
+            <ReactCompareSlider
+              className="w-full h-200"
+              itemOne={<ReactCompareSliderImage src="/images/projects/deney.png" alt="Before" style={{ width: "100%", height: "100%", objectFit: "contain" }} />}
+              itemTwo={<ReactCompareSliderImage src="/images/projects/3.png" alt="After" style={{ width: "100%", height: "100%", objectFit: "contain" }} />}
+            />
           </article>
           <CommonDetailCarousel
-            initialImage="/images/projects/desilight-detail-carousel/image-1.webp"
-            miniImageClassName="h-45 object-bottom"
-            bigImageClassName="flex-1"
-            classNames="max-w-180"
+            initialImage={{ src: "/images/projects/desilight-detail-carousel/image-2.webp", className: "object-cover object-[50%_80%]" }}
+            bigImageDivClassName="w-full h-[600px]"
+            bigImageClassName="object-cover object-[50%_40%]"
+            miniImageDivClassName="h-45"
+            miniImageClassName="object-center object-fill"
+            classNames=""
+            time={500000}
             images={[
-              "/images/projects/desilight-detail-carousel/image-1.webp",
-              "/images/projects/desilight-detail-carousel/image-2.webp",
-              "/images/projects/desilight-detail-carousel/image-3.webp",
-              "/images/projects/desilight-detail-carousel/image-4.webp",
+              { src: "/images/projects/desilight-detail-carousel/image-2.webp", className: "object-cover object-[50%_80%]" },
+              { src: "/images/projects/desilight-detail-carousel/image-1.webp", className: "object-cover object-[50%_80%]" },
+              { src: "/images/projects/desilight-detail-carousel/image-3.webp", className: "object-cover object-[50%_80%]" },
+              { src: "/images/projects/desilight-detail-carousel/image-4.webp", className: "object-contain object-[50%_50%]" },
             ]}
           />
         </main>

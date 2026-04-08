@@ -3,9 +3,7 @@ import CommonDetailCarousel from "@/components/common/commonDetailCarousel";
 import CommonHero from "@/components/common/commonHero";
 import { useHeaderStore } from "@/store/headerStore";
 import { useIntroStore } from "@/store/introStore";
-import Image from "next/image";
 import React, { useEffect } from "react";
-import ReactCompareImage from "react-compare-image";
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 
 export default function ColosseumNameDetail() {
@@ -47,11 +45,9 @@ export default function ColosseumNameDetail() {
             </p>
           </div>
           <div className="relative w-full max-w-163.75 flex-1 h-163.75">
-            <ReactCompareImage
-              aspectRatio="shorter"
-              leftImage="/images/projects/colosseum-name-detail-1.webp"
-              rightImage="/images/projects/colosseum-name-detail-2222.jpeg"
-              rightImageCss={{ objectFit: "cover", objectPosition: "center 27%" }}
+            <ReactCompareSlider
+              itemOne={<ReactCompareSliderImage src="/images/projects/colosseum-name-detail-1.webp" alt="Before" style={{ width: "100%", height: "100%" }} />}
+              itemTwo={<ReactCompareSliderImage src="/images/projects/colosseum-name-detail-2222.webp" alt="After" style={{ width: "100%", height: "100%" }} />}
             />
           </div>
         </article>
@@ -59,16 +55,16 @@ export default function ColosseumNameDetail() {
 
       <section className="w-full py-18.75 flex items-start gap-18.75">
         <CommonDetailCarousel
-          initialImage="/images/projects/riva-937-detail-carousel/image-1.webp"
+          initialImage={{ src: "/images/projects/riva-937-detail-carousel/image-1.webp", className: "" }}
           images={[
-            "/images/projects/riva-937-detail-carousel/image-1.webp",
-            "/images/projects/riva-937-detail-carousel/image-2.webp",
-            "/images/projects/riva-937-detail-carousel/image-3.webp",
-            "/images/projects/riva-937-detail-carousel/image-4.webp",
-            "/images/projects/riva-937-detail-carousel/image-5.webp",
-            "/images/projects/riva-937-detail-carousel/image-6.webp",
-            "/images/projects/riva-937-detail-carousel/image-7.webp",
-            "/images/projects/riva-937-detail-carousel/image-8.webp",
+            { src: "/images/projects/riva-937-detail-carousel/image-1.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-2.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-3.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-4.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-5.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-6.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-7.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-8.webp", className: "" },
           ]}
         />
         <article className="flex-1 max-w-125 w-full flex flex-col items-start gap-10">

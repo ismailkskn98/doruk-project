@@ -34,16 +34,20 @@ export default function RivaDetail() {
       />
       <section className="w-full py-18.75 flex items-start gap-18.75">
         <CommonDetailCarousel
-          initialImage="/images/projects/riva-937-detail-carousel/image-1.webp"
+          initialImage={{ src: "/images/projects/riva-937-detail-carousel/image-1.webp", className: "" }}
+          bigImageDivClassName="h-126.5"
+          bigImageClassName="object-fill"
+          miniImageDivClassName="h-[61.61px]"
+          miniImageClassName="object-fill"
           images={[
-            "/images/projects/riva-937-detail-carousel/image-1.webp",
-            "/images/projects/riva-937-detail-carousel/image-2.webp",
-            "/images/projects/riva-937-detail-carousel/image-3.webp",
-            "/images/projects/riva-937-detail-carousel/image-4.webp",
-            "/images/projects/riva-937-detail-carousel/image-5.webp",
-            "/images/projects/riva-937-detail-carousel/image-6.webp",
-            "/images/projects/riva-937-detail-carousel/image-7.webp",
-            "/images/projects/riva-937-detail-carousel/image-8.webp",
+            { src: "/images/projects/riva-937-detail-carousel/image-1.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-2.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-3.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-4.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-5.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-6.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-7.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel/image-8.webp", className: "" },
           ]}
         />
         <article className="flex-1 max-w-125 w-full flex flex-col items-start gap-10">
@@ -68,13 +72,16 @@ export default function RivaDetail() {
         </article>
         <CommonDetailCarousel
           time={3000}
-          initialImage="/images/projects/riva-937-detail-carousel-2/image-1.webp"
+          initialImage={{ src: "/images/projects/riva-937-detail-carousel-2/image-1.webp", className: "" }}
+          bigImageDivClassName="h-[541.69px]"
+          bigImageClassName="object-fill"
+          miniImageDivClassName="h-[105.47px]"
           images={[
-            "/images/projects/riva-937-detail-carousel-2/image-1.webp",
-            "/images/projects/riva-937-detail-carousel-2/image-2.webp",
-            "/images/projects/riva-937-detail-carousel-2/image-3.webp",
-            "/images/projects/riva-937-detail-carousel-2/image-4.webp",
-            "/images/projects/riva-937-detail-carousel-2/image-5.webp",
+            { src: "/images/projects/riva-937-detail-carousel-2/image-1.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel-2/image-2.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel-2/image-3.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel-2/image-4.webp", className: "" },
+            { src: "/images/projects/riva-937-detail-carousel-2/image-5.webp", className: "" },
           ]}
         />
       </section>
