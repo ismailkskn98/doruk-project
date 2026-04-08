@@ -9,10 +9,12 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
     <main className="w-full flex flex-col items-start">
       <MotionLeftView className="w-full py-8 lg:py-12.5 overflow-hidden">
         {video ? (
-          <section className="w-full flex items-center justify-center py-12.5 max-h-202.5">
-            <video className="block w-full max-w-202.5 h-full max-h-202.5 bg-white object-cover" autoPlay loop muted>
-              <source src={video} type="video/mp4" />
-            </video>
+          <section className="w-full flex items-center justify-center">
+            <div className="relative w-full aspect-1360/800 min-h-65 sm:min-h-80 overflow-hidden">
+              <video className="absolute inset-0 h-full w-full bg-white" autoPlay loop muted playsInline>
+                <source src={video} type="video/mp4" />
+              </video>
+            </div>
           </section>
         ) : (
           <div className="relative w-full aspect-1360/700">
