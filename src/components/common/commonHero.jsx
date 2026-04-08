@@ -7,7 +7,7 @@ import MotionRightView from "./motionRightView";
 export default function CommonHero({ video, image, alt, title, lightTitle, subtitle, description, sideInfo = [], imageClassName = "" }) {
   return (
     <main className="w-full flex flex-col items-start">
-      <MotionLeftView className="w-full py-12.5 overflow-hidden">
+      <MotionLeftView className="w-full py-8 lg:py-12.5 overflow-hidden">
         {video ? (
           <section className="w-full flex items-center justify-center py-12.5 max-h-202.5">
             <video className="block w-full max-w-202.5 h-full max-h-202.5 bg-white object-cover" autoPlay loop muted>
@@ -15,7 +15,9 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
             </video>
           </section>
         ) : (
-          <Image src={image} alt={alt} width={1360} height={700} className={cn("w-full object-cover object-[50%_42%] max-h-175", imageClassName)} />
+          <div className="relative w-full aspect-1360/700">
+            <Image src={image} alt={alt} fill className={cn("w-full h-auto object-cover object-[50%_42%]", imageClassName)} />
+          </div>
         )}
       </MotionLeftView>
       <MotionRightView className="w-full flex items-start justify-between py-12.5 gap-12 font-helvetica-neue">
