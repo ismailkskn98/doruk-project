@@ -32,7 +32,7 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
             {sideInfo.map((info, index) => (
               <div key={index} className="flex flex-col items-center gap-0 lg:gap-2.5 leading-4">
                 <span className="uppercase font-bold text-lg sm:text-xl lg:text-2xl">{info.label}</span>
-                <span className="text-base sm:text-lg lg:text-[20px] font-light text-nowrap">{info.value}</span>
+                <span className="text-sm sm:text-base lg:text-[20px] font-light text-nowrap">{info.value}</span>
               </div>
             ))}
           </article>

@@ -13,7 +13,7 @@ export default function ContactMain() {
 
   useEffect(() => {
     setLightTitle("Contact");
-    setTitle("Doruk BICER");
+    setTitle("");
     setIntroComplete(true);
   }, [setTitle, setLightTitle, setIntroComplete]);
 
