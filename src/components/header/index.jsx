@@ -13,10 +13,10 @@ export default function Header() {
   const lightTitle = useHeaderStore((state) => state.lightTitle);
 
   return (
-    <header className="relative z-40 flex items-center justify-between min-h-30 max-h-30 overflow-hidden">
+    <header className="relative z-40 flex items-center justify-between py-10 lg:py-0 lg:min-h-30 max-h-16 lg:max-h-30 overflow-hidden">
       <Link href="/" id="logo-container">
         <motion.div
-          className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[32px]"
+          className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[22px] sm:text-[28px] lg:text-[32px] -mb-1.5"
           initial={{ opacity: 0 }}
           animate={{ opacity: introComplete ? 1 : 0 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
