@@ -29,14 +29,9 @@ const categoryContent = {
       <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
         <Link href="/works/the-modular-home" className="flex flex-col items-start gap-5">
           <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
+            <Image src="/images/projects/the-modular-home.webp" alt="the-modular-home" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
             <Image
-              src="/images/projects/the-modular-home.jpg"
-              alt="the-modular-home"
-              fill
-              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-            />
-            <Image
-              src="/images/projects/the-modular-home-absolute.jpg"
+              src="/images/projects/the-modular-home-absolute.webp"
               alt="the-modular-home-absolute"
               width={150}
               height={70}
@@ -49,12 +44,7 @@ const categoryContent = {
         </Link>
         <Link href="/works/riva-937" className="flex flex-col items-start gap-5">
           <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-            <Image
-              src="/images/projects/riva-937.png"
-              alt="riva-937"
-              fill
-              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-            />
+            <Image src="/images/projects/riva-937.webp" alt="riva-937" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
           <h3 className="text-[32px] font-bold font-helvetica-neue">
             Riva 937 <span className="font-light">2024</span>
@@ -62,12 +52,7 @@ const categoryContent = {
         </Link>
         <Link href="/works/extreamity" className="flex flex-col items-start gap-5">
           <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-            <Image
-              src="/images/projects/extreamity.png"
-              alt="extreamity"
-              fill
-              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-            />
+            <Image src="/images/projects/extreamity.webp" alt="extreamity" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
           <h3 className="text-[32px] font-bold font-helvetica-neue">Extreamity</h3>
         </Link>
@@ -80,12 +65,7 @@ const categoryContent = {
       <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
         <Link href="/works/desilight" className="flex flex-col items-start gap-5">
           <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-            <Image
-              src="/images/projects/desilight-2025.png"
-              alt="desiglight-2025"
-              fill
-              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-            />
+            <Image src="/images/projects/desilight-2025.webp" alt="desiglight-2025" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
           <h3 className="text-[32px] font-bold font-helvetica-neue">
             DesiLight <span className="font-light">2025</span>
@@ -93,12 +73,7 @@ const categoryContent = {
         </Link>
         <Link href="/works/viberon" className="flex flex-col items-start gap-5">
           <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-            <Image
-              src="/images/projects/viberon-2025.png"
-              alt="viberon-2025"
-              fill
-              className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500"
-            />
+            <Image src="/images/projects/viberon-2025.webp" alt="viberon-2025" fill className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
           <h3 className="text-[32px] font-bold font-helvetica-neue">
             Viberon <span className="font-light">2025</span>
@@ -106,12 +81,7 @@ const categoryContent = {
         </Link>
         <Link href="/works/fuantei" className="flex flex-col items-start gap-5">
           <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-            <Image
-              src="/images/projects/fuantei.jpg"
-              alt="fuantei"
-              fill
-              className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500"
-            />
+            <Image src="/images/projects/fuantei.webp" alt="fuantei" fill className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
           <h3 className="text-[32px] font-bold font-helvetica-neue">
             Fuantei <span className="font-light">2020</span>
@@ -120,7 +90,7 @@ const categoryContent = {
         <Link href="/works/colosseum-name" className="flex flex-col items-start gap-5">
           <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
             <Image
-              src="/images/projects/colosseum-name.png"
+              src="/images/projects/colosseum-name.webp"
               alt="colosseum-name"
               fill
               className="object-cover object-center h-full w-full scale-160 group-hover:scale-165 transition-all duration-500 rotate-90"
@@ -139,12 +109,7 @@ const categoryContent = {
       <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
         <Link href="/works/desilight" className="flex flex-col items-start gap-5">
           <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-            <Image
-              src="/images/projects/desilight-2025.png"
-              alt="desiglight-2025"
-              fill
-              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-            />
+            <Image src="/images/projects/desilight-2025.webp" alt="desiglight-2025" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
           <h3 className="text-[32px] font-bold font-helvetica-neue">
             DesiLight <span className="font-light">2025</span>
@@ -159,12 +124,7 @@ const categoryContent = {
       <section className="grid grid-cols-2 place-content-stretch justify-items-stretch gap-13">
         <Link href="/works/viberon" className="flex flex-col items-start gap-5">
           <div className="relative h-137.5 w-137.5 overflow-hidden cursor-pointer group">
-            <Image
-              src="/images/projects/viberon-2025.png"
-              alt="viberon-2025"
-              fill
-              className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500"
-            />
+            <Image src="/images/projects/viberon-2025.webp" alt="viberon-2025" fill className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
           <h3 className="text-[32px] font-bold font-helvetica-neue">
             Viberon <span className="font-light">2025</span>
@@ -212,15 +172,7 @@ export default function WorksMain() {
         </TabsList>
         <div className="w-full overflow-hidden">
           <AnimatePresence mode="popLayout" custom={direction}>
-            <motion.div
-              key={selectedCategory}
-              custom={direction}
-              variants={slideVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.25, ease: "easeOut" }}
-            >
+            <motion.div key={selectedCategory} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition={{ duration: 0.25, ease: "easeOut" }}>
               {categoryContent[selectedCategory]}
             </motion.div>
           </AnimatePresence>

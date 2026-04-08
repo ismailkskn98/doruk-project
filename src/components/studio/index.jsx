@@ -17,7 +17,7 @@ export default function StudioMain() {
 
   return (
     <CommonHero
-      image="/images/studio.jpg"
+      image="/images/studio.webp"
       imageClassName="grayscale"
       alt="studio"
       title="Studio Doruk Bicer"

@@ -8,15 +8,8 @@ const CARD_DATA = {
   email: "doruk@dorukbicer.com",
   phone: "+39 331 342 7864",
   website: "https://www.dorukbicer.com",
-  address: {
-    street: "Via Giovanni Pastorelli 4",
-    city: "Milan",
-    stateProvince: "",
-    postalCode: "",
-    countryRegion: "Italy",
-    label: "Via Giovanni Pastorelli 4, Milan, Italy",
-  },
-  photo: "/images/doruk-bicer.jpg",
+  address: { street: "Via Giovanni Pastorelli 4", city: "Milan", stateProvince: "", postalCode: "", countryRegion: "Italy", label: "Via Giovanni Pastorelli 4, Milan, Italy" },
+  photo: "/images/doruk-bicer.webp",
 };
 
 function normalizeWebsite(url) {
@@ -66,13 +59,7 @@ async function buildVCard(data = CARD_DATA) {
 export async function GET() {
   const vCardString = await buildVCard();
 
-  return new Response(vCardString, {
-    status: 200,
-    headers: {
-      "Content-Type": "text/vcard; charset=utf-8",
-      "Content-Disposition": 'attachment; filename="doruk-bicer-contact.vcf"',
-    },
-  });
+  return new Response(vCardString, { status: 200, headers: { "Content-Type": "text/vcard; charset=utf-8", "Content-Disposition": 'attachment; filename="doruk-bicer-contact.vcf"' } });
 }
 
 export async function POST(request) {
@@ -96,19 +83,8 @@ export async function POST(request) {
       photo: body.photo || "",
     });
 
-    return new Response(vCardString, {
-      status: 200,
-      headers: {
-        "Content-Type": "text/vcard; charset=utf-8",
-        "Content-Disposition": 'attachment; filename="contact.vcf"',
-      },
-    });
+    return new Response(vCardString, { status: 200, headers: { "Content-Type": "text/vcard; charset=utf-8", "Content-Disposition": 'attachment; filename="contact.vcf"' } });
   } catch (error) {
-    return new Response(JSON.stringify({ error: "Invalid request body" }), {
-      status: 400,
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-      },
-    });
+    return new Response(JSON.stringify({ error: "Invalid request body" }), { status: 400, headers: { "Content-Type": "application/json; charset=utf-8" } });
   }
 }

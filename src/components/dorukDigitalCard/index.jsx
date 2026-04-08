@@ -9,7 +9,7 @@ const userData = {
   phone: "+39 331 342 7864",
   website: "www.dorukbicer.com",
   address: "Via Giovanni Pastorelli 4, Milan, Italy",
-  photo: "/images/doruk-bicer.jpg",
+  photo: "/images/doruk-bicer.webp",
 };
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 

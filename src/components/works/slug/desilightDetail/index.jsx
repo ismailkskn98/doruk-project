@@ -24,7 +24,7 @@ export default function DesilightDetail() {
   return (
     <main className="w-full fluid gridContainer">
       <CommonHero
-        image="/images/projects/desilight-detail-hero.png"
+        image="/images/projects/desilight-detail-hero.webp"
         imageClassName="object-center"
         alt="DesiLight"
         title="DesiLight"
@@ -43,13 +43,12 @@ export default function DesilightDetail() {
       />
       <section className="w-full py-18.75 flex items-end gap-12.5">
         <article className="relative flex-1 h-187.5 w-full">
-          <Image src="/images/projects/desilight-detail-1.png" alt="desilight-detail-1" fill className="object-cover object-center h-full w-full" />
+          <Image src="/images/projects/desilight-detail-1.webp" alt="desilight-detail-1" fill className="object-cover object-center h-full w-full" />
         </article>
         <article className="flex-1 w-full max-w-77.5 font-minion-pro text-[20px] leading-7">
           <p>
-            The issue of being disturbed by loud voices in restaurants is a common but often overlooked problem, even though it causes significant discomfort.
-            In most cases, it is inappropriate for businesses or staff to directly warn the customers. To solve this problem, a product that subtly alerts
-            customers without annoying them would be a gentle and efficient solution.
+            The issue of being disturbed by loud voices in restaurants is a common but often overlooked problem, even though it causes significant discomfort. In most cases, it is inappropriate for
+            businesses or staff to directly warn the customers. To solve this problem, a product that subtly alerts customers without annoying them would be a gentle and efficient solution.
           </p>
         </article>
       </section>
@@ -141,17 +140,17 @@ export default function DesilightDetail() {
               </span>
             </h3>
             <p className="font-minion-pro text-[20px] leading-7 max-w-79.5">
-              A collection of table lamps designed to interact with users, creating comfortable public spaces. The lights on the bottom respond to the sound
-              level of each table, allowing users to become aware of their volume.
+              A collection of table lamps designed to interact with users, creating comfortable public spaces. The lights on the bottom respond to the sound level of each table, allowing users to
+              become aware of their volume.
             </p>
           </div>
           <div className="relative w-full max-w-163.75 flex-1 h-163.75">
-            <Image src="/images/projects/desilight-detail-3.png" alt="desilight-detail-3" fill className="object-cover object-center h-full w-full" />
+            <Image src="/images/projects/desilight-detail-3.webp" alt="desilight-detail-3" fill className="object-cover object-center h-full w-full" />
           </div>
         </article>
         <article className="w-full flex items-end justify-start gap-12.5 -mt-30">
           <div className="relative w-full max-w-163.75 flex-1 h-163.75">
-            <Image src="/images/projects/desilight-detail-4.png" alt="desilight-detail-4" fill className="object-cover object-left h-full w-full" />
+            <Image src="/images/projects/desilight-detail-4.webp" alt="desilight-detail-4" fill className="object-cover object-left h-full w-full" />
           </div>
           <div className="flex flex-col items-start text-start gap-10">
             <h3 className="font-helvetica-neue text-[32px] font-bold leading-10">
@@ -160,8 +159,8 @@ export default function DesilightDetail() {
               <span className="font-light">Picky</span>
             </h3>
             <p className="font-minion-pro text-[20px] leading-7 max-w-79.5">
-              The product is made from a bead-blasted stainless steel body and a frosted satin glass diffuser, available in two different colors. While
-              providing comfortable lighting, the lights located on the bottom part interact with the user by pulsing in sync with the sound level at the table.
+              The product is made from a bead-blasted stainless steel body and a frosted satin glass diffuser, available in two different colors. While providing comfortable lighting, the lights
+              located on the bottom part interact with the user by pulsing in sync with the sound level at the table.
             </p>
           </div>
         </article>
@@ -173,12 +172,11 @@ export default function DesilightDetail() {
               <span className="font-light">Biggy</span>
             </h3>
             <p className="font-minion-pro text-[20px] leading-7 max-w-79.5">
-              Designed for better durability, the product is made from a cast polyethylene (PE) body and a frosted acrylic (PMMA) diffuser, available in three
-              different colors.
+              Designed for better durability, the product is made from a cast polyethylene (PE) body and a frosted acrylic (PMMA) diffuser, available in three different colors.
             </p>
           </div>
           <div className="relative w-full max-w-163.75 flex-1 h-163.75">
-            <Image src="/images/projects/desilight-detail-5.png" alt="desilight-detail-5" fill className="object-cover object-left h-full w-full" />
+            <Image src="/images/projects/desilight-detail-5.webp" alt="desilight-detail-5" fill className="object-cover object-left h-full w-full" />
           </div>
         </article>
 
@@ -193,23 +191,13 @@ export default function DesilightDetail() {
               <article className="flex flex-col items-start border-b border-black pb-12 p-1">
                 <h4 className="font-light font-helvetica-neue">Turn on the product & select a mode.</h4>
                 <div className="relative w-full max-w-85 h-58.5 border-r-2 border-black p-5">
-                  <Image
-                    src="/images/projects/desilight-detail-7-approach-1.png"
-                    alt="desilight-detail-7-approach-1"
-                    fill
-                    className="object-fit object-center h-full w-full"
-                  />
+                  <Image src="/images/projects/desilight-detail-7-approach-1.webp" alt="desilight-detail-7-approach-1" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
               <article className="flex flex-col items-start border-b border-black pb-12 p-1">
                 <h4 className="font-light font-helvetica-neue">Ensure the microphone on top is not covered.</h4>
                 <div className="relative w-full max-w-85 h-58.5 border-r-2 border-black p-5">
-                  <Image
-                    src="/images/projects/desilight-detail-7-approach-2.png"
-                    alt="desilight-detail-7-approach-2"
-                    fill
-                    className="object-fit object-center h-full w-full"
-                  />
+                  <Image src="/images/projects/desilight-detail-7-approach-2.webp" alt="desilight-detail-7-approach-2" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
               <section className="col-span-2 w-full">
@@ -217,20 +205,10 @@ export default function DesilightDetail() {
                   <h4 className="font-light font-helvetica-neue">The light located on the body will pulse in sync with the sound level of the conversation.</h4>
                   <div className="w-full flex items-start justify-between">
                     <div className="relative w-full max-w-85 h-58.5">
-                      <Image
-                        src="/images/projects/desilight-detail-7-approach-3.png"
-                        alt="desilight-detail-7-approach-3"
-                        fill
-                        className="object-fit object-center h-full w-full"
-                      />
+                      <Image src="/images/projects/desilight-detail-7-approach-3.webp" alt="desilight-detail-7-approach-3" fill className="object-fit object-center h-full w-full" />
                     </div>
                     <div className="relative w-full max-w-85 h-58.5">
-                      <Image
-                        src="/images/projects/desilight-detail-7-approach-4.png"
-                        alt="desilight-detail-7-approach-4"
-                        fill
-                        className="object-fit object-center h-full w-full"
-                      />
+                      <Image src="/images/projects/desilight-detail-7-approach-4.webp" alt="desilight-detail-7-approach-4" fill className="object-fit object-center h-full w-full" />
                     </div>
                   </div>
                 </article>
@@ -239,45 +217,25 @@ export default function DesilightDetail() {
               <article className="flex flex-col items-start p-1">
                 <h4 className="font-light font-helvetica-neue">When the sound level remains at extreme, the main light will blink.</h4>
                 <div className="relative w-full max-w-85 h-58.5 border-r-2 border-black">
-                  <Image
-                    src="/images/projects/desilight-detail-7-approach-5.png"
-                    alt="desilight-detail-7-approach-5"
-                    fill
-                    className="object-fit object-center h-full w-full"
-                  />
+                  <Image src="/images/projects/desilight-detail-7-approach-5.webp" alt="desilight-detail-7-approach-5" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
               <article className="flex flex-col items-start p-1">
                 <h4 className="font-light font-helvetica-neue">If the sound level does not decrease, the lights will turn off.</h4>
                 <div className="relative w-full max-w-85 h-58.5 border-r-2 border-black">
-                  <Image
-                    src="/images/projects/desilight-detail-7-approach-6.png"
-                    alt="desilight-detail-7-approach-6"
-                    fill
-                    className="object-fit object-center h-full w-full"
-                  />
+                  <Image src="/images/projects/desilight-detail-7-approach-6.webp" alt="desilight-detail-7-approach-6" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
               <article className="flex flex-col items-start p-1">
                 <h4 className="font-light font-helvetica-neue">When the sound level normalise, the lights will turn back to normal.</h4>
                 <div className="relative w-full max-w-85 h-58.5 border-r-2 border-black">
-                  <Image
-                    src="/images/projects/desilight-detail-7-approach-7.png"
-                    alt="desilight-detail-7-approach-7"
-                    fill
-                    className="object-fit object-center h-full w-full"
-                  />
+                  <Image src="/images/projects/desilight-detail-7-approach-7.webp" alt="desilight-detail-7-approach-7" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
               <article className="flex flex-col items-start p-1">
                 <h4 className="font-light font-helvetica-neue">The product need to be charged after 12 hours.</h4>
                 <div className="relative w-full max-w-85 h-58.5">
-                  <Image
-                    src="/images/projects/desilight-detail-7-approach-8.png"
-                    alt="desilight-detail-7-approach-8"
-                    fill
-                    className="object-fit object-center h-full w-full"
-                  />
+                  <Image src="/images/projects/desilight-detail-7-approach-8.webp" alt="desilight-detail-7-approach-8" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
             </main>
@@ -287,19 +245,19 @@ export default function DesilightDetail() {
         <main className="w-full py-18.75 grid grid-cols-2 place-content-stretch gap-18.75">
           <article className="flex-1 max-w-132.5 w-full flex flex-col items-start gap-10">
             <div className="relative w-full h-full">
-              <ReactCompareImage leftImage="/images/projects/desilight-detail-6-lower.png" rightImage="/images/projects/desilight-detail-6.png" />
+              <ReactCompareImage leftImage="/images/projects/desilight-detail-6-lower.webp" rightImage="/images/projects/desilight-detail-6.webp" />
             </div>
           </article>
           <CommonDetailCarousel
-            initialImage="/images/projects/desilight-detail-carousel/image-1.jpg"
+            initialImage="/images/projects/desilight-detail-carousel/image-1.webp"
             miniImageClassName="h-45 object-bottom"
             bigImageClassName="flex-1"
             classNames="max-w-180"
             images={[
-              "/images/projects/desilight-detail-carousel/image-1.jpg",
-              "/images/projects/desilight-detail-carousel/image-2.jpg",
-              "/images/projects/desilight-detail-carousel/image-3.jpg",
-              "/images/projects/desilight-detail-carousel/image-4.jpg",
+              "/images/projects/desilight-detail-carousel/image-1.webp",
+              "/images/projects/desilight-detail-carousel/image-2.webp",
+              "/images/projects/desilight-detail-carousel/image-3.webp",
+              "/images/projects/desilight-detail-carousel/image-4.webp",
             ]}
           />
         </main>

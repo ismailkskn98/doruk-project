@@ -19,7 +19,7 @@ export default function ViberonDetail() {
   return (
     <main className="w-full fluid gridContainer">
       <CommonHero
-        image="/images/projects/viberon-detail-hero.png"
+        image="/images/projects/viberon-detail-hero.webp"
         imageClassName="object-center scale-170"
         alt="Viberon"
         title="Viberon"
@@ -38,42 +38,42 @@ export default function ViberonDetail() {
       />
       <section className="w-full py-18.75 flex items-end gap-12.5">
         <article className="relative flex-1 h-187.5 w-full">
-          <Image src="/images/projects/viberon-detail-1.png" alt="viberon-detail-1" fill className="object-cover object-center h-full w-full" />
+          <Image src="/images/projects/viberon-detail-1.webp" alt="viberon-detail-1" fill className="object-cover object-center h-full w-full" />
         </article>
         <article className="flex-1 w-full max-w-77.5 font-minion-pro text-[20px] leading-7">
           <p>
-            Societal changes have generally shown a growing involvement of men in household chores, including ironing, as gender roles evolve. Surveys and
-            studies on gender equality often point to men participating more in domestic responsibilities, especially in dual-income households or among younger
-            generations. However, when we look at the market, irons are mostly designed with women in mind in terms of color and form.
+            Societal changes have generally shown a growing involvement of men in household chores, including ironing, as gender roles evolve. Surveys and studies on gender equality often point to men
+            participating more in domestic responsibilities, especially in dual-income households or among younger generations. However, when we look at the market, irons are mostly designed with
+            women in mind in terms of color and form.
           </p>
         </article>
       </section>
 
       <section className="flex items-center justify-center gap-6">
         <div className="relative w-75 h-75">
-          <Image src="/images/projects/viberon-detail-2-left.png" alt="viberon-detail-left-2" fill className="object-fit object-center h-full w-full" />
+          <Image src="/images/projects/viberon-detail-2-left.webp" alt="viberon-detail-left-2" fill className="object-fit object-center h-full w-full" />
         </div>
         <div className="relative w-100 h-100">
-          <Image src="/images/projects/viberon-detail-2-center.png" alt="viberon-detail-center-2" fill className="object-fit object-center h-full w-full" />
+          <Image src="/images/projects/viberon-detail-2-center.webp" alt="viberon-detail-center-2" fill className="object-fit object-center h-full w-full" />
         </div>
         <div className="relative w-75 h-75">
-          <Image src="/images/projects/viberon-detail-2-right.png" alt="viberon-detail-right-2" fill className="object-fit object-center h-full w-full" />
+          <Image src="/images/projects/viberon-detail-2-right.webp" alt="viberon-detail-right-2" fill className="object-fit object-center h-full w-full" />
         </div>
       </section>
 
       <section className="w-full grid grid-cols-3 place-content-stretch justify-items-stretch py-18.75 gap-12.5">
         <article className="relative col-span-2 w-full h-200">
-          <Image src="/images/projects/viberon-detail-3-final.png" alt="viberon-detail-3-final" fill className="object-cover object-left h-full w-full" />
+          <Image src="/images/projects/viberon-detail-3-final.webp" alt="viberon-detail-3-final" fill className="object-cover object-left h-full w-full" />
         </article>
         <article className="grid grid-cols-1 gap-12.5 h-full w-104">
           <div className="relative w-full h-full">
-            <Image src="/images/projects/viberon-detail-3-top.png" alt="viberon-detail-3-top" fill className="object-cover object-center" />
+            <Image src="/images/projects/viberon-detail-3-top.webp" alt="viberon-detail-3-top" fill className="object-cover object-center" />
           </div>
           <div className="relative w-full h-full">
-            <Image src="/images/projects/viberon-detail-3-center.png" alt="viberon-detail-3-center" fill className="object-cover object-center" />
+            <Image src="/images/projects/viberon-detail-3-center.webp" alt="viberon-detail-3-center" fill className="object-cover object-center" />
           </div>
           <div className="relative w-full h-full">
-            <Image src="/images/projects/viberon-detail-3-bottom.png" alt="viberon-detail-3-bottom" fill className="object-cover object-center" />
+            <Image src="/images/projects/viberon-detail-3-bottom.webp" alt="viberon-detail-3-bottom" fill className="object-cover object-center" />
           </div>
         </article>
       </section>

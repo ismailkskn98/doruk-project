@@ -19,7 +19,7 @@ export default function FuanteiDetail() {
   return (
     <main className="w-full fluid gridContainer">
       <CommonHero
-        image="/images/projects/fuantei.jpg"
+        image="/images/projects/fuantei.webp"
         alt="Fuantei"
         title="Fuantei"
         subtitle="Balanced Unbalanced Plate"
@@ -44,15 +44,15 @@ export default function FuanteiDetail() {
               Hand
             </h3>
             <p className="font-minion-pro text-[20px] leading-7 max-w-79.5">
-              The collection is inspired by traditional craftsmanship slip casting, makes each piece unique. The entire production of first series of the
-              collection made by the designer himself by hand to refine the shape and reach the ideal form.
+              The collection is inspired by traditional craftsmanship slip casting, makes each piece unique. The entire production of first series of the collection made by the designer himself by
+              hand to refine the shape and reach the ideal form.
             </p>
             <button type="button" className="p-3.75 bg-custom-gray font-helvetica-neue font-light text-[20px]">
               Watch Production Video
             </button>
           </div>
           <div className="relative w-full max-w-163.75 flex-1 h-163.75">
-            <Image src="/images/projects/fuantei-detail-1.jpg" alt="fuantei-detail-1" fill className="object-cover object-center h-full w-full" />
+            <Image src="/images/projects/fuantei-detail-1.webp" alt="fuantei-detail-1" fill className="object-cover object-center h-full w-full" />
           </div>
         </article>
       </section>
