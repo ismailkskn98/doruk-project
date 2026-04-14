@@ -18,8 +18,8 @@ export default function SideBar() {
         className="p-0 border-l-2 border-black shadow-sm 
         data-[side=right]:xl:w-[30%]! 
         data-[side=right]:xl:max-w-[30%]! 
-        data-[side=right]:min-[131.25rem]:w-[calc((100vw-1550px)/2)]! 
-        data-[side=right]:min-[131.25rem]:max-w-[calc((100vw-1550px)/2)]!"
+        data-[side=right]:min-[134rem]:w-[calc((100vw-1550px)/2)]! 
+        data-[side=right]:min-[134rem]:max-w-[calc((100vw-1550px)/2)]!"
       >
         <DialogClose asChild>
           <button className="sm:hidden absolute top-5 right-5 cursor-pointer">
