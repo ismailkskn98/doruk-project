@@ -1,24 +1,24 @@
-"use client";
-import { useHeaderStore } from "@/store/headerStore";
-import { useIntroStore } from "@/store/introStore";
-import React, { useEffect, useState } from "react";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useSearchParams } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import { AnimatePresence, motion } from "motion/react";
+'use client';
+import { useHeaderStore } from '@/store/headerStore';
+import { useIntroStore } from '@/store/introStore';
+import React, { useEffect, useState } from 'react';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import { AnimatePresence, motion } from 'motion/react';
 
 const categories = [
-  { key: "art", value: "ART" },
-  { key: "design", value: "DESIGN" },
-  { key: "architecture", value: "ARCHITECTURE" },
-  { key: "graphic", value: "GRAPHIC" },
+  { key: 'art', value: 'ART' },
+  { key: 'design', value: 'DESIGN' },
+  { key: 'architecture', value: 'ARCHITECTURE' },
+  { key: 'graphic', value: 'GRAPHIC' },
 ];
 
 const slideVariants = {
-  enter: (direction) => ({ x: direction > 0 ? "60%" : "-60%", opacity: 0 }),
+  enter: (direction) => ({ x: direction > 0 ? '60%' : '-60%', opacity: 0 }),
   center: { x: 0, opacity: 1 },
-  exit: (direction) => ({ x: direction > 0 ? "-60%" : "60%", opacity: 0 }),
+  exit: (direction) => ({ x: direction > 0 ? '-60%' : '60%', opacity: 0 }),
 };
 
 /*
@@ -46,7 +46,12 @@ const categoryContent = {
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-6 sm:gap-8 lg:gap-13">
         <Link href="/works/the-modular-home" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
           <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
-            <Image src="/images/projects/the-modular-home.webp" alt="the-modular-home" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
+            <Image
+              src="/images/projects/the-modular-home.webp"
+              alt="the-modular-home"
+              fill
+              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
             <Image
               src="/images/projects/the-modular-home-absolute.webp"
               alt="the-modular-home-absolute"
@@ -82,7 +87,12 @@ const categoryContent = {
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-6 sm:gap-8 lg:gap-13">
         <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
           <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
-            <Image src="/images/projects/desilight-2025.webp" alt="desiglight-2025" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
+            <Image
+              src="/images/projects/desilight-2025.webp"
+              alt="desiglight-2025"
+              fill
+              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
           </div>
           <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
             DesiLight <span className="font-light">2025</span>
@@ -126,7 +136,12 @@ const categoryContent = {
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-6 sm:gap-8 lg:gap-13">
         <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
           <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
-            <Image src="/images/projects/desilight-2025.webp" alt="desiglight-2025" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
+            <Image
+              src="/images/projects/desilight-2025.webp"
+              alt="desiglight-2025"
+              fill
+              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
+            />
           </div>
           <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
             DesiLight <span className="font-light">2025</span>
@@ -154,7 +169,7 @@ const categoryContent = {
 
 export default function WorksMain() {
   const searchParams = useSearchParams();
-  const category = searchParams.get("category") || "art";
+  const category = searchParams.get('category') || 'design';
   const [selectedCategory, setSelectedCategory] = useState(category);
   const [direction, setDirection] = useState(1);
   const setTitle = useHeaderStore((state) => state.setTitle);
@@ -162,8 +177,8 @@ export default function WorksMain() {
   const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
 
   useEffect(() => {
-    setLightTitle("WORKS");
-    setTitle("");
+    setLightTitle('WORKS');
+    setTitle('');
     setIntroComplete(true);
   }, [setTitle, setLightTitle, setIntroComplete]);
 
@@ -173,8 +188,8 @@ export default function WorksMain() {
     setDirection(nextIndex > prevIndex ? 1 : -1);
     setSelectedCategory(value);
     const url = new URL(window.location);
-    url.searchParams.set("category", value);
-    window.history.pushState({}, "", url);
+    url.searchParams.set('category', value);
+    window.history.pushState({}, '', url);
   };
 
   return (
@@ -189,7 +204,7 @@ export default function WorksMain() {
         </TabsList>
         <div className="w-full overflow-hidden">
           <AnimatePresence mode="wait" custom={direction}>
-            <motion.div key={selectedCategory} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition={{ duration: 0.25, ease: "easeOut" }}>
+            <motion.div key={selectedCategory} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition={{ duration: 0.25, ease: 'easeOut' }}>
               {categoryContent[selectedCategory]}
             </motion.div>
           </AnimatePresence>
