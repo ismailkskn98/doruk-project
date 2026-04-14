@@ -1,11 +1,10 @@
-"use client";
-import { useSidebarStore } from "@/store/sidebarStore";
-import React from "react";
-import SideNavbar from "./sideNavbar";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { Button } from "../ui/button";
-import { DialogClose } from "../ui/dialog";
-import { IoCloseOutline } from "react-icons/io5";
+'use client';
+import { useSidebarStore } from '@/store/sidebarStore';
+import React from 'react';
+import SideNavbar from './sideNavbar';
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from '@/components/ui/sheet';
+import { DialogClose } from '../ui/dialog';
+import { IoCloseOutline } from 'react-icons/io5';
 
 export default function SideBar() {
   const sidebarOpen = useSidebarStore((state) => state.sidebarOpen);
@@ -16,7 +15,11 @@ export default function SideBar() {
       <SheetContent
         side="right"
         showCloseButton={false}
-        className="p-0 border-l border-gray-200 shadow-sm data-[side=right]:xl:w-[30%]! data-[side=right]:xl:max-w-[30%]! data-[side=right]:min-[131.25rem]:w-[calc((100vw-1500px)/2)]! data-[side=right]:min-[131.25rem]:max-w-[calc((100vw-1500px)/2)]!"
+        className="p-0 border-l-2 border-black shadow-sm 
+        data-[side=right]:xl:w-[30%]! 
+        data-[side=right]:xl:max-w-[30%]! 
+        data-[side=right]:min-[131.25rem]:w-[calc((100vw-1580px)/2)]! 
+        data-[side=right]:min-[131.25rem]:max-w-[calc((100vw-1580px)/2)]!"
       >
         <DialogClose asChild>
           <button className="sm:hidden absolute top-5 right-5 cursor-pointer">
