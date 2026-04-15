@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { motion } from "motion/react";
-import Logo from "../Logo";
-import { useIntroStore } from "@/store/introStore";
-import SidebarOpenButton from "../common/sidebarOpenButton";
-import { useHeaderStore } from "@/store/headerStore";
-import Link from "next/link";
+import { motion } from 'motion/react';
+import Logo from '../Logo';
+import { useIntroStore } from '@/store/introStore';
+import SidebarOpenButton from '../common/sidebarOpenButton';
+import { useHeaderStore } from '@/store/headerStore';
+import Link from 'next/link';
 
 export default function Header() {
   const introComplete = useIntroStore((state) => state.introComplete);
@@ -20,23 +20,23 @@ export default function Header() {
             className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[22px] sm:text-[28px] lg:text-[32px] -mb-1.5"
             initial={{ opacity: 0 }}
             animate={{ opacity: introComplete ? 1 : 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
           >
             <Logo />
           </motion.div>
         </Link>
         <article className="flex items-center gap-2.5">
-          <p className="hidden md:block text-2xl font-bold uppercase -mb-1">
+          <p className="hidden sm:block text-xl md:text-2xl font-bold uppercase -mb-1">
             <span className="font-light">{lightTitle && `${lightTitle} `}</span>
             {title && `${title}`}
           </p>
           <SidebarOpenButton />
         </article>
       </header>
-      <p className="block md:hidden text-base sm:text-lg lg:text-2xl font-bold uppercase -mb-1">
+      {/* <p className="block md:hidden text-base sm:text-lg lg:text-2xl font-bold uppercase -mb-1">
         <span className="font-light">{lightTitle && `${lightTitle} `}</span>
         {title && `${title}`}
-      </p>
+      </p> */}
     </div>
   );
 }

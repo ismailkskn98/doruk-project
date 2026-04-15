@@ -1,23 +1,23 @@
-"use client";
-import React from "react";
-import { QRCodeCanvas } from "qrcode.react";
+'use client';
+import React from 'react';
+import { QRCodeCanvas } from 'qrcode.react';
 
 const userData = {
-  name: "DORUK",
-  surname: "BICER",
-  email: "doruk@dorukbicer.com",
-  phone: "+39 331 342 7864",
-  website: "www.dorukbicer.com",
-  address: "Via Giovanni Pastorelli 4, Milan, Italy",
-  photo: "/images/doruk-bicer.webp",
+  name: 'DORUK',
+  surname: 'BICER',
+  email: 'doruk@dorukbicer.com',
+  phone: '+39 331 342 7864',
+  website: 'www.dorukbicer.com',
+  address: 'Via Giovanni Pastorelli 4B, Milan, Italy',
+  photo: '/images/vcard-logo.png',
 };
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
 const QR_URL = `${BASE_URL}/api/vcard`;
 
 function normalizeWebsite(url) {
-  if (!url) return "";
-  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  if (!url) return '';
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
   return `https://${url}`;
 }
 

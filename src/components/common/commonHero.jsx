@@ -1,13 +1,13 @@
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import React from "react";
-import MotionLeftView from "./motionLeftView";
-import MotionRightView from "./motionRightView";
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import React from 'react';
+import MotionLeftView from './motionLeftView';
+import MotionRightView from './motionRightView';
 
-export default function CommonHero({ video, image, alt, title, lightTitle, subtitle, description, sideInfo = [], imageClassName = "" }) {
+export default function CommonHero({ video, image, alt, title, lightTitle, subtitle, description, sideInfo = [], imageClassName = '' }) {
   return (
     <main className="w-full flex flex-col items-start">
-      <MotionLeftView className="w-full py-8 lg:py-12.5 overflow-hidden">
+      <MotionLeftView className="w-full pb-8 pt-4 sm:py-8 lg:py-12.5 overflow-hidden">
         {video ? (
           <section className="w-full flex items-center justify-center">
             <div className="relative w-full aspect-1360/800 min-h-65 sm:min-h-80 overflow-hidden">
@@ -18,7 +18,7 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
           </section>
         ) : (
           <div className="relative w-full aspect-1360/700">
-            <Image src={image} alt={alt} fill className={cn("w-full h-auto object-cover object-[50%_42%]", imageClassName)} />
+            <Image src={image} alt={alt} fill className={cn('w-full h-auto object-cover object-[50%_42%]', imageClassName)} />
           </div>
         )}
       </MotionLeftView>
