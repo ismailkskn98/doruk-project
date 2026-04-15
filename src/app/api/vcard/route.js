@@ -7,7 +7,7 @@ const CARD_DATA = {
   surname: 'BICER',
   formattedName: 'DORUK BICER',
   organization: 'Studio Doruk Bicer',
-  title: 'Design Studio',
+  title: '',
   email: 'info@dorukbicer.com',
   emailLabel: 'business',
   phone: '+39 331 342 7864',
