@@ -10,7 +10,7 @@ export default function HomeHero() {
             <source src="/videos/home-hero-video-2.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="w-full h-[92px]" />
+        <div className="w-full h-[10px] sm:h-[40px] lg:h-[92px]" />
       </main>
       <Navbar />
     </section>
