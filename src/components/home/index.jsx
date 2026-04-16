@@ -54,10 +54,10 @@ export default function HomeMain() {
 
       const tl = gsap.timeline();
 
-      tl.to({}, { duration: 5 });
+      tl.to({}, { duration: 1 });
 
       // Siyah overlay kaybolsun
-      tl.to(overlay, { opacity: 0, duration: 5, ease: 'power1.out' }, 5);
+      tl.to(overlay, { opacity: 0, duration: 1, ease: 'power1.out' }, 0.35);
 
       // Proxy logo header'daki yerine gitsin
       const targetFontSize = window.innerWidth >= 1024 ? '36px' : window.innerWidth >= 640 ? '32px' : '24px';
