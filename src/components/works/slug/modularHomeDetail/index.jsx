@@ -94,7 +94,7 @@ export default function ModularHomeDetail() {
               <source src="/videos/the-modular-home-detail-video.mp4" type="video/mp4" />
             </video>
             <div className="flex flex-col items-start gap-2 xl:gap-5 min-[86.25rem]:gap-10">
-              <h3 className="text-[32px] font-helvetica-neue font-light">Kitchen</h3>
+              <h3 className="text-xl sm:text-2xl lg:text-[32px] font-helvetica-neue font-light">Kitchen</h3>
               <p className="font-minion-pro text-base sm:text-lg xl:text-[20px] sm:leading-5 xl:leading-7">
                 The kitchen module functions in two modes: fully open as a traditional kitchen, or closed for basic use. It supports users by ordering food based on health data, with
                 deliveries stored in a temperature-controlled cabinet.

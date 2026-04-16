@@ -47,7 +47,7 @@ const categoryContent = {
         <Link href="/works/the-modular-home" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image
-              src="/images/projects/the-modular-home.webp"
+              src="/images/projects/the-modular-home-crop.webp"
               alt="the-modular-home"
               fill
               className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
