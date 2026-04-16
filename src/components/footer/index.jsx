@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="flex flex-col items-start gap-2 md:gap-2.5 font-helvetica-neue font-light leading-4">
               <a href="mailto:info@dorukbicer.com">info@dorukbicer.com</a>
               <p className="">
-                Via Giovanni Pastorelli 4 <br />
+                Via Giovanni Pastorelli 4B <br />
                 Milan / Italy
               </p>
             </div>
