@@ -22,8 +22,8 @@ const slideVariants = {
 };
 
 /*
-  <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-    <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+  <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+    <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
       <Image
         src="/images/projects/desilight-2025.webp"
         alt="desilight-2025"
@@ -32,7 +32,7 @@ const slideVariants = {
       />
     </div>
 
-    <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
+    <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
       DesiLight <span className="font-light">2025</span>
     </h3>
   </Link>
@@ -41,11 +41,11 @@ const slideVariants = {
 
 const categoryContent = {
   art: (
-    <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-6 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
+    <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-5 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
       <h2 className="uppercase text-lg sm:text-xl lg:text-2xl font-bold">ART</h2>
-      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-6 sm:gap-8 lg:gap-13">
-        <Link href="/works/the-modular-home" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-          <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
+        <Link href="/works/the-modular-home" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image
               src="/images/projects/the-modular-home.webp"
               alt="the-modular-home"
@@ -60,33 +60,33 @@ const categoryContent = {
               className="absolute left-6 top-6 z-20 object-cover object-center w-33.25 h-17"
             />
           </div>
-          <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
+          <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
             The Modular Home <span className="font-light">2026</span>
           </h3>
         </Link>
-        <Link href="/works/riva-937" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-          <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+        <Link href="/works/riva-937" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image src="/images/projects/riva-937.webp" alt="riva-937" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
-          <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
+          <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
             Riva 937 <span className="font-light">2024</span>
           </h3>
         </Link>
-        <Link href="/works/extreamity" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-          <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+        <Link href="/works/extreamity" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image src="/images/projects/extreamity.webp" alt="extreamity" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
-          <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">Extreamity</h3>
+          <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">Extreamity</h3>
         </Link>
       </section>
     </main>
   ),
   design: (
-    <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-6 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
+    <main className="pt-2 sm:pt-8 xl:pt-12.5 pb-20 xl:pb-30 flex flex-col items-start gap-5 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
       <h2 className="uppercase text-lg sm:text-xl lg:text-2xl font-bold">DESIGN</h2>
-      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-6 sm:gap-8 lg:gap-13">
-        <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-          <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
+        <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image
               src="/images/projects/desilight-2025.webp"
               alt="desiglight-2025"
@@ -94,28 +94,28 @@ const categoryContent = {
               className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
             />
           </div>
-          <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
+          <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
             DesiLight <span className="font-light">2025</span>
           </h3>
         </Link>
-        <Link href="/works/viberon" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-          <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+        <Link href="/works/viberon" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image src="/images/projects/viberon-2025.webp" alt="viberon-2025" fill className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
-          <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
+          <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
             Viberon <span className="font-light">2025</span>
           </h3>
         </Link>
-        <Link href="/works/fuantei" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-          <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+        <Link href="/works/fuantei" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image src="/images/projects/fuantei.webp" alt="fuantei" fill className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
-          <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
+          <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
             Fuantei <span className="font-light">2020</span>
           </h3>
         </Link>
-        <Link href="/works/colosseum-name" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-          <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+        <Link href="/works/colosseum-name" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image
               src="/images/projects/colosseum-name.webp"
               alt="colosseum-name"
@@ -123,7 +123,7 @@ const categoryContent = {
               className="object-cover object-center h-full w-full scale-160 group-hover:scale-165 transition-all duration-500 rotate-90"
             />
           </div>
-          <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
+          <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
             Colosseum Name <span className="font-light">2021</span>
           </h3>
         </Link>
@@ -131,11 +131,11 @@ const categoryContent = {
     </main>
   ),
   architecture: (
-    <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-6 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
+    <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-5 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
       <h2 className="uppercase text-lg sm:text-xl lg:text-2xl font-bold">ARCHITECTURE</h2>
-      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-6 sm:gap-8 lg:gap-13">
-        <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-          <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
+        <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image
               src="/images/projects/desilight-2025.webp"
               alt="desiglight-2025"
@@ -143,7 +143,7 @@ const categoryContent = {
               className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
             />
           </div>
-          <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
+          <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
             DesiLight <span className="font-light">2025</span>
           </h3>
         </Link>
@@ -151,14 +151,14 @@ const categoryContent = {
     </main>
   ),
   graphic: (
-    <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-6 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
+    <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-5 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
       <h2 className="uppercase text-lg sm:text-xl lg:text-2xl font-bold">GRAPHIC</h2>
-      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-6 sm:gap-8 lg:gap-13">
-        <Link href="/works/viberon" className="flex flex-col items-start gap-2.5 lg:gap-5 w-full lg:w-137.5">
-          <div className="relative w-full aspect-square lg:w-137.5 lg:h-137.5 overflow-hidden cursor-pointer group shrink-0">
+      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
+        <Link href="/works/viberon" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image src="/images/projects/viberon-2025.webp" alt="viberon-2025" fill className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
-          <h3 className="text-lg sm:text-2xl lg:text-[32px] font-bold font-helvetica-neue">
+          <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
             Viberon <span className="font-light">2025</span>
           </h3>
         </Link>
@@ -195,9 +195,9 @@ export default function WorksMain() {
   return (
     <main className="w-full overflow-hidden">
       <Tabs value={selectedCategory} onValueChange={handleTabChange} className="w-full">
-        <TabsList variant="line" className="w-full flex justify-between pb-8 pt-11.5 lg:py-11.5 gap-2.5 px-0">
+        <TabsList variant="line" className="w-full flex justify-between pb-8 pt-10 sm:pt-11.5 lg:py-11.5 gap-2.5 px-0">
           {categories.map((cat) => (
-            <TabsTrigger value={cat.key} key={cat.key} className="font-bold text-lg sm:text-xl lg:text-2xl max-w-fit uppercase px-0">
+            <TabsTrigger value={cat.key} key={cat.key} className="font-bold text-base sm:text-xl lg:text-2xl max-w-fit uppercase px-0">
               {cat.value}
             </TabsTrigger>
           ))}

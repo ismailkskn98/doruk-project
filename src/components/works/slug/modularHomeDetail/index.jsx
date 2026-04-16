@@ -69,7 +69,7 @@ export default function ModularHomeDetail() {
           </article>
         </section>
         <section className="w-full flex flex-col items-start gap-12.5 sm:gap-15 lg:gap-18.75">
-          <article className="relative w-full max-w-222.25 h-125">
+          <article className="relative w-full max-w-222.25 max-h-125 aspect-889/500">
             <Image src="/images/projects/the-modular-home-detail-3.webp" alt="The Modular Home Detail 3" fill className="object-cover w-full h-full" />
           </article>
           <article className="flex flex-col self-end items-start gap-3 max-w-213.5 font-minion-pro text-base sm:text-lg lg:text-[20px] leading-7">
