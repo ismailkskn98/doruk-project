@@ -19,7 +19,7 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
           </section>
         ) : (
           <div className="relative w-full aspect-1360/800">
-            <Image src={image} alt={alt} fill className={cn('w-full h-auto object-cover object-[50%_42%]', imageClassName)} />
+            <Image src={image} alt={alt} fill className={cn('w-full h-auto object-cover object-[50%_42%]', imageClassName)} sizes="100vw" quality={100} unoptimized />
           </div>
         )}
       </MotionLeftView>
