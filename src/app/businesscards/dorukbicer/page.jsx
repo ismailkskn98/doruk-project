@@ -2,7 +2,7 @@ import DorukDigitalCard from '@/components/dorukDigitalCard';
 import React from 'react';
 
 export const metadata = {
-  title: 'Digital Card - Studio Doruk Bicer',
+  title: 'Digital Card - Studio Bicer',
   description: 'Doruk Bicer - Digital Business Card',
 };
 

@@ -6,7 +6,7 @@ const CARD_DATA = {
   name: 'DORUK',
   surname: 'BICER',
   formattedName: 'DORUK BICER',
-  organization: 'Studio Doruk Bicer',
+  organization: 'Studio Bicer',
   title: '',
   email: 'info@dorukbicer.com',
   emailLabel: 'business',

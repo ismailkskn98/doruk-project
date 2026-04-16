@@ -7,7 +7,7 @@ export default function Footer() {
         <section className="w-full h-full flex sm:flex-row flex-col items-start sm:justify-between gap-4 sm:gap-5">
           <article className="w-fit h-full flex flex-col items-start justify-between gap-4 md:gap-0 text-sm sm:text-base">
             <h2 className="text-[22px] sm:text-[28px] lg:text-[32px] font-bold font-forma-djr-display uppercase text-nowrap">
-              <span className="font-light">Studıo</span> Doruk Bıcer
+              <span className="font-light">Studıo</span> Bıcer
             </h2>
             <div className="flex flex-col items-start gap-2 md:gap-2.5 font-helvetica-neue font-light leading-4">
               <a href="mailto:info@dorukbicer.com">info@dorukbicer.com</a>
@@ -35,7 +35,7 @@ export default function Footer() {
       <div className="gridContainer">
         <main className="w-full py-3 sm:py-2.5 flex items-center justify-center gap-0 min-h-10 font-light font-helvetica-neue text-[9.5px] min-[390px]:text-[10px] sm:text-xs md:text-sm lg:text-base text-nowrap">
           <p>
-            © Studio <span className="font-bold font-forma-djr-display">Doruk Bicer</span> 2026 - All Rights Reserved
+            © Studio <span className="font-bold font-forma-djr-display">Bicer</span> 2026 - All Rights Reserved
           </p>
           <div className="flex items-center">
             <span className="px-0.75 min-[390px]:px-1.5 sm:px-2.5"> | </span>

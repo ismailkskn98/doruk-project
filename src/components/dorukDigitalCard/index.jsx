@@ -27,7 +27,7 @@ export default function DorukDigitalCard() {
       <article className="flex flex-col items-center text-center gap-15">
         <div className="flex flex-col gap-1">
           <h1 className="text-[32px] font-bold font-forma-djr-display tracking-tight text-nowrap">
-            <span className="font-light">STUDIO</span> DORUK BICER
+            <span className="font-light">STUDIO</span> BICER
           </h1>
         </div>
 

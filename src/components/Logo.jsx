@@ -1,10 +1,11 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export default function Logo() {
   return (
     <>
-      <div className={cn("font-light")}>STUDIO</div>
-      <div className={cn("text-nowrap")}>DORUK BICER</div>
+      <div className={cn('text-nowrap')}>
+        <span className="font-light">STUDIO</span> BICER
+      </div>
     </>
   );
 }

@@ -1,8 +1,8 @@
-"use client";
-import { useHeaderStore } from "@/store/headerStore";
-import { useIntroStore } from "@/store/introStore";
-import React, { useEffect } from "react";
-import CommonHero from "../common/commonHero";
+'use client';
+import { useHeaderStore } from '@/store/headerStore';
+import { useIntroStore } from '@/store/introStore';
+import React, { useEffect } from 'react';
+import CommonHero from '../common/commonHero';
 
 export default function StudioMain() {
   const setTitle = useHeaderStore((state) => state.setTitle);
@@ -10,8 +10,8 @@ export default function StudioMain() {
   const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
 
   useEffect(() => {
-    setLightTitle("About");
-    setTitle("STUDIO");
+    setLightTitle('About');
+    setTitle('STUDIO');
     setIntroComplete(true);
   }, [setTitle, setLightTitle, setIntroComplete]);
 
@@ -20,7 +20,7 @@ export default function StudioMain() {
       image="/images/studio.webp"
       imageClassName="grayscale"
       alt="studio"
-      title="Studio Doruk Bicer"
+      title="Studio Bicer"
       subtitle="Design Studio"
       description="Doruk Biçer, born and raised in Istanbul. I was first impressed by the idea of shaping
                 material during my childhood, which I spent in my grandfather’s carpentry shop. My college years
@@ -34,9 +34,9 @@ export default function StudioMain() {
                 dive more into a side of the field that lies between collectible and industrial design, based on my selfreflection
                 and the interests."
       sideInfo={[
-        { label: "date", value: "2024" },
-        { label: "DIMENSION", value: "Milan, Italy" },
-        { label: "PROJECT COUNT", value: "23" },
+        { label: 'date', value: '2024' },
+        { label: 'DIMENSION', value: 'Milan, Italy' },
+        { label: 'PROJECT COUNT', value: '23' },
       ]}
     />
   );
