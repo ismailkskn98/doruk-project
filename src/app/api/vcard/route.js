@@ -22,7 +22,7 @@ const CARD_DATA = {
     label: 'Via Giovanni Pastorelli 4B 20143 Milan, Italy',
     customLabel: 'work',
   },
-  photo: '/images/vcard-logo.png',
+  photo: '/images/vcard-logo-update.png',
 };
 
 function normalizeWebsite(url) {

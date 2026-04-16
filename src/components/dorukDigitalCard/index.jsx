@@ -9,7 +9,7 @@ const userData = {
   phone: '+39 331 342 7864',
   website: 'www.dorukbicer.com',
   address: 'Via Giovanni Pastorelli 4B, Milan, Italy',
-  photo: '/images/vcard-logo.png',
+  photo: '/images/vcard-logo-update.png',
 };
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
