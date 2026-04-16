@@ -177,7 +177,7 @@ export default function DesilightDetail() {
           </article>
         </main>
 
-        <article className="w-full flex md:flex-row flex-col-reverse items-end md:items-start gap-6 md:gap-12.5 mt-12 xl:mt-25">
+        <article className="w-full flex md:flex-row flex-col-reverse items-end md:items-start md:justify-end gap-6 md:gap-12.5 mt-12 xl:mt-25">
           <div className="w-full max-w-[660px] flex-1 flex flex-col items-end text-end gap-2.5 sm:gap-4 lg:gap-6 xl:gap-10">
             <h3 className="font-helvetica-neue text-2xl lg:text-3xl xl:text-[32px] font-bold xl:leading-10">
               DesiLight
@@ -258,21 +258,24 @@ export default function DesilightDetail() {
             <ModeBar />
           </section>
         </main>
-        <main className="w-full py-6 lg:py-18.75 flex gap-25">
-          <article className="flex-1 w-full">
-            <ReactCompareSlider
-              className="w-full h-200"
-              itemOne={<ReactCompareSliderImage src="/images/projects/deney.png" alt="Before" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />}
-              itemTwo={<ReactCompareSliderImage src="/images/projects/3.png" alt="After" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />}
-            />
+        <main className="w-full py-6 lg:py-18.75 flex flex-col md:flex-row gap-12.5 lg:gap-25">
+          <article className="flex-1 min-w-0 shrink">
+            <div className="relative w-full max-w-[530px] max-h-[350px] sm:max-h-[800px] aspect-[530/800]">
+              <ReactCompareSlider
+                className="h-full w-full"
+                itemOne={<ReactCompareSliderImage src="/images/projects/deney.png" alt="Before" style={{ objectFit: 'contain' }} />}
+                itemTwo={<ReactCompareSliderImage src="/images/projects/3.png" alt="After" style={{ objectFit: 'contain' }} />}
+              />
+            </div>
           </article>
+
           <CommonDetailCarousel
+            classNames="flex-1 min-w-0"
             initialImage={{ src: '/images/projects/desilight-detail-carousel/image-2.webp', className: 'object-cover object-[50%_80%]' }}
-            bigImageDivClassName="w-full h-[600px]"
+            bigImageDivClassName="w-full h-full flex-1 max-h-full aspect-[720/600]"
             bigImageClassName="object-cover object-[50%_40%]"
-            miniImageDivClassName="h-45"
-            miniImageClassName="object-center object-fill"
-            classNames=""
+            miniImageDivClassName="max-h-45 aspect-[165/180]"
+            miniImageClassName="object-center object-cover"
             images={[
               { src: '/images/projects/desilight-detail-carousel/image-2.webp', className: 'object-cover object-[50%_80%]' },
               { src: '/images/projects/desilight-detail-carousel/image-1.webp', className: 'object-cover object-[50%_80%]' },

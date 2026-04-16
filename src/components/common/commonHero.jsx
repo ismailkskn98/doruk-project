@@ -33,7 +33,7 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
           </div>
           <article className="w-full flex md:hidden items-center justify-between gap-6 sm:gap-8 lg:gap-12.5">
             {sideInfo.map((info, index) => (
-              <div key={index} className="flex flex-col items-center gap-0  leading-4">
+              <div key={index} className="flex flex-col items-center justify-center gap-0 leading-4">
                 <span className="uppercase font-bold text-base sm:text-lg md:text-xl xl:text-2xl">{info.label}</span>
                 <span className="text-sm sm:text-base lg:text-[20px] font-light text-nowrap">{info.value}</span>
               </div>
