@@ -260,7 +260,7 @@ export default function DesilightDetail() {
         </main>
         <main className="w-full py-6 lg:py-18.75 flex flex-col md:flex-row gap-12.5 lg:gap-25">
           <article className="flex-1 min-w-0 shrink">
-            <div className="relative w-full max-w-[530px] max-h-[350px] sm:max-h-[800px] aspect-[530/800]">
+            <div className="relative w-full max-w-[530px] max-h-[350px] sm:max-h-[800px] aspect-530/800">
               <ReactCompareSlider
                 className="h-full w-full"
                 itemOne={<ReactCompareSliderImage src="/images/projects/deney.png" alt="Before" style={{ objectFit: 'contain' }} />}
