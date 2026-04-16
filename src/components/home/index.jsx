@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useRef, useEffect, useLayoutEffect } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import HomeHero from "./homeHero";
-import Logo from "../Logo";
-import { useIntroStore } from "@/store/introStore";
-import { useHeaderStore } from "@/store/headerStore";
+import { useRef, useEffect, useLayoutEffect } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import HomeHero from './homeHero';
+import Logo from '../Logo';
+import { useIntroStore } from '@/store/introStore';
+import { useHeaderStore } from '@/store/headerStore';
 
 export default function HomeMain() {
   const containerRef = useRef(null);
@@ -18,11 +18,11 @@ export default function HomeMain() {
   const setTitle = useHeaderStore((state) => state.setTitle);
 
   useLayoutEffect(() => {
-    setLightTitle("");
-    setTitle("");
+    setLightTitle('');
+    setTitle('');
 
     // sessionStorage kontrol et: intro daha önce bu tab'da gösterildi mi?
-    const alreadySeen = sessionStorage.getItem("introSeen") === "true";
+    const alreadySeen = sessionStorage.getItem('introSeen') === 'true';
     if (alreadySeen) {
       setIntroComplete();
     }
@@ -32,12 +32,12 @@ export default function HomeMain() {
     () => {
       if (introComplete) return;
       const introLogo = introLogoRef.current;
-      const logoContainer = document.getElementById("logo-container");
+      const logoContainer = document.getElementById('logo-container');
       const overlay = overlayRef.current;
 
       if (!introLogo || !logoContainer || !overlay) return;
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
 
       const scale = 1;
 
@@ -50,22 +50,22 @@ export default function HomeMain() {
       const startLeft = window.innerWidth / 2 - (logoBox.width * scale) / 2;
       const startTop = window.innerHeight / 2 - (logoBox.height * scale) / 2;
 
-      gsap.set(introLogo, { opacity: 1, color: "#fff", scale, left: startLeft, top: startTop, transformOrigin: "top left" });
+      gsap.set(introLogo, { opacity: 1, color: '#fff', scale, left: startLeft, top: startTop, transformOrigin: 'top left' });
 
       const tl = gsap.timeline();
 
-      tl.to({}, { duration: 1 });
+      tl.to({}, { duration: 5 });
 
       // Siyah overlay kaybolsun
-      tl.to(overlay, { opacity: 0, duration: 1, ease: "power1.out" }, 0.35);
+      tl.to(overlay, { opacity: 0, duration: 5, ease: 'power1.out' }, 5);
 
       // Proxy logo header'daki yerine gitsin
-      const targetFontSize = window.innerWidth >= 1024 ? "32px" : window.innerWidth >= 640 ? "28px" : "22px";
-      tl.to(introLogo, { left: containerBox.left, top: containerBox.top, scale: 1, color: "#000", duration: 1, ease: "power1.out", fontSize: targetFontSize }, 0.55);
+      const targetFontSize = window.innerWidth >= 1024 ? '36px' : window.innerWidth >= 640 ? '32px' : '24px';
+      tl.to(introLogo, { left: containerBox.left, top: containerBox.top, scale: 1, color: '#000', duration: 1, ease: 'power1.out', fontSize: targetFontSize }, 0.55);
 
       tl.call(() => {
-        document.documentElement.style.overflow = "";
-        document.body.style.overflow = "";
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
         setIntroComplete();
         gsap.to(introLogo, { opacity: 0, duration: 0.25 });
       });
