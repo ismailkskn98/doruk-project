@@ -10,7 +10,7 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
       <MotionLeftView className="fluid gridContainer w-full overflow-hidden">
         {video ? (
           <section className="w-full flex items-center justify-center">
-            <div className="relative w-full aspect-1360/800 min-h-65 sm:min-h-80 overflow-hidden">
+            <div className="relative w-full aspect-1360/800 min-h-[250px] sm:min-h-80 max-h-[800px] overflow-hidden">
               <video className="absolute inset-0 h-full w-full bg-white" autoPlay loop muted playsInline>
                 <source src={video} type="video/mp4" />
               </video>
