@@ -13,11 +13,11 @@ export default function Header() {
   const lightTitle = useHeaderStore((state) => state.lightTitle);
 
   return (
-    <div className="flex flex-col">
-      <header className="relative z-40 flex items-center justify-between py-[45px] overflow-hidden">
+    <div className="gridContainer">
+      <header className="relative z-40 flex items-center justify-between py-[clamp(28px,4vw,45px)] overflow-hidden">
         <Link href="/" id="logo-container">
           <motion.div
-            className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[24px] sm:text-[20px] lg:text-[36px] -mb-1.5"
+            className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[clamp(24px,4vw,36px)] -mb-1.5"
             initial={{ opacity: 0 }}
             animate={{ opacity: introComplete ? 1 : 0 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
@@ -26,7 +26,7 @@ export default function Header() {
           </motion.div>
         </Link>
         <article className="flex items-center gap-2.5">
-          <p className="hidden sm:block text-xl md:text-2xl font-bold uppercase -mb-1">
+          <p className="hidden sm:block text-[clamp(20px,4vw,24px)] font-bold uppercase -mb-1">
             <span className="font-light">{lightTitle && `${lightTitle} `}</span>
             {title && `${title}`}
           </p>

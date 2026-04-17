@@ -6,9 +6,12 @@ export default function Footer() {
       <main className="w-full fluid gridContainer bg-custom-gray py-9 md:py-12.5 min-h-57 sm:min-h-60 md:min-h-75">
         <section className="w-full h-full flex sm:flex-row flex-col items-start sm:justify-between gap-4 sm:gap-5">
           <article className="w-fit h-full flex flex-col items-start justify-between gap-4 md:gap-0 text-sm sm:text-base">
-            <h2 className="text-[22px] sm:text-[28px] lg:text-[32px] font-bold font-forma-djr-display uppercase text-nowrap">
+            <h2 className="text-[clamp(24px,4vw,36px)] font-bold font-forma-djr-display uppercase text-nowrap">
               <span className="font-light">Studıo</span> Bıcer
             </h2>
+            <div>
+              <span className="text-black text-base">|</span>
+            </div>
             <div className="flex flex-col items-start gap-2 md:gap-2.5 font-helvetica-neue font-light leading-4">
               <a href="mailto:info@dorukbicer.com">info@dorukbicer.com</a>
               <p className="">
@@ -33,14 +36,14 @@ export default function Footer() {
         </section>
       </main>
       <div className="gridContainer">
-        <main className="w-full py-3 sm:py-2.5 flex items-center justify-center gap-0 min-h-10 font-light font-helvetica-neue text-[9.5px] min-[390px]:text-[10px] sm:text-xs md:text-sm lg:text-base text-nowrap">
+        <main className="w-full py-3 sm:py-2.5 flex items-center justify-center gap-0 min-h-10 font-light font-helvetica-neue text-[7px] min-[25rem]:text-[8.5px] sm:text-xs md:text-sm lg:text-base text-nowrap">
           <p>
-            © Studio <span className="font-bold font-forma-djr-display">Bicer</span> 2026 - All Rights Reserved
+            © <span className="uppercase">Studio</span> <span className="font-bold font-forma-djr-display uppercase">Bicer</span> 2026 - All Rights Reserved P. Iva 14311630967
           </p>
           <div className="flex items-center">
-            <span className="px-0.75 min-[390px]:px-1.5 sm:px-2.5"> | </span>
+            <span className="px-0.75 min-[25rem]:px-1.5 sm:px-2.5"> | </span>
             <p>Privacy Policy</p>
-            <span className="px-0.75 min-[390px]:px-1.5 sm:px-2.5"> | </span>
+            <span className="px-0.75 min-[25rem]:px-1.5 sm:px-2.5"> | </span>
             <p>Legal Notes</p>
           </div>
         </main>

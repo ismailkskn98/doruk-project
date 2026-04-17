@@ -22,28 +22,28 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
           </div>
         )}
       </MotionLeftView>
-      <MotionRightView className="w-full flex items-start justify-between py-6 lg:py-12.5 gap-4 sm:gap-8 lg:gap-12 font-helvetica-neue">
-        <article className="flex flex-col items-start gap-6 sm:gap-8 lg:gap-12.5">
-          <div className="flex flex-col items-start gap-0 lg:gap-2.5">
-            <h2 className="font-bold text-xl sm:text-2xl lg:text-[32px] leading-5 sm:leading-6 md:leading-7 text-nowrap">
-              {title} {lightTitle && <span className="font-light">{lightTitle}</span>}
+      <MotionRightView className="w-full flex items-start justify-between gap-[clamp(14px,4vw,50px)] font-helvetica-neue py-[clamp(28px,4vw,50px)]">
+        <article className="flex flex-col items-start gap-[clamp(14px,4vw,50px)]">
+          <div className="flex flex-col items-start gap-0 lg:gap-2.5 uppercase">
+            <h2 className="font-bold text-2xl md:text-[28px] lg:text-[32px] leading-5 sm:leading-6 md:leading-7 text-nowrap">
+              {lightTitle && <span className="font-light">{lightTitle}</span>} {title}
             </h2>
             <p className="font-light text-lg sm:text-xl lg:text-2xl leading-7 text-nowrap">{subtitle}</p>
           </div>
-          <article className="w-full flex md:hidden items-center justify-between gap-6 sm:gap-8 lg:gap-12.5">
+          <article className="w-full flex md:hidden items-center justify-between gap-[clamp(14px,4vw,50px)]">
             {sideInfo.map((info, index) => (
               <div key={index} className="flex flex-col items-center justify-center gap-0 leading-4">
-                <span className="uppercase font-bold text-base sm:text-lg md:text-xl xl:text-2xl">{info.label}</span>
-                <span className="text-sm sm:text-base lg:text-[20px] font-light text-nowrap">{info.value}</span>
+                <span className="uppercase font-bold text-lg sm:text-xl lg:text-2xl text-nowrap">{info.label}</span>
+                <span className="text-base sm:text-lg lg:text-[20px] font-light text-nowrap">{info.value}</span>
               </div>
             ))}
           </article>
-          <p className="max-w-175 text-base sm:text-lg lg:text-[20px] font-minion-pro leading-6 md:leading-7">{description}</p>
+          <p className="max-w-175 text-base sm:text-lg lg:text-[20px] font-minion-pro tracking-[-0.015em] leading-6 lg:leading-5.7">{description}</p>
         </article>
-        <article className="hidden md:flex flex-col items-end gap-4 sm:gap-8 lg:gap-12.5">
+        <article className="hidden md:flex flex-col items-end gap-[clamp(14px,4vw,50px)]">
           {sideInfo.map((info, index) => (
             <div key={index} className="flex flex-col items-end gap-0  leading-4 text-nowrap text-right">
-              <span className="uppercase font-bold text-base sm:text-lg md:text-xl xl:text-2xl">{info.label}</span>
+              <span className="uppercase font-bold text-lg sm:text-xl lg:text-2xl text-nowrap">{info.label}</span>
               <span className="text-base sm:text-lg lg:text-[20px] font-light text-nowrap">{info.value}</span>
             </div>
           ))}

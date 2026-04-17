@@ -60,7 +60,7 @@ export default function HomeMain() {
       tl.to(overlay, { opacity: 0, duration: 1, ease: 'power1.out' }, 0.35);
 
       // Proxy logo header'daki yerine gitsin
-      const targetFontSize = window.innerWidth >= 1024 ? '36px' : window.innerWidth >= 640 ? '32px' : '24px';
+      const targetFontSize = window.innerWidth >= 1024 ? '36px' : window.innerWidth >= 640 ? '28px' : '24px';
       tl.to(introLogo, { left: containerBox.left, top: containerBox.top, scale: 1, color: '#000', duration: 1, ease: 'power1.out', fontSize: targetFontSize }, 0.55);
 
       tl.call(() => {
