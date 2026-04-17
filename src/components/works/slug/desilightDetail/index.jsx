@@ -86,7 +86,7 @@ export default function DesilightDetail() {
       </section>
 
       <section className="w-full grid grid-cols-1 sm:grid-cols-2 min-[56.25rem]:grid-cols-3 gap-[clamp(24px,4vw,100px)] py-6 sm:py-12.5 lg:py-18.5 xl:py-25">
-        <article className="max-h-[250px] sm:max-h-auto bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
+        <article className="max-h-[250px] sm:max-h-max bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
           <p className="font-helvetica-neue font-light text-xs lg:text-sm xl:text-base leading-[1.2] text-black text-center w-full max-w-11/12">Average Sound Level In Restaurant Types</p>
           <SoundChart
             data={[
@@ -99,7 +99,7 @@ export default function DesilightDetail() {
             domain={[30, 85]}
           />
         </article>
-        <article className="max-h-[250px] sm:max-h-auto bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
+        <article className="max-h-[250px] sm:max-h-max sm:max-h-auto bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
           <p className="font-helvetica-neue font-light text-xs lg:text-sm xl:text-base leading-[1.2] text-black text-center w-full max-w-11/12">Average Sound Level In Restaurant Types</p>
           <SoundChart
             data={[
@@ -112,7 +112,7 @@ export default function DesilightDetail() {
             yTickFormatter={(value) => `${value}dB`}
           />
         </article>
-        <article className="max-h-[250px] sm:max-h-auto mx-auto sm:w-1/2 min-[56.25rem]:w-full sm:col-span-2 min-[56.25rem]:col-span-1 bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
+        <article className="max-h-[250px] sm:max-h-max sm:max-h-auto mx-auto sm:w-1/2 min-[56.25rem]:w-full sm:col-span-2 min-[56.25rem]:col-span-1 bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
           <p className="font-helvetica-neue font-light text-xs lg:text-sm xl:text-base leading-[1.2] text-black text-center w-full max-w-11/12">Average Timespan In Restaurant Types</p>
           <SoundChart
             data={[
