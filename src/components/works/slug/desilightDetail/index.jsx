@@ -71,14 +71,14 @@ export default function DesilightDetail() {
               <span className="font-light"> Loud Voices In Public Spaces</span>
             </h2>
           </article>
-          <article className="bg-custom-gray w-full flex-1 flex items-center justify-center gap-4.5 py-2.5 px-12">
-            <div className="flex flex-col items-center">
-              <span className="font-extralight text-5xl lg:text-7xl 2xl:text-[96px] leading-20">%10</span>
+          <article className="bg-custom-gray w-full flex-1 flex items-center justify-center gap-4.5 pt-3.5 pb-2.5 px-12">
+            <div className="flex flex-col items-center aspect-257/147">
+              <span className="font-extralight text-5xl lg:text-7xl 2xl:text-[96px]">%10</span>
               <span className="font-helvetica-neue text-lg lg:text-2xl 2xl:text-[32px] font-light text-nowrap">Increas in dB</span>
             </div>
             <span className="text-5xl lg:text-7xl 2xl:text-[128px] font-extralight -mt-4">=</span>
-            <div className="flex flex-col items-center">
-              <span className="font-extralight text-5xl lg:text-7xl 2xl:text-[96px] leading-20">%28</span>
+            <div className="flex flex-col items-center aspect-257/147">
+              <span className="font-extralight text-5xl lg:text-7xl 2xl:text-[96px]">%28</span>
               <span className="font-helvetica-neue text-lg lg:text-2xl 2xl:text-[32px] font-light text-nowrap">Increase in Anxiety</span>
             </div>
           </article>
