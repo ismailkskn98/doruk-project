@@ -2,6 +2,7 @@
 import { useHeaderStore } from '@/store/headerStore';
 import { useIntroStore } from '@/store/introStore';
 import React, { useEffect } from 'react';
+import AboutTabsNavbar from '../common/aboutTabsNavbar';
 import MotionLeftView from '../common/motionLeftView';
 import MotionRightView from '../common/motionRightView';
 import Image from 'next/image';
@@ -19,6 +20,7 @@ export default function DorukBicerMain() {
 
   return (
     <main className="gridContainer min-[93.75rem]:block w-full min-[93.75rem]:px-12.5 min-[93.75rem]:fluid">
+      <AboutTabsNavbar />
       <MotionLeftView className="w-full flex flex-col md:flex-row md:items-end md:justify-between gap-[clamp(14px,4vw,50px)] overflow-hidden">
         <div className="order-2 md:order-1 w-full flex-1 flex flex-col items-start gap-0 lg:gap-2 uppercase">
           <h2 className="font-bold text-2xl md:text-[28px] lg:text-[32px] leading-5 sm:leading-6 md:leading-7 text-nowrap">Doruk Bicer</h2>
