@@ -54,7 +54,7 @@ export default function DesilightDetail() {
         </article>
       </section>
 
-      <section className="w-full py-6 sm:py-12.5 lg:py-18.5 xl:py-25 flex items-center">
+      <section className="w-full  flex items-center">
         <main className="w-full flex flex-col md:flex-row items-start md:items-center gap-3.5 sm:gap-5 md:gap-10.5">
           <article className="xl:max-w-125 w-full flex-1 font-helvetica-neue leading-11">
             <h2 className="font-bold text-lg sm:text-xl lg:text-3xl 2xl:text-[40px] hidden md:block">
