@@ -6,7 +6,7 @@ export default function HomeHero() {
     <section className="w-full">
       <main className="w-full flex flex-col">
         <div className="relative w-full overflow-hidden">
-          <video className="w-full h-full min-[93.75rem]:max-h-[800px]" autoPlay loop muted playsInline>
+          <video className="w-full h-full lg:max-h-[800px]" autoPlay loop muted playsInline>
             <source src="/videos/home-hero-video-2.mp4" type="video/mp4" />
           </video>
         </div>
