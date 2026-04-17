@@ -22,8 +22,8 @@ export default function ColosseumNameDetail() {
       <CommonHero
         image="/images/projects/colosseum-detail-hero.webp"
         imageClassName="object-center scale-170"
-        alt="Colosseum Name"
-        title="Colosseum Name"
+        alt="Colosseum"
+        title="Colosseum"
         subtitle="Motorised Mop Bucket"
         description="Focusing on enhancing the moping experience, a mop bucket is designed with a spinning mechanism that works with gentle pressure. The Colosseum considers the mop as a stylish and practical cleaning tool."
         sideInfo={[

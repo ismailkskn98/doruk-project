@@ -36,7 +36,7 @@ export default function ViberonDetail() {
           { label: 'MATERIAL', value: 'Plastic + Metal' },
         ]}
       />
-      <section className="w-full gap-6 lg:gap-12.5 py-6 lg:py-18.75 flex flex-col lg:flex-row items-start lg:items-end">
+      <section className="w-full gap-6 lg:gap-12.5 py-[clamp(20px,4vw,75px)] flex flex-col lg:flex-row items-start lg:items-end">
         <article className="relative flex-1 aspect-1000/750 w-full">
           <Image src="/images/projects/viberon-detail-1.webp" alt="viberon-detail-1" fill className="object-cover object-center h-full w-full" />
         </article>
@@ -49,7 +49,7 @@ export default function ViberonDetail() {
         </article>
       </section>
 
-      <section className="flex items-center justify-center gap-6 py-6 lg:py-0">
+      <section className="flex items-center justify-center gap-6 py-[clamp(14px,4vw,50px)]">
         <div className="relative w-full max-w-75 aspect-300/300">
           <Image src="/images/projects/viberon-detail-2-left.webp" alt="viberon-detail-left-2" fill className="object-fit object-center h-full w-full" />
         </div>
@@ -61,8 +61,8 @@ export default function ViberonDetail() {
         </div>
       </section>
 
-      <section className="w-full grid grid-cols-3 place-content-stretch justify-items-stretch pt-6 pb-12.5 lg:py-18.75 gap-2.5 sm:gap-6 lg:gap-12.5">
-        <article className="relative col-span-2 w-full h-full max-w-[893px] aspect-893/893">
+      <section className="w-full grid grid-cols-3 place-content-stretch justify-items-stretch py-[clamp(20px,4vw,75px)] gap-2.5 sm:gap-6 lg:gap-12.5">
+        <article className="relative col-span-2 w-full h-full aspect-893/893">
           <Image
             src="/images/projects/viberon-detail-3-final.png"
             alt="viberon-detail-3-final"

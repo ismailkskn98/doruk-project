@@ -27,6 +27,7 @@ export default function StudioMain() {
         alt="studio"
         title="Bicer"
         lightTitle="Studio"
+        titleLightReverse={true}
         subtitle="Design Studio"
         description="Doruk Biçer, born and raised in Istanbul. I was first impressed by the idea of shaping material during my childhood, which I spent in my grandfather’s carpentry shop. My college years
 started with studying a business degree, and later, I decided to follow my interests and began my

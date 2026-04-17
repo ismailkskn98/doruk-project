@@ -74,20 +74,20 @@ export default function DesilightDetail() {
           <article className="bg-custom-gray w-full flex-1 flex items-center justify-center gap-4.5 pt-3.5 pb-2.5 px-12">
             <div className="flex flex-col items-center aspect-257/147">
               <span className="font-extralight text-5xl lg:text-7xl 2xl:text-[96px]">%10</span>
-              <span className="font-helvetica-neue text-lg lg:text-2xl 2xl:text-[32px] font-light text-nowrap">Increas in dB</span>
+              <span className="font-helvetica-neue text-[clamp(16px,4vw,32px)] font-light text-nowrap">Increas in dB</span>
             </div>
             <span className="text-5xl lg:text-7xl 2xl:text-[128px] font-extralight -mt-4">=</span>
             <div className="flex flex-col items-center aspect-257/147">
               <span className="font-extralight text-5xl lg:text-7xl 2xl:text-[96px]">%28</span>
-              <span className="font-helvetica-neue text-lg lg:text-2xl 2xl:text-[32px] font-light text-nowrap">Increase in Anxiety</span>
+              <span className="font-helvetica-neue text-[clamp(16px,4vw,32px)] font-light text-nowrap">Increase in Anxiety</span>
             </div>
           </article>
         </main>
       </section>
 
-      <section className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-12.5 xl:gap-25 py-6 sm:py-12.5 lg:py-18.5 xl:py-25">
-        <article className="bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
-          <p className="font-helvetica-neue font-light text-sm xl:text-base leading-[1.2] text-black text-center">Average Sound Level In Restaurant Types</p>
+      <section className="w-full grid grid-cols-1 sm:grid-cols-2 min-[56.25rem]:grid-cols-3 gap-[clamp(24px,4vw,100px)] py-6 sm:py-12.5 lg:py-18.5 xl:py-25">
+        <article className="max-h-[250px] sm:max-h-auto bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
+          <p className="font-helvetica-neue font-light text-xs lg:text-sm xl:text-base leading-[1.2] text-black text-center w-full max-w-11/12">Average Sound Level In Restaurant Types</p>
           <SoundChart
             data={[
               { name: 'Ideal for Human', value: 60 },
@@ -99,8 +99,8 @@ export default function DesilightDetail() {
             domain={[30, 85]}
           />
         </article>
-        <article className="bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
-          <p className="font-helvetica-neue font-light text-sm xl:text-base leading-[1.2] text-black text-center">Average Sound Level In Restaurant Types</p>
+        <article className="max-h-[250px] sm:max-h-auto bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
+          <p className="font-helvetica-neue font-light text-xs lg:text-sm xl:text-base leading-[1.2] text-black text-center w-full max-w-11/12">Average Sound Level In Restaurant Types</p>
           <SoundChart
             data={[
               { name: 'Fast Food', value: 80 },
@@ -112,8 +112,8 @@ export default function DesilightDetail() {
             yTickFormatter={(value) => `${value}dB`}
           />
         </article>
-        <article className="md:col-span-2 xl:col-span-1 bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 md:w-1/2 md:mx-auto xl:w-full flex flex-col items-center gap-4">
-          <p className="font-helvetica-neue font-light text-sm xl:text-base leading-[1.2] text-black text-center">Average Timespan In Restaurant Types</p>
+        <article className="max-h-[250px] sm:max-h-auto mx-auto sm:w-1/2 min-[56.25rem]:w-full sm:col-span-2 min-[56.25rem]:col-span-1 bg-custom-gray py-3.5 px-0 2xl:p-5 flex-1 w-full flex flex-col items-center gap-4">
+          <p className="font-helvetica-neue font-light text-xs lg:text-sm xl:text-base leading-[1.2] text-black text-center w-full max-w-11/12">Average Timespan In Restaurant Types</p>
           <SoundChart
             data={[
               { name: 'Fast Food', value: 15 },
@@ -202,60 +202,63 @@ export default function DesilightDetail() {
           <h2 className="font-helvetica-neue text-2xl md:text-3xl xl:text-[40px] font-bold block md:hidden">
             Approach: <span className="font-light">Make It Visable</span>
           </h2>
-          <section className="w-full flex flex-col items-center gap-4 sm:gap-12.5 lg:gap-18.75 py-6 md:py-12.5 lg:py-18.75">
-            <main className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-6">
-              <article className="flex flex-col items-center text-center lg:text-start lg:items-start sm:border-r lg:border-r-0 border-b border-black lg:pb-12 p-4 lg:p-1">
-                <h4 className="font-light font-helvetica-neue">Turn on the product & select a mode.</h4>
-                <div className="relative w-full max-w-85 h-58.5 lg:border-r-2 border-black p-5">
+          <section className="w-full flex flex-col items-center gap-[clamp(14px,4vw,50px)] py-6 md:py-12.5 lg:py-18.75">
+            <main className="w-full grid grid-cols-2 lg:grid-cols-4 lg:gap-y-6">
+              <article className="flex flex-col items-center text-center lg:text-start lg:items-start gap-1 sm:gap-0 border-r lg:border-r-0 border-b border-black lg:pb-12 px-2 sm:px-4 pb-2 sm:pb-4">
+                <h4 className="font-light font-helvetica-neue text-sm sm:text-base">Turn on the product & select a mode.</h4>
+                <div className="relative w-full max-w-[340px] aspect-340/234 lg:border-r-2 border-black p-5">
                   <Image src="/images/projects/desilight-detail-7-approach-1.webp" alt="desilight-detail-7-approach-1" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
-              <article className="flex flex-col items-center text-center lg:text-start lg:items-start border-b border-black lg:pb-12 p-4 lg:p-1">
-                <h4 className="font-light font-helvetica-neue">Ensure the microphone on top is not covered.</h4>
-                <div className="relative w-full max-w-85 h-58.5 lg:border-r-2 border-black p-5">
+              <article className="flex flex-col items-center text-center lg:text-start lg:items-start gap-1 sm:gap-0 border-b border-black lg:pb-12 px-2 sm:px-4 pb-2 sm:pb-4">
+                <h4 className="font-light font-helvetica-neue text-sm sm:text-base">Ensure the microphone on top is not covered.</h4>
+                <div className="relative w-full max-w-[340px] aspect-340/234 lg:border-r-2 border-black p-5">
                   <Image src="/images/projects/desilight-detail-7-approach-2.webp" alt="desilight-detail-7-approach-2" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
-              <section className="sm:col-span-2 w-full">
-                <article className="flex flex-col items-center text-center lg:text-start lg:items-start border-b border-black lg:pb-12 p-4 lg:p-1">
-                  <h4 className="font-light font-helvetica-neue">The light located on the body will pulse in sync with the sound level of the conversation.</h4>
+              <section className="col-span-2 w-full">
+                <article className="h-full flex flex-col items-center text-center lg:text-start lg:items-start gap-1 sm:gap-0 border-b border-black lg:pb-12 px-2 py-4 sm:p-4">
+                  <h4 className="font-light font-helvetica-neue text-sm sm:text-base">The light located on the body will pulse in sync with the sound level of the conversation.</h4>
                   <div className="w-full flex items-start justify-between">
-                    <div className="relative w-full max-w-85 h-58.5">
+                    <div className="relative w-full max-w-[340px] aspect-340/234">
                       <Image src="/images/projects/desilight-detail-7-approach-3.webp" alt="desilight-detail-7-approach-3" fill className="object-fit object-center h-full w-full" />
                     </div>
-                    <div className="relative w-full max-w-85 h-58.5">
+                    <div className="relative w-full max-w-[340px] aspect-340/234">
                       <Image src="/images/projects/desilight-detail-7-approach-4.webp" alt="desilight-detail-7-approach-4" fill className="object-fit object-center h-full w-full" />
                     </div>
                   </div>
                 </article>
               </section>
               {/*  */}
-              <article className="flex flex-col items-center text-center lg:text-start lg:items-start sm:border-r border-black lg:border-r-0 border-b lg:border-b-0 p-4 lg:p-1">
-                <h4 className="font-light font-helvetica-neue">When the sound level remains at extreme, the main light will blink.</h4>
-                <div className="relative w-full max-w-85 h-58.5 lg:border-r-2 border-black">
+              <article className="flex flex-col items-center text-center lg:text-start lg:items-start gap-1 sm:gap-0 border-r border-black lg:border-r-0 border-b lg:border-b-0 px-2 py-4 sm:p-4">
+                <h4 className="font-light font-helvetica-neue text-sm sm:text-base">When the sound level remains at extreme, the main light will blink.</h4>
+                <div className="relative w-full max-w-[340px] aspect-340/234 lg:border-r-2 border-black">
                   <Image src="/images/projects/desilight-detail-7-approach-5.webp" alt="desilight-detail-7-approach-5" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
-              <article className="flex flex-col items-center text-center lg:text-start lg:items-start justify-between lg:justify-start lg:border-r-0 border-b lg:border-b-0 border-black p-4 lg:p-1">
-                <h4 className="font-light font-helvetica-neue">If the sound level does not decrease, the lights will turn off.</h4>
-                <div className="relative w-full max-w-85 h-58.5 lg:border-r-2 border-black">
+              <article className="flex flex-col items-center text-center lg:text-start lg:items-start gap-1 sm:gap-0 justify-between lg:justify-start lg:border-r-0 border-b lg:border-b-0 border-black px-2 py-4 sm:p-4">
+                <h4 className="font-light font-helvetica-neue text-sm sm:text-base">If the sound level does not decrease, the lights will turn off.</h4>
+                <div className="relative w-full max-w-[340px] aspect-340/234 lg:border-r-2 border-black">
                   <Image src="/images/projects/desilight-detail-7-approach-6.webp" alt="desilight-detail-7-approach-6" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
-              <article className="flex flex-col items-center text-center lg:text-start lg:items-start sm:border-r lg:border-r-0 border-black border-b sm:border-b-0 p-4 lg:p-1">
-                <h4 className="font-light font-helvetica-neue">When the sound level normalise, the lights will turn back to normal.</h4>
-                <div className="relative w-full max-w-85 h-58.5 lg:border-r-2 border-black">
+              <article className="flex flex-col items-center text-center lg:text-start lg:items-start gap-1 sm:gap-0 border-r lg:border-r-0 border-black px-2 py-4 sm:p-4">
+                <h4 className="font-light font-helvetica-neue text-sm sm:text-base">When the sound level normalise, the lights will turn back to normal.</h4>
+                <div className="relative w-full max-w-[340px] aspect-340/234 lg:border-r-2 border-black">
                   <Image src="/images/projects/desilight-detail-7-approach-7.webp" alt="desilight-detail-7-approach-7" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
-              <article className="flex flex-col items-center text-center lg:text-start lg:items-star justify-between lg:justify-start p-4 lg:p-1">
-                <h4 className="font-light font-helvetica-neue">The product need to be charged after 12 hours.</h4>
-                <div className="relative w-full max-w-85 h-58.5">
+              <article className="flex flex-col items-center text-center lg:text-start lg:items-start gap-1 sm:gap-0 justify-between lg:justify-start px-2 py-4 sm:p-4">
+                <h4 className="font-light font-helvetica-neue text-sm sm:text-base">The product need to be charged after 12 hours.</h4>
+                <div className="relative w-full max-w-[340px] aspect-340/234">
                   <Image src="/images/projects/desilight-detail-7-approach-8.webp" alt="desilight-detail-7-approach-8" fill className="object-fit object-center h-full w-full" />
                 </div>
               </article>
             </main>
-            <ModeBar />
+            {/* <ModeBar /> */}
+            <div className="relative w-full max-w-[1000px] aspect-1000/120">
+              <Image src="/images/projects/desilight-mode.svg" alt="desilight-mode" fill className="object-fit object-center h-full w-full" />
+            </div>
           </section>
         </main>
         <main className="w-full py-6 lg:py-18.75 flex flex-col md:flex-row gap-12.5 lg:gap-25">
