@@ -21,7 +21,7 @@ export default function ColosseumNameDetail() {
     <main className="w-full fluid gridContainer">
       <CommonHero
         image="/images/projects/colosseum-detail-hero.webp"
-        imageClassName="object-center scale-170"
+        imageClassName="object-center "
         alt="Colosseum"
         title="Colosseum"
         subtitle="Motorised Mop Bucket"
