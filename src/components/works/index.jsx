@@ -12,7 +12,7 @@ const categories = [
   { key: 'art', value: 'ART' },
   { key: 'design', value: 'DESIGN' },
   { key: 'architecture', value: 'ARCHITECTURE' },
-  { key: 'graphic', value: 'GRAPHIC' },
+  // { key: 'graphic', value: 'GRAPHIC' },
 ];
 
 const slideVariants = {
@@ -21,30 +21,8 @@ const slideVariants = {
   exit: (direction) => ({ x: direction > 0 ? '-60%' : '60%', opacity: 0 }),
 };
 
-const categoryContent = {
-  art: (
-    <main className="py-[clamp(14px,4vw,50px)] flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
-      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
-        <Link href="/works/the-modular-home" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
-          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
-            <Image
-              src="/images/projects/the-modular-home-crop.webp"
-              alt="the-modular-home"
-              fill
-              className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
-            />
-            <Image
-              src="/images/projects/the-modular-home-absolute.webp"
-              alt="the-modular-home-absolute"
-              width={150}
-              height={70}
-              className="absolute left-6 top-6 z-20 object-cover object-center w-33.25 h-17"
-            />
-          </div>
-          <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">
-            The Modular Home <span className="font-light">2026</span>
-          </h3>
-        </Link>
+/*
+
         <Link href="/works/riva-937" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image src="/images/projects/riva-937.webp" alt="riva-937" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
@@ -53,11 +31,19 @@ const categoryContent = {
             Riva 937 <span className="font-light">2024</span>
           </h3>
         </Link>
+*/
+
+const categoryContent = {
+  art: (
+    <main className="py-[clamp(14px,4vw,50px)] flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
+      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
         <Link href="/works/extreamity" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image src="/images/projects/extreamity.webp" alt="extreamity" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
-          <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">Extreamity</h3>
+          <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">
+            EXTREAMITY <span className="font-light">2023</span>
+          </h3>
         </Link>
       </section>
     </main>
@@ -86,14 +72,6 @@ const categoryContent = {
             Viberon <span className="font-light">2025</span>
           </h3>
         </Link>
-        <Link href="/works/fuantei" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
-          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
-            <Image src="/images/projects/fuantei.webp" alt="fuantei" fill className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500" />
-          </div>
-          <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">
-            Fuantei <span className="font-light">2020</span>
-          </h3>
-        </Link>
         <Link href="/works/colosseum-name" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image
@@ -107,42 +85,48 @@ const categoryContent = {
             Colosseum Name <span className="font-light">2021</span>
           </h3>
         </Link>
+        <Link href="/works/fuantei" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
+            <Image src="/images/projects/fuantei.webp" alt="fuantei" fill className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500" />
+          </div>
+          <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">
+            Fuantei <span className="font-light">2020</span>
+          </h3>
+        </Link>
       </section>
     </main>
   ),
   architecture: (
     <main className="py-[clamp(14px,4vw,50px)] flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
-        <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+        <Link href="/works/the-modular-home" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
             <Image
-              src="/images/projects/desilight-2025.webp"
-              alt="desiglight-2025"
+              src="/images/projects/the-modular-home-crop.webp"
+              alt="the-modular-home"
               fill
               className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500"
             />
+            <Image
+              src="/images/projects/the-modular-home-absolute.webp"
+              alt="the-modular-home-absolute"
+              width={150}
+              height={70}
+              className="absolute left-6 top-6 z-20 object-cover object-center w-33.25 h-17"
+            />
           </div>
           <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">
-            DesiLight <span className="font-light">2025</span>
+            The Modular Home <span className="font-light">2026</span>
           </h3>
         </Link>
       </section>
     </main>
   ),
-  graphic: (
-    <main className="py-[clamp(14px,4vw,50px)] flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
-      <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
-        <Link href="/works/viberon" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
-          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
-            <Image src="/images/projects/viberon-2025.webp" alt="viberon-2025" fill className="object-cover object-right h-full w-full group-hover:scale-105 transition-all duration-500" />
-          </div>
-          <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">
-            Viberon <span className="font-light">2025</span>
-          </h3>
-        </Link>
-      </section>
-    </main>
-  ),
+  // graphic: (
+  //   <main className="py-[clamp(14px,4vw,50px)] flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
+  //     <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13"></section>
+  //   </main>
+  // ),
 };
 
 export default function WorksMain() {
