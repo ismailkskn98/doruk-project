@@ -69,11 +69,13 @@ export default function ExtreamityDetail() {
         </main>
       </section>
 
-      <section className="relative aspect-1460/973 max-h-[1000px] w-full fluid">
-        <Image src="/images/projects/extreamity-detail-1.webp" alt="extreamity-detail-1" fill className="object-cover object-center w-full h-full" />
-      </section>
+      <div className="w-full py-[clamp(14px,4vw,50px)]">
+        <section className="relative aspect-1360/906 max-w-[1500px] w-full">
+          <Image src="/images/projects/extreamity-detail-1.webp" alt="extreamity-detail-1" fill className="object-cover object-center w-full h-full" />
+        </section>
+      </div>
 
-      <section className="grid xl:grid-cols-2 gap-8 lg:gap-12 py-8 lg:py-12 items-stretch">
+      <section className="grid lg:grid-cols-2 gap-8 lg:gap-12 py-8 lg:py-12 items-stretch">
         <main className="order-2 xl:order-1 flex flex-col gap-9 2xl:gap-12.5">
           <article className="flex flex-col items-end text-end gap-4 2xl:gap-10">
             <h3 className="font-helvetica-neue text-lg lg:text-[24px] font-bold leading-7 2xl:leading-10">Why Always More ?</h3>
@@ -112,7 +114,7 @@ export default function ExtreamityDetail() {
           </article>
         </main>
         {/* min-w-188 */}
-        <div className="order-1 xl:order-2 w-full max-w-[756px] aspect-756/840">
+        <div className="order-1 lg:order-2 w-full mx-auto lg:mx-0 max-w-[300px] sm:max-w-[400px] lg:max-w-[756px] aspect-756/840">
           <GradientCircle />
         </div>
       </section>
