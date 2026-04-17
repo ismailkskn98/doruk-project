@@ -1,5 +1,6 @@
 'use client';
 import { cn } from '@/lib/utils';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
@@ -15,6 +16,7 @@ export default function CommonDetailCarousel({
 }) {
   const [selectedImage, setSelectedImage] = useState(initialImage || images[0]);
   const [isHovered, setIsHovered] = useState(false);
+  const [previewImage, setPreviewImage] = useState(initialImage || images[0]);
 
   useEffect(() => {
     if (isHovered) return;
@@ -29,19 +31,31 @@ export default function CommonDetailCarousel({
 
   return (
     <main className={cn('flex-1 w-full flex flex-col items-center gap-2 lg:gap-2.5 xl:gap-3 2xl:gap-5', classNames)}>
-      <div
-        className={cn('relative max-h-126.5 aspect-810/506 overflow-hidden w-full', bigImageDivClassName)}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <Image src={selectedImage.src} alt="Detail Carousel Image" fill className={cn('absolute inset-0 z-0 object-cover object-center w-full h-full')} />
-        <Image
-          src={selectedImage.src}
-          alt="Detail Carousel Image"
-          fill
-          className={cn('relative z-20 object-cover object-center w-full h-full', bigImageClassName, selectedImage?.className)}
-        />
-      </div>
+      <Dialog>
+        <DialogTrigger asChild>
+          <button
+            type="button"
+            className={cn('relative max-h-126.5 aspect-810/506 overflow-hidden w-full cursor-zoom-in', bigImageDivClassName)}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onClick={() => setPreviewImage(selectedImage)}
+          >
+            <Image src={selectedImage.src} alt="Detail Carousel Image" fill className={cn('absolute inset-0 z-0 object-cover object-center w-full h-full')} />
+            <Image
+              src={selectedImage.src}
+              alt="Detail Carousel Image"
+              fill
+              className={cn('relative z-20 object-cover object-center w-full h-full transition-transform duration-300 hover:scale-[1.03]', bigImageClassName, selectedImage?.className)}
+            />
+          </button>
+        </DialogTrigger>
+        <DialogContent className="max-w-[min(94vw,1300px)] border-0 bg-transparent p-0 shadow-none ring-0 sm:max-w-[min(92vw,1200px)]">
+          <DialogTitle className="sr-only">Detail Carousel Image Preview</DialogTitle>
+          <div className="relative aspect-810/506 w-full overflow-hidden">
+            <Image src={previewImage.src} alt="Detail Carousel Image Preview" fill className={cn('object-contain object-center w-full h-full', bigImageClassName, previewImage?.className)} />
+          </div>
+        </DialogContent>
+      </Dialog>
       <article className="w-full flex items-center justify-between gap-2 lg:gap-2.5 xl:gap-3 2xl:gap-5">
         {images.map((image, index) => (
           <div key={index} className={cn('relative overflow-hidden w-full', { 'ring-2 ring-primary': selectedImage?.src === image?.src, [miniImageDivClassName]: true })}>
