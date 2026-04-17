@@ -25,26 +25,26 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
       <MotionRightView className="w-full flex items-start justify-between gap-[clamp(14px,4vw,50px)] font-helvetica-neue py-[clamp(28px,4vw,50px)]">
         <article className="flex flex-col items-start gap-[clamp(14px,4vw,50px)]">
           <div className="flex flex-col items-start gap-0 lg:gap-2.5 uppercase">
-            <h2 className="font-bold text-2xl md:text-[28px] lg:text-[32px] leading-5 sm:leading-6 md:leading-7 text-nowrap">
+            <h2 className="font-bold text-[clamp(24px,4vw,32px)] leading-5 sm:leading-6 md:leading-7 text-nowrap">
               {lightTitle && <span className="font-light">{lightTitle}</span>} {title}
             </h2>
-            <p className="font-light text-lg sm:text-xl lg:text-2xl leading-7 text-nowrap">{subtitle}</p>
+            <p className="font-light text-[clamp(18px,4vw,24px)] leading-7 text-nowrap">{subtitle}</p>
           </div>
           <article className="w-full flex md:hidden items-center justify-between gap-[clamp(14px,4vw,50px)]">
             {sideInfo.map((info, index) => (
               <div key={index} className="flex flex-col items-center justify-center gap-0 leading-4">
-                <span className="uppercase font-bold text-lg sm:text-xl lg:text-2xl text-nowrap">{info.label}</span>
-                <span className="text-base sm:text-lg lg:text-[20px] font-light text-nowrap">{info.value}</span>
+                <span className="uppercase font-bold text-[clamp(18px,4vw,24px)] text-nowrap">{info.label}</span>
+                <span className="text-[clamp(16px,4vw,20px)] leading-relaxed font-light text-nowrap">{info.value}</span>
               </div>
             ))}
           </article>
-          <p className="max-w-175 text-base sm:text-lg lg:text-[20px] font-minion-pro tracking-[-0.015em] leading-6 lg:leading-5.7">{description}</p>
+          <p className="max-w-175 text-[clamp(16px,4vw,20px)] font-minion-pro tracking-[-0.015em] leading-6 lg:leading-5.7">{description}</p>
         </article>
         <article className="hidden md:flex flex-col items-end gap-[clamp(14px,4vw,50px)]">
           {sideInfo.map((info, index) => (
             <div key={index} className="flex flex-col items-end gap-0  leading-4 text-nowrap text-right">
-              <span className="uppercase font-bold text-lg sm:text-xl lg:text-2xl text-nowrap">{info.label}</span>
-              <span className="text-base sm:text-lg lg:text-[20px] font-light text-nowrap">{info.value}</span>
+              <span className="uppercase font-bold text-[clamp(18px,4vw,24px)] text-nowrap">{info.label}</span>
+              <span className="text-[clamp(16px,4vw,20px)] leading-relaxed font-light text-nowrap">{info.value}</span>
             </div>
           ))}
         </article>
