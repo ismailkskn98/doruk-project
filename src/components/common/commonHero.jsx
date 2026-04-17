@@ -6,9 +6,8 @@ import MotionRightView from './motionRightView';
 
 export default function CommonHero({ video, image, alt, title, lightTitle, subtitle, description, sideInfo = [], imageClassName = '' }) {
   return (
-    <main className="w-full flex flex-col items-start">
-      {/* w-full flex flex-col md:flex-row md:items-end md:justify-between gap-6 sm:gap-7 md:gap-10 pb-3 sm:pb-2 pt-4 md:py-8 lg:py-12.5 overflow-hidden */}
-      <MotionLeftView className="w-full pt-4 sm:pt-8 lg:pt-12.5 overflow-hidden">
+    <main className="w-full fluid gridContainer">
+      <MotionLeftView className="fluid gridContainer w-full overflow-hidden">
         {video ? (
           <section className="w-full flex items-center justify-center">
             <div className="relative w-full aspect-1360/800 min-h-65 sm:min-h-80 overflow-hidden">
@@ -18,8 +17,8 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
             </div>
           </section>
         ) : (
-          <div className="relative w-full aspect-1360/800">
-            <Image src={image} alt={alt} fill className={cn('w-full h-auto object-cover object-[50%_42%]', imageClassName)} sizes="100vw" quality={100} unoptimized />
+          <div className="relative w-full min-h-[250px] max-h-[800px] aspect-1360/800 min-[93.75rem]:fluid">
+            <Image src={image} alt={alt} fill className={cn('w-full h-auto object-cover object-[50%_42%] min-[93.75rem]:px-12.5', imageClassName)} sizes="100vw" quality={100} unoptimized />
           </div>
         )}
       </MotionLeftView>

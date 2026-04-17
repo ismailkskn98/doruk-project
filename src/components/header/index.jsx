@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <div className="flex flex-col">
-      <header className="relative z-40 flex items-center justify-between py-10 lg:py-0 lg:min-h-30 max-h-16 lg:max-h-30 overflow-hidden">
+      <header className="relative z-40 flex items-center justify-between py-[45px] overflow-hidden">
         <Link href="/" id="logo-container">
           <motion.div
             className="flex flex-row gap-1.5 leading-[0.9] font-bold text-[24px] sm:text-[20px] lg:text-[36px] -mb-1.5"

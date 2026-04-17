@@ -21,28 +21,9 @@ const slideVariants = {
   exit: (direction) => ({ x: direction > 0 ? '-60%' : '60%', opacity: 0 }),
 };
 
-/*
-  <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
-    <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
-      <Image
-        src="/images/projects/desilight-2025.webp"
-        alt="desilight-2025"
-        fill
-        className="object-cover object-center group-hover:scale-105 transition-all duration-500"
-      />
-    </div>
-
-    <h3 className="text-base sm:text-lg md:text-2xl xl:text-[32px] font-bold font-helvetica-neue">
-      DesiLight <span className="font-light">2025</span>
-    </h3>
-  </Link>
-
-*/
-
 const categoryContent = {
   art: (
-    <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-5 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
-      <h2 className="uppercase text-lg sm:text-xl lg:text-2xl font-bold">ART</h2>
+    <main className="pb-20 lg:pb-30 flex flex-col items-start gap-5 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
         <Link href="/works/the-modular-home" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
@@ -83,7 +64,6 @@ const categoryContent = {
   ),
   design: (
     <main className="pt-2 sm:pt-8 xl:pt-12.5 pb-20 xl:pb-30 flex flex-col items-start gap-5 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
-      <h2 className="uppercase text-lg sm:text-xl lg:text-2xl font-bold">DESIGN</h2>
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
         <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
@@ -132,7 +112,6 @@ const categoryContent = {
   ),
   architecture: (
     <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-5 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
-      <h2 className="uppercase text-lg sm:text-xl lg:text-2xl font-bold">ARCHITECTURE</h2>
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
         <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
@@ -152,7 +131,6 @@ const categoryContent = {
   ),
   graphic: (
     <main className="pt-2 sm:pt-8 lg:pt-12.5 pb-20 lg:pb-30 flex flex-col items-start gap-5 sm:gap-8 lg:gap-12.5 max-w-6xl mx-auto">
-      <h2 className="uppercase text-lg sm:text-xl lg:text-2xl font-bold">GRAPHIC</h2>
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
         <Link href="/works/viberon" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">

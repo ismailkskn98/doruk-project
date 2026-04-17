@@ -18,8 +18,8 @@ export default function DorukBicerMain() {
   }, [setTitle, setLightTitle, setIntroComplete]);
 
   return (
-    <main className="w-full flex flex-col items-start">
-      <MotionLeftView className="w-full flex flex-col md:flex-row md:items-end md:justify-between gap-6 sm:gap-7 md:gap-10 pb-3 sm:pb-2 pt-4 md:py-8 lg:py-12.5 overflow-hidden">
+    <main className="w-full min-[93.75]:px-12.5 min-[93.75rem]:fluid flex flex-col items-start">
+      <MotionLeftView className="w-full flex flex-col md:flex-row md:items-end md:justify-between gap-6 sm:gap-7 md:gap-10 overflow-hidden">
         <div className="order-2 md:order-1 w-full flex-1 flex flex-col items-start gap-0 lg:gap-2.5">
           <h2 className="font-bold text-xl sm:text-2xl lg:text-[32px] leading-5 sm:leading-6 md:leading-7 text-nowrap">Doruk Bicer</h2>
           <p className="font-light text-lg sm:text-xl lg:text-2xl leading-7 text-nowrap">Designer</p>
