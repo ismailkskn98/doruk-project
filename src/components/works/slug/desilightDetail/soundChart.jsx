@@ -13,7 +13,7 @@ const CustomXAxisTick = ({ x, y, payload }) => {
 
   return (
     <g transform={`translate(${x},${y})`}>
-      <text x={0} y={10} textAnchor="middle" fill="#222" className="text-[9px] lg:text-[11px] xl:text-sm" fontSize={13} fontFamily="Helvetica Neue, Arial, sans-serif" fontWeight={300}>
+      <text x={0} y={10} textAnchor="middle" fill="#222" className="text-[10px] lg:text-[11px] xl:text-sm" fontSize={13} fontFamily="Helvetica Neue, Arial, sans-serif" fontWeight={300}>
         {words.length > 1
           ? words.map((word, index) => (
               <tspan key={index} x="0" dy={index === 0 ? 0 : 14}>
@@ -32,7 +32,7 @@ const CustomYAxisTick = ({ x, y, payload, formatter }) => {
 
   return (
     <g transform={`translate(${x},${y})`}>
-      <text x={0} y={0} textAnchor="end" fill="#222" fontSize={13} className="text-[9px] lg:text-[11px] xl:text-sm" fontFamily="Helvetica Neue, Arial, sans-serif" fontWeight={300}>
+      <text x={0} y={0} textAnchor="end" fill="#222" fontSize={13} className="text-[10px] lg:text-[11px] xl:text-sm" fontFamily="Helvetica Neue, Arial, sans-serif" fontWeight={300}>
         {lines.map((line, index) => (
           <tspan key={index} x={0} dy={index === 0 ? 4 : 14}>
             {line}
