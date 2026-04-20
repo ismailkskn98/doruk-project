@@ -54,27 +54,28 @@ export default function ColosseumNameDetail() {
         </article>
       </section>
 
-      {/* <section className="w-full pt-0 pb-12.5 lg:py-12.5 flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-12.5">
+      <section className="w-full pt-0 pb-12.5 lg:py-12.5 flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-12.5">
         <CommonDetailCarousel
-          classNames="flex-1 min-w-0"
+          classNames="flex-1 min-w-0 mx-auto max-w-9/12"
+          // bigImageDivClassName="w-full h-full flex-1 max-h-full aspect-[810/506]"
           bigImageDivClassName="w-full h-full flex-1 max-h-full aspect-[810/506]"
           bigImageClassName="object-cover object-center"
           // miniImageDivClassName="max-w-[98px] aspect-[98/61]"
           miniImageDivClassName="aspect-[98/61]"
           miniImageClassName="object-center object-cover"
-          initialImage={{ src: '/images/projects/riva-937-detail-carousel/image-1.webp', className: '' }}
+          initialImage={{ src: '/images/colosseum/1.1.jpg', className: '' }}
           images={[
-            { src: '/images/projects/riva-937-detail-carousel/image-1.webp', className: '' },
-            { src: '/images/projects/riva-937-detail-carousel/image-2.webp', className: '' },
-            { src: '/images/projects/riva-937-detail-carousel/image-3.webp', className: '' },
-            { src: '/images/projects/riva-937-detail-carousel/image-4.webp', className: '' },
-            { src: '/images/projects/riva-937-detail-carousel/image-5.webp', className: '' },
-            { src: '/images/projects/riva-937-detail-carousel/image-6.webp', className: '' },
-            { src: '/images/projects/riva-937-detail-carousel/image-7.webp', className: '' },
-            { src: '/images/projects/riva-937-detail-carousel/image-8.webp', className: '' },
+            { src: '/images/colosseum/1.1.jpg', className: '' },
+            { src: '/images/colosseum/1.2.jpg', className: '' },
+            { src: '/images/colosseum/1.3.jpg', className: '' },
+            { src: '/images/colosseum/2.1.jpg', className: '' },
+            { src: '/images/colosseum/2.2.1.jpg', className: '' },
+            { src: '/images/colosseum/3.1.jpg', className: '' },
+            { src: '/images/colosseum/3.2.jpg', className: '' },
+            { src: '/images/colosseum/3.3.1.jpg', className: '' },
           ]}
         />
-        <article className="flex-1 max-w-125 w-full flex flex-col items-start gap-4 sm:gap-8 lg:gap-12.5">
+        {/* <article className="flex-1 max-w-125 w-full flex flex-col items-start gap-4 sm:gap-8 lg:gap-12.5">
           <h2 className="font-helvetica-neue text-2xl sm:text-3xl lg:text-[40px] font-bold lg:leading-10 hidden lg:block">
             Exterior Images <br /> <span className="font-light">Text Here</span>
           </h2>
@@ -85,8 +86,8 @@ export default function ColosseumNameDetail() {
             The product is made from a bead-blasted stainless steel body and a frosted satin glass diffuser, available in two different colors. While providing comfortable lighting, the
             lights located on the bottom part interact with the user by pulsing in sync with the sound level at the table.
           </p>
-        </article>
-      </section> */}
+        </article> */}
+      </section>
     </main>
   );
 }

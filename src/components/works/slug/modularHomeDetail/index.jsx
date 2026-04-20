@@ -90,7 +90,7 @@ export default function ModularHomeDetail() {
             <Image src="/images/projects/the-modular-home-detail-4.webp" alt="The Modular Home Detail 4" fill className="object-cover w-full h-full" />
           </article>
           <article className="flex h-full flex-col items-start gap-5 min-[86.25rem]:gap-10">
-            <video className="block aspect-725/472 bg-white object-fit" autoPlay loop muted>
+            <video className="block aspect-725/472 bg-white object-fit" autoPlay loop muted playsInline>
               <source src="/videos/the-modular-home-detail-video.mp4" type="video/mp4" />
             </video>
             <div className="flex flex-col items-start gap-2 xl:gap-5 min-[86.25rem]:gap-10">

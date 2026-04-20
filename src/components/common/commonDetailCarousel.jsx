@@ -51,8 +51,8 @@ export default function CommonDetailCarousel({
         </DialogTrigger>
         <DialogContent className="max-w-[min(94vw,1300px)] border-0 bg-transparent p-0 shadow-none ring-0 sm:max-w-[min(92vw,1200px)]">
           <DialogTitle className="sr-only">Detail Carousel Image Preview</DialogTitle>
-          <div className="relative aspect-810/506 w-full overflow-hidden">
-            <Image src={previewImage.src} alt="Detail Carousel Image Preview" fill className={cn('object-contain object-center w-full h-full', bigImageClassName, previewImage?.className)} />
+          <div className="relative w-full max-h-[90vh] flex items-center justify-center">
+            <Image src={previewImage.src} alt="Detail Carousel Image Preview" width={1300} height={900} className="w-full h-auto max-h-[90vh] object-contain" />
           </div>
         </DialogContent>
       </Dialog>

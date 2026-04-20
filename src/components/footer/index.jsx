@@ -35,7 +35,7 @@ export default function Footer() {
       <div className="gridContainer">
         <main className="w-full py-3 sm:py-2.5 flex items-center justify-center gap-0 min-h-10 font-light font-helvetica-neue text-[7px] min-[25rem]:text-[8.5px] sm:text-xs md:text-sm lg:text-base text-nowrap">
           <p>
-            © <span className="uppercase">Studio</span> <span className="font-bold font-forma-djr-display uppercase">Bicer</span> 2026 - All Rights Reserved P. Iva 14311630967
+            © <span className="uppercase">Studio</span> <span className="font-bold font-forma-djr-display uppercase">Bicer</span> 2026 - All Rights Reserved | P. Iva 14311630967
           </p>
           <div className="flex items-center">
             <span className="px-0.75 min-[25rem]:px-1.5 sm:px-2.5"> | </span>

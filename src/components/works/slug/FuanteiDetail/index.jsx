@@ -1,14 +1,24 @@
 'use client';
 import CommonHero from '@/components/common/commonHero';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { useHeaderStore } from '@/store/headerStore';
 import { useIntroStore } from '@/store/introStore';
 import Image from 'next/image';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+const YOUTUBE_URL = 'https://www.youtube.com/watch?v=u9f43hQFp94';
+const YOUTUBE_EMBED_URL = 'https://www.youtube-nocookie.com/embed/u9f43hQFp94?playsinline=1&rel=0';
+
+function isIOS() {
+  if (typeof navigator === 'undefined') return false;
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
 
 export default function FuanteiDetail() {
   const setTitle = useHeaderStore((state) => state.setTitle);
   const setLightTitle = useHeaderStore((state) => state.setLightTitle);
   const setIntroComplete = useIntroStore((state) => state.setIntroComplete);
+  const [videoOpen, setVideoOpen] = useState(false);
 
   useEffect(() => {
     setLightTitle('Works');
@@ -48,9 +58,35 @@ export default function FuanteiDetail() {
               The collection is inspired by traditional craftsmanship slip casting, makes each piece unique. The entire production of first series of the collection made by the designer
               himself by hand to refine the shape and reach the ideal form.
             </p>
-            <button type="button" className="p-2.5 sm:p-3.75 bg-custom-gray font-helvetica-neue font-light text-sm sm:text-lg lg:text-[20px] w-fit">
+            <button
+              type="button"
+              className="p-2.5 sm:p-3.75 bg-custom-gray font-helvetica-neue font-light text-sm sm:text-lg lg:text-[20px] w-fit"
+              onClick={() => {
+                if (isIOS()) {
+                  window.open(YOUTUBE_URL, '_blank');
+                } else {
+                  setVideoOpen(true);
+                }
+              }}
+            >
               Watch Production Video
             </button>
+            <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
+              <DialogContent className="!max-w-[min(94vw,1100px)] !w-[min(94vw,1100px)] border-0 bg-black p-0 shadow-none ring-0 sm:!max-w-[min(94vw,1100px)]">
+                <DialogTitle className="sr-only">Fuantei Production Video</DialogTitle>
+                <div className="relative w-full aspect-video">
+                  <iframe
+                    src={YOUTUBE_EMBED_URL}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           <div className="relative w-full max-w-[820px] flex-1 aspect-820/820">
             <Image src="/images/projects/fuantei-detail-1.webp" alt="fuantei-detail-1" fill className="object-cover object-center h-full w-full" />
