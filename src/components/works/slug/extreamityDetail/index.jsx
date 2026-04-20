@@ -69,7 +69,7 @@ export default function ExtreamityDetail() {
         </main>
       </section>
 
-      <div className="w-full py-[clamp(14px,4vw,50px)]">
+      <div className="w-full py-[clamp(25px,1.667vw+25px,50px)]">
         <section className="relative aspect-1360/906 max-w-[1500px] w-full">
           <Image src="/images/projects/extreamity-detail-1.webp" alt="extreamity-detail-1" fill className="object-cover object-center w-full h-full" />
         </section>
@@ -77,19 +77,19 @@ export default function ExtreamityDetail() {
 
       <section className="grid lg:grid-cols-2 gap-8 lg:gap-12 py-8 lg:py-12 items-stretch">
         <main className="order-2 xl:order-1 flex flex-col gap-9 2xl:gap-12.5">
-          <article className="flex flex-col items-end text-end gap-4 2xl:gap-10">
+          <article className="flex flex-col items-end text-end gap-10">
             <h3 className="font-helvetica-neue text-lg lg:text-[24px] font-bold leading-7 2xl:leading-10">Why Always More ?</h3>
             <div className="flex flex-col items-end text-end">
-              <h4 className="font-helvetica-neue text-base lg:text-lg 2xl:text-[20px] font-light">Needs & Satisfaction</h4>
-              <p className="font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-6 2xl:leading-7 ">
+              <h4 className="font-helvetica-neue text-base lg:text-lg 2xl:text-[20px] font-light leading-5.5 lg:leading-6 tracking-[-0.015em]">Needs & Satisfaction</h4>
+              <p className="font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-5.5 lg:leading-6 tracking-[-0.015em]">
                 According to Maslow’s Hierarchy of Needs, once basic needs are met, the drive to achieve more continues as new goals emerge. Neurologically, this is linked to dopamine, which
                 responds more to the anticipation of rewards than to their fulfillment. However, when everything is easily attained, the expectation fades, dopamine production slows, and
                 satisfaction diminishes.
               </p>
             </div>
             <div className="flex flex-col items-end text-end -mt-5">
-              <h4 className="font-helvetica-neue text-base lg:text-lg 2xl:text-[20px] font-light">Goal & Meaning</h4>
-              <p className="font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-6 2xl:leading-7 ">
+              <h4 className="font-helvetica-neue text-base lg:text-lg 2xl:text-[20px] font-light leading-5.5 lg:leading-6 tracking-[-0.015em]">Goal & Meaning</h4>
+              <p className="font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-5.5 lg:leading-6 tracking-[-0.015em]">
                 The constant striving is concidered as searching for meaning in many psychologcal perspectives. But sine the satisfaction is short lived and new goals are set, people always
                 sets new goals to improve and develop their identitity. But whenthat person reachs all the goals, dissatisfaction and lost of meaning starts.
               </p>
@@ -98,15 +98,15 @@ export default function ExtreamityDetail() {
           <article className="flex flex-col items-start text-start gap-2.5">
             <h3 className="font-helvetica-neue text-lg lg:text-[24px] font-bold leading-7 2xl:leading-10">Does Extreams Meet?</h3>
             <div className="flex flex-col items-start text-start">
-              <h4 className="font-helvetica-neue text-base lg:text-lg 2xl:text-[20px] font-light">Narcissism & Self-Hatred</h4>
-              <p className="font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-6 2xl:leading-7">
+              <h4 className="font-helvetica-neue text-base lg:text-lg 2xl:text-[20px] font-light leading-5.5 lg:leading-6 tracking-[-0.015em]">Narcissism & Self-Hatred</h4>
+              <p className="font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-5.5 lg:leading-6 tracking-[-0.015em]">
                 According to psychoanalysts such as Otto Kernberg, pathological narcissism and deep self-hatred may actually be two extremes of the same personality structure and they both
                 concidered as not being able to accept one’s true self and producing a mask.
               </p>
             </div>
             <div className="flex flex-col items-start text-start">
-              <h4 className="font-helvetica-neue text-lg 2xl:text-[20px] font-light">Obsession & Submission</h4>
-              <p className="font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-6 2xl:leading-7">
+              <h4 className="font-helvetica-neue text-base lg:text-lg 2xl:text-[20px] font-light leading-5.5 lg:leading-6 tracking-[-0.015em]">Obsession & Submission</h4>
+              <p className="font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-5.5 lg:leading-6 tracking-[-0.015em]">
                 In psychology they both are concidered as coming from the feeling of fear, uncertainty and insecurity. One reacts those emotions with the need of over controll and the other
                 by staying passive. Even they seems like a pollar siturations, they both are just different paths to same result in extreams with same the motivation in the beggining.
               </p>

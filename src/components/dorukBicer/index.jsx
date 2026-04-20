@@ -19,7 +19,7 @@ export default function DorukBicerMain() {
   }, [setTitle, setLightTitle, setIntroComplete]);
 
   return (
-    <main className="gridContainer min-[93.75rem]:block w-full min-[93.75rem]:px-12.5 min-[93.75rem]:fluid">
+    <main className="gridContainer w-full min-[93.75rem]:px-12.5">
       <AboutTabsNavbar />
       <MotionLeftView className="w-full flex flex-col md:flex-row md:items-end md:justify-between gap-[clamp(14px,4vw,50px)] overflow-hidden">
         <div className="order-2 md:order-1 w-full flex-1 flex flex-col items-start gap-0 lg:gap-2 uppercase">

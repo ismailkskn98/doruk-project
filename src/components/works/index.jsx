@@ -35,11 +35,11 @@ const slideVariants = {
 
 const categoryContent = {
   art: (
-    <main className="py-[clamp(14px,4vw,50px)] flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
+    <main className=" flex flex-col items-start gap-[clamp(20px,4vw,50px)] mx-auto">
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
         <Link href="/works/extreamity" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
-            <Image src="/images/projects/extreamity.webp" alt="extreamity" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
+            <Image src="/images/projects/extreamity.webp" alt="extreamity" fill className="object-cover object-[55%_50%] h-full w-full group-hover:scale-105 transition-all duration-500" />
           </div>
           <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">
             EXTREAMITY <span className="font-light">2023</span>
@@ -49,7 +49,7 @@ const categoryContent = {
     </main>
   ),
   design: (
-    <main className="py-[clamp(14px,4vw,50px)] flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
+    <main className=" flex flex-col items-start gap-[clamp(20px,4vw,50px)] mx-auto">
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
         <Link href="/works/desilight" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
@@ -97,7 +97,7 @@ const categoryContent = {
     </main>
   ),
   architecture: (
-    <main className="py-[clamp(14px,4vw,50px)] flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
+    <main className=" flex flex-col items-start gap-[clamp(20px,4vw,50px)] mx-auto">
       <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13">
         <Link href="/works/the-modular-home" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
           <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
@@ -119,11 +119,19 @@ const categoryContent = {
             The Modular Home <span className="font-light">2026</span>
           </h3>
         </Link>
+        <Link href="/works/riva-937" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
+          <div className="relative w-full aspect-550/550 overflow-hidden cursor-pointer group shrink-0">
+            <Image src="/images/projects/riva-937.webp" alt="riva-937" fill className="object-cover object-center h-full w-full group-hover:scale-105 transition-all duration-500" />
+          </div>
+          <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">
+            Riva 937 <span className="font-light">2024</span>
+          </h3>
+        </Link>
       </section>
     </main>
   ),
   // graphic: (
-  //   <main className="py-[clamp(14px,4vw,50px)] flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
+  //   <main className=" flex flex-col items-start gap-[clamp(20px,4vw,50px)] max-w-6xl mx-auto">
   //     <section className="w-full grid grid-cols-2 place-content-stretch justify-items-stretch gap-4 sm:gap-6 lg:gap-8 xl:gap-13"></section>
   //   </main>
   // ),
@@ -156,7 +164,7 @@ export default function WorksMain() {
 
   return (
     <main className="w-full gridContainer overflow-hidden">
-      <Tabs value={selectedCategory} onValueChange={handleTabChange} className="w-full">
+      <Tabs value={selectedCategory} onValueChange={handleTabChange} className="w-full gap-0">
         <TabsList variant="line" className="w-full flex justify-between py-[clamp(14px,4vw,46px)] gap-2.5 px-0">
           {categories.map((cat) => (
             <TabsTrigger value={cat.key} key={cat.key} className="font-bold text-[clamp(16px,3vw,24px)] max-w-fit uppercase px-0">

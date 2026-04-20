@@ -21,7 +21,7 @@ export default function ColosseumNameDetail() {
     <main className="w-full fluid gridContainer">
       <CommonHero
         image="/images/projects/colosseum-detail-hero.webp"
-        imageClassName="object-center "
+        imageClassName="object-center scale-150"
         alt="Colosseum"
         title="Colosseum"
         subtitle="Motorised Mop Bucket"
@@ -33,7 +33,7 @@ export default function ColosseumNameDetail() {
         ]}
       />
 
-      <section className="w-full pt-6 pb-12.5 lg:py-18.75">
+      <section className="w-full pt-6 pb-12.5 lg:py-12.5">
         <article className="w-full flex flex-col-reverse lg:flex-row items-start lg:justify-end gap-6 sm:gap-8 lg:gap-12.5">
           <div className="flex flex-col lg:items-end lg:text-end gap-4 sm:gap-8 lg:gap-12.5 flex-1">
             <h3 className="font-helvetica-neue text-2xl sm:text-3xl lg:text-[40px] font-light lg:leading-10 hidden lg:block">
@@ -54,12 +54,13 @@ export default function ColosseumNameDetail() {
         </article>
       </section>
 
-      <section className="w-full pt-0 pb-12.5 lg:py-18.75 flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-12.5">
+      {/* <section className="w-full pt-0 pb-12.5 lg:py-12.5 flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-12.5">
         <CommonDetailCarousel
           classNames="flex-1 min-w-0"
           bigImageDivClassName="w-full h-full flex-1 max-h-full aspect-[810/506]"
           bigImageClassName="object-cover object-center"
-          miniImageDivClassName="max-w-[98px] aspect-[98/61]"
+          // miniImageDivClassName="max-w-[98px] aspect-[98/61]"
+          miniImageDivClassName="aspect-[98/61]"
           miniImageClassName="object-center object-cover"
           initialImage={{ src: '/images/projects/riva-937-detail-carousel/image-1.webp', className: '' }}
           images={[
@@ -85,7 +86,7 @@ export default function ColosseumNameDetail() {
             lights located on the bottom part interact with the user by pulsing in sync with the sound level at the table.
           </p>
         </article>
-      </section>
+      </section> */}
     </main>
   );
 }

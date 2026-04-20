@@ -9,9 +9,6 @@ export default function Footer() {
             <h2 className="text-[clamp(24px,4vw,36px)] font-bold font-forma-djr-display uppercase text-nowrap">
               <span className="font-light">Studıo</span> Bıcer
             </h2>
-            <div>
-              <span className="text-black text-base">|</span>
-            </div>
             <div className="flex flex-col items-start gap-2 md:gap-2.5 font-helvetica-neue font-light leading-4">
               <a href="mailto:info@dorukbicer.com">info@dorukbicer.com</a>
               <p className="">

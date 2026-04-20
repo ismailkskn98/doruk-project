@@ -48,7 +48,7 @@ export default function ModularHomeDetail() {
           </article>
         </main>
       </section>
-      <main className="w-full flex flex-col gap-12.5 sm:gap-15 lg:gap-18.75 py-12.5 lg:py-18.75">
+      <main className="w-full flex flex-col gap-12.5 sm:gap-15 lg:gap-18.75 py-12.5 lg:py-12.5">
         <section className="w-full">
           <article className="relative w-full aspect-1500/765">
             <Image src="/images/projects/the-modular-home-detail-1.webp" alt="The Modular Home Detail 1" fill className="object-cover w-full h-full" />

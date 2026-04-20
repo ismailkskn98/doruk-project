@@ -35,7 +35,7 @@ export default function FuanteiDetail() {
         ]}
       />
 
-      <section className="w-full pt-6 pb-12.5 lg:py-18.75">
+      <section className="w-full pt-6 pb-12.5 lg:py-12.5">
         <article className="w-full flex flex-col-reverse lg:flex-row items-start lg:justify-end gap-6 sm:gap-8 lg:gap-12.5">
           <div className="flex flex-col lg:items-end lg:text-end gap-4 sm:gap-8 lg:gap-12.5">
             <h3 className="font-helvetica-neue text-2xl sm:text-3xl lg:text-[40px] font-light lg:leading-10 hidden lg:block">

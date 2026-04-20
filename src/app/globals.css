@@ -50,7 +50,7 @@ body {
   }
 } */
 
-@utility gridContainer {
+/* @utility gridContainer {
   display: grid;
   grid-template-columns: minmax(25px, 1fr) min(calc(100% - 50px), 1500px) minmax(25px, 1fr);
 
@@ -61,6 +61,19 @@ body {
   @media (min-width: 1024px) {
     grid-template-columns: minmax(50px, 1fr) min(calc(100% - 100px), 1500px) minmax(50px, 1fr);
   }
+
+  & > * {
+    grid-column: 2;
+  }
+} */
+@utility gridContainer {
+  --gutter: clamp(25px, calc(1.667vw + 25px), 50px);
+
+  display: grid;
+  grid-template-columns:
+    minmax(var(--gutter), 1fr)
+    min(calc(100% - (var(--gutter) * 2)), 1500px)
+    minmax(var(--gutter), 1fr);
 
   & > * {
     grid-column: 2;

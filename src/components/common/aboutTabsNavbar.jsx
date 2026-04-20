@@ -15,7 +15,7 @@ export default function AboutTabsNavbar() {
 
   return (
     <Tabs value={activeTab} className="w-full">
-      <TabsList variant="line" className="w-full flex justify-center pb-[clamp(14px,4vw,46px)] gap-2.5 px-0">
+      <TabsList variant="line" className="w-full flex justify-between md:justify-center pb-[clamp(14px,4vw,46px)] gap-12.5 px-0">
         {aboutTabs.map((tab) => (
           <TabsTrigger key={tab.href} value={tab.href} asChild className="relative font-bold text-[clamp(16px,3vw,24px)] max-w-fit uppercase leading-5 px-0">
             <Link href={tab.href} className="absolute z-10 inset-0">

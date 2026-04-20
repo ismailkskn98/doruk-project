@@ -28,6 +28,7 @@ export default function DesilightDetail() {
         imageClassName="object-center"
         alt="DesiLight"
         title="DesiLight"
+        isDesilightPage={true}
         lightTitle="Biggy / Picky"
         subtitle="Voice Interactive Table Lamp"
         description="Being annoyed by the loud voices created by others around us
@@ -41,11 +42,11 @@ export default function DesilightDetail() {
           { label: 'CLIENT', value: 'Plastic / Metal + Glass' },
         ]}
       />
-      <section className="w-full py-6 lg:py-18.75 flex md:flex-row flex-col items-start md:items-end gap-8 lg:gap-12.5">
+      <section className="w-full py-6 lg:py-12.5 flex md:flex-row flex-col items-start md:items-end gap-8 lg:gap-12.5">
         <article className="relative flex-1 max-h-187.5 w-full aspect-1000/750">
           <Image src="/images/projects/desilight-detail-1.webp" alt="desilight-detail-1" fill className="object-cover object-center h-full w-full" />
         </article>
-        <article className="flex-1 w-full md:max-w-77.5 font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-6 2xl:leading-7">
+        <article className="flex-1 w-full md:max-w-77.5 font-minion-pro text-base lg:text-lg 2xl:text-[20px] leading-5.5 lg:leading-6 tracking-[-0.015em]">
           <p>
             The issue of being disturbed by loud voices in restaurants is a common but often overlooked problem, even though it causes significant discomfort. In most cases, it is
             inappropriate for businesses or staff to directly warn the customers. To solve this problem, a product that subtly alerts customers without annoying them would be a gentle and
@@ -132,7 +133,7 @@ export default function DesilightDetail() {
         </article>
       </section>
 
-      <section className="w-full py-6 lg:py-18.75">
+      <section className="w-full py-6 lg:py-12.5">
         <main className="w-full flex flex-col gap-10 md:gap-18 lg:gap-12.5">
           <article className="w-full flex md:flex-row flex-col-reverse items-end md:items-start gap-6 md:gap-12.5">
             <div className="flex-1 w-full flex flex-col items-end text-end gap-2.5 sm:gap-4 lg:gap-6 xl:gap-10">
@@ -202,7 +203,7 @@ export default function DesilightDetail() {
           <h2 className="font-helvetica-neue text-2xl md:text-3xl xl:text-[40px] font-bold block md:hidden">
             Approach: <span className="font-light">Make It Visable</span>
           </h2>
-          <section className="w-full flex flex-col items-center gap-[clamp(14px,4vw,50px)] py-6 md:py-12.5 lg:py-18.75">
+          <section className="w-full flex flex-col items-center gap-[clamp(14px,4vw,50px)] py-6 md:py-12.5 lg:py-12.5">
             <main className="w-full grid grid-cols-2 lg:grid-cols-4 lg:gap-y-6">
               <article className="flex flex-col items-center text-center lg:text-start lg:items-start gap-1 sm:gap-0 border-r lg:border-r-0 border-b border-black lg:pb-12 px-2 sm:px-4 pb-2 sm:pb-4">
                 <h4 className="font-light font-helvetica-neue text-sm sm:text-base">Turn on the product & select a mode.</h4>
@@ -261,7 +262,7 @@ export default function DesilightDetail() {
             </div>
           </section>
         </main>
-        <main className="w-full py-6 lg:py-18.75 flex flex-col md:flex-row gap-12.5 lg:gap-25">
+        <main className="w-full py-6 lg:py-12.5 flex flex-col md:flex-row gap-12.5 lg:gap-25">
           <article className="flex-1 min-w-0 shrink">
             <div className="relative w-full max-w-[530px] max-h-[350px] sm:max-h-[800px] aspect-530/800">
               <ReactCompareSlider

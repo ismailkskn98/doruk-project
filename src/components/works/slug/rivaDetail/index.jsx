@@ -32,7 +32,7 @@ export default function RivaDetail() {
           { label: 'CLIENT', value: 'Private Client' },
         ]}
       />
-      <section className="w-full py-0 md:py-12.5 lg:py-18.75 flex lg:flex-row flex-col items-start gap-8 sm:gap-12.5 lg:gap-15 xl:gap-18.75">
+      <section className="w-full py-0 md:py-12.5 lg:py-12.5 flex lg:flex-row flex-col items-start gap-8 sm:gap-12.5 lg:gap-15 xl:gap-18.75">
         <CommonDetailCarousel
           initialImage={{ src: '/images/projects/riva-937-detail-carousel/image-1.webp', className: '' }}
           bigImageDivClassName="max-h-126.5 aspect-810/506"
@@ -60,7 +60,7 @@ export default function RivaDetail() {
           </p>
         </article>
       </section>
-      <section className="w-full py-12.5 lg:py-18.75 flex flex-col-reverse lg:flex-row items-start gap-8 sm:gap-12.5 lg:gap-15 xl:gap-18.75">
+      <section className="w-full py-12.5 lg:py-12.5 flex flex-col-reverse lg:flex-row items-start gap-8 sm:gap-12.5 lg:gap-15 xl:gap-18.75">
         <article className="flex-1 lg:max-w-125 w-full flex flex-col items-start lg:items-end justify-end lg:text-end gap-2.5 sm:gap-6 lg:gap-10">
           <h2 className="font-helvetica-neue text-xl sm:text-2xl lg:text-[32px] font-bold">
             Interior Design <br /> <span className="font-light">Clean & Calm</span>
