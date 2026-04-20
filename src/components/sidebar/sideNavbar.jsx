@@ -1,31 +1,31 @@
-"use client";
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useSidebarStore } from "@/store/sidebarStore";
-import SearchMain from "../common/search";
+'use client';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useSidebarStore } from '@/store/sidebarStore';
+import SearchMain from '../common/search';
 
 const navItems = [
   {
-    name: "About",
+    name: 'About',
     href: null,
     children: [
-      { name: "Doruk BICER", href: "/doruk-bicer" },
-      { name: "STUDIO", href: "/studio" },
+      { name: 'Doruk BICER', href: '/doruk-bicer' },
+      { name: 'STUDIO', href: '/studio' },
     ],
   },
   {
-    name: "Works",
-    href: "/works",
+    name: 'Works',
+    href: '/works',
     children: [
-      { name: "Art", href: "/works?category=art" },
-      { name: "Design", href: "/works?category=design" },
-      { name: "Architecture", href: "/works?category=architecture" },
-      { name: "Graphic", href: "/works?category=graphic" },
+      { name: 'Art', href: '/works?category=art' },
+      { name: 'Design', href: '/works?category=design' },
+      { name: 'Architecture', href: '/works?category=architecture' },
+      // { name: "Graphic", href: "/works?category=graphic" },
     ],
   },
-  { name: "Contact", href: "/contact" },
+  { name: 'Contact', href: '/contact' },
 ];
 
 export default function SideNavbar() {
@@ -73,9 +73,9 @@ export default function SideNavbar() {
             {item.children && openItem === item.name && (
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
+                animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
                 className="overflow-hidden"
               >
                 <div className="flex flex-col gap-2.5 pl-3.5 lg:pl-5 pb-0 pt-3 lg:pb-3 lg:pt-5">

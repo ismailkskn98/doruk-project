@@ -56,7 +56,7 @@ export default function ColosseumNameDetail() {
 
       <section className="w-full pt-0 pb-12.5 lg:py-12.5 flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-12.5">
         <CommonDetailCarousel
-          classNames="flex-1 min-w-0 mx-auto max-w-9/12"
+          classNames="flex-1 min-w-0 mx-auto max-w-full md:max-w-9/12"
           // bigImageDivClassName="w-full h-full flex-1 max-h-full aspect-[810/506]"
           bigImageDivClassName="w-full h-full flex-1 max-h-full aspect-[810/506]"
           bigImageClassName="object-cover object-center"

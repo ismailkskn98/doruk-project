@@ -26,7 +26,7 @@ export default function ExtreamityDetail() {
         subtitle="Photograph Collection"
         description="The photography collection aims to make the viewer think about the possibility of opposite extremes to be the different paths to the same result, and question their goals. "
         sideInfo={[
-          { label: 'DATE', value: '202' },
+          { label: 'DATE', value: '2023' },
           { label: 'DIMENSION', value: '50 x 71cm' },
           { label: 'MATERIAL', value: 'Color Print' },
         ]}
