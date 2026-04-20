@@ -2,15 +2,14 @@ export const searchData = [
   // --- PROJELER ---
   {
     id: 1,
-    title: 'The Modular Home',
-    category: 'Art',
+      category: 'Architecture',
     year: '2026',
     type: 'project',
     href: '/works/the-modular-home',
     image: '/images/projects/the-modular-home.webp',
     keywords: ['modular', 'home', 'art', 'architecture'],
   },
-  { id: 2, title: 'Riva 937', category: 'Art', year: '2024', type: 'project', href: '/works/riva-937', image: '/images/projects/riva-937.webp', keywords: ['riva', 'boat', 'art'] },
+  { id: 2, title: 'Riva 937', category: 'Architecture', year: '2024', type: 'project', href: '/works/riva-937', image: '/images/projects/riva-937.webp', keywords: ['riva', 'boat', 'art'] },
   {
     id: 3,
     title: 'Desilight',
@@ -26,7 +25,7 @@ export const searchData = [
   {
     id: 6,
     title: 'Colosseum Name',
-    category: 'Graphic',
+    category: 'Design',
     type: 'project',
     href: '/works/colosseum-name',
     image: '/images/projects/colosseum-name.webp',
