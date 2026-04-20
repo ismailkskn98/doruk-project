@@ -82,7 +82,7 @@ const categoryContent = {
             />
           </div>
           <h3 className="text-[clamp(16px,4vw,32px)] font-bold font-helvetica-neue uppercase">
-            Colosseum Name <span className="font-light">2021</span>
+            Colosseum<span className="font-light"> 2021</span>
           </h3>
         </Link>
         <Link href="/works/fuantei" className="flex flex-col items-start gap-2.5 lg:gap-5 aspect-550/634">
