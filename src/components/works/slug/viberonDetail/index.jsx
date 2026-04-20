@@ -4,6 +4,7 @@ import { useHeaderStore } from '@/store/headerStore';
 import { useIntroStore } from '@/store/introStore';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
+import ViberonGallery from './viberonGallery';
 
 export default function ViberonDetail() {
   const setTitle = useHeaderStore((state) => state.setTitle);
@@ -60,31 +61,7 @@ export default function ViberonDetail() {
           <Image src="/images/projects/viberon-detail-2-right.webp" alt="viberon-detail-right-2" fill className="object-fit object-center h-full w-full" />
         </div>
       </section>
-
-      <section className="w-full grid grid-cols-3 place-content-stretch justify-items-stretch py-[clamp(20px,4vw,75px)] gap-2.5 sm:gap-6 lg:gap-12.5">
-        <article className="relative col-span-2 w-full h-full aspect-893/893">
-          <Image
-            src="/images/projects/viberon-detail-3-final.png"
-            alt="viberon-detail-3-final"
-            fill
-            className="object-cover object-center h-full w-full"
-            unoptimized
-            quality={100}
-            sizes="100vw"
-          />
-        </article>
-        <article className="grid grid-cols-1 gap-2.5 sm:gap-6 lg:gap-12.5 w-full h-full max-w-[416px] aspect-416/893">
-          <div className="relative w-full h-full">
-            <Image src="/images/projects/viberon-detail-3-top.webp" alt="viberon-detail-3-top" fill className="object-cover object-center" unoptimized quality={100} sizes="100vw" />
-          </div>
-          <div className="relative w-full h-full">
-            <Image src="/images/projects/viberon-detail-3-center.webp" alt="viberon-detail-3-center" fill className="object-cover object-center" unoptimized quality={100} sizes="100vw" />
-          </div>
-          <div className="relative w-full h-full">
-            <Image src="/images/projects/viberon-detail-3-bottom.webp" alt="viberon-detail-3-bottom" fill className="object-cover object-center" unoptimized quality={100} sizes="100vw" />
-          </div>
-        </article>
-      </section>
+      <ViberonGallery />
     </main>
   );
 }

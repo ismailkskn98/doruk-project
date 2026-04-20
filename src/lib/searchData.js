@@ -2,7 +2,7 @@ export const searchData = [
   // --- PROJELER ---
   {
     id: 1,
-      category: 'Architecture',
+    category: 'Architecture',
     year: '2026',
     type: 'project',
     href: '/works/the-modular-home',
