@@ -20,9 +20,12 @@ export const metadata = {
     follow: true,
   },
   icons: {
-    icon: siteConfig.ogImage,
-    shortcut: siteConfig.ogImage,
-    apple: siteConfig.ogImage,
+    icon: [
+      { url: siteConfig.favicon, sizes: '48x48' },
+      { url: siteConfig.icon48, sizes: '48x48', type: 'image/png' },
+    ],
+    shortcut: siteConfig.favicon,
+    apple: siteConfig.appleIcon,
   },
   openGraph: {
     title: siteConfig.name,
@@ -34,8 +37,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1024,
-        height: 1024,
+        width: 1080,
+        height: 1080,
         alt: `${siteConfig.name} logo`,
       },
     ],

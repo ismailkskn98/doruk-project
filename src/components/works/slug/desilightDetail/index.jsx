@@ -280,6 +280,7 @@ export default function DesilightDetail() {
             bigImageClassName="object-cover object-[50%_40%]"
             miniImageDivClassName="max-h-45 aspect-[165/180]"
             miniImageClassName="object-center object-cover"
+            enableLightbox
             images={[
               { src: '/images/projects/desilight-detail-carousel/image-2.webp', className: 'object-cover object-[50%_80%]' },
               { src: '/images/projects/desilight-detail-carousel/image-1.webp', className: 'object-cover object-[50%_80%]' },

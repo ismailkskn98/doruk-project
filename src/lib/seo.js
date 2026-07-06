@@ -6,6 +6,9 @@ export const siteConfig = {
     'Studio Bicer is the design practice of Doruk Bicer, presenting selected works across art, design, architecture, and graphic disciplines.',
   locale: 'en_US',
   ogImage: '/images/vcard-logo-update.png',
+  favicon: '/favicon.ico',
+  icon48: '/icon-48.png',
+  appleIcon: '/apple-touch-icon.png',
   keywords: ['Studio Bicer', 'Doruk Bicer', 'design studio', 'furniture design', 'art', 'architecture', 'graphic design'],
 };
 
@@ -30,8 +33,8 @@ export function buildPageMetadata({ title, description, path = '/', keywords = [
       images: [
         {
           url: siteConfig.ogImage,
-          width: 1024,
-          height: 1024,
+          width: 1080,
+          height: 1080,
           alt: `${siteConfig.name} logo`,
         },
       ],

@@ -39,6 +39,7 @@ export default function RivaDetail() {
           bigImageClassName="object-cover"
           miniImageDivClassName="max-h-[61.61px] aspect-98/61"
           miniImageClassName="object-cover"
+          enableLightbox
           images={[
             { src: '/images/projects/riva-937-detail-carousel/image-1.webp', className: '' },
             { src: '/images/projects/riva-937-detail-carousel/image-2.webp', className: '' },
@@ -77,6 +78,7 @@ export default function RivaDetail() {
           bigImageClassName="object-cover"
           miniImageDivClassName="max-h-[105.47px] aspect-187/105"
           miniImageClassName="object-cover"
+          enableLightbox
           images={[
             { src: '/images/projects/riva-937-detail-carousel-2/image-1.webp', className: '' },
             { src: '/images/projects/riva-937-detail-carousel-2/image-2.webp', className: '' },
