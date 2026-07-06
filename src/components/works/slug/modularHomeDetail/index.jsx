@@ -1,11 +1,11 @@
 'use client';
 import CommonHero from '@/components/common/commonHero';
-import MotionLeftView from '@/components/common/motionLeftView';
 import MotionRightView from '@/components/common/motionRightView';
 import { useHeaderStore } from '@/store/headerStore';
 import { useIntroStore } from '@/store/introStore';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
+import ModuleExplorer from './moduleExplorer';
 
 export default function ModularHomeDetail() {
   const setTitle = useHeaderStore((state) => state.setTitle);
@@ -85,23 +85,7 @@ export default function ModularHomeDetail() {
             </p>
           </article>
         </section>
-        <section className="w-full grid lg:grid-cols-2 place-content-stretch justify-items-stretch gap-12.5">
-          <article className="relative aspect-750/750">
-            <Image src="/images/projects/the-modular-home-detail-4.webp" alt="The Modular Home Detail 4" fill className="object-cover w-full h-full" />
-          </article>
-          <article className="flex h-full flex-col items-start gap-5 min-[86.25rem]:gap-10">
-            <video className="block aspect-725/472 bg-white object-fit" autoPlay loop muted playsInline>
-              <source src="/videos/the-modular-home-detail-video.mp4" type="video/mp4" />
-            </video>
-            <div className="flex flex-col items-start gap-2 xl:gap-5 min-[86.25rem]:gap-10">
-              <h3 className="text-xl sm:text-2xl lg:text-[32px] font-helvetica-neue font-light">Kitchen</h3>
-              <p className="font-minion-pro text-base sm:text-lg xl:text-[20px] sm:leading-5 xl:leading-7">
-                The kitchen module functions in two modes: fully open as a traditional kitchen, or closed for basic use. It supports users by ordering food based on health data, with
-                deliveries stored in a temperature-controlled cabinet.
-              </p>
-            </div>
-          </article>
-        </section>
+        <ModuleExplorer />
       </main>
     </main>
   );

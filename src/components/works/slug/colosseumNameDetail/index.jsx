@@ -59,7 +59,7 @@ export default function ColosseumNameDetail() {
           classNames="flex-1 min-w-0 mx-auto max-w-full md:max-w-9/12"
           // bigImageDivClassName="w-full h-full flex-1 max-h-full aspect-[810/506]"
           bigImageDivClassName="w-full h-full flex-1 max-h-full aspect-[810/506]"
-          bigImageClassName="object-cover object-center"
+          bigImageClassName="object-contain object-center"
           // miniImageDivClassName="max-w-[98px] aspect-[98/61]"
           miniImageDivClassName="aspect-[98/61]"
           miniImageClassName="object-center object-cover"
