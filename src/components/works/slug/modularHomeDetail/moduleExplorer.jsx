@@ -158,7 +158,7 @@ function CrossfadeStack({ activeId, reduceMotion, duration, className, mode = 'o
 }
 
 function Hotspot({ module, isActive, isHovered, isFocused, onSelect, onHoverStart, onHoverEnd, onFocus, onBlur }) {
-  const overlayOpacity = isFocused ? 0.02 : isHovered ? 0.1 : isActive ? 0.02 : 0;
+  const overlayOpacity = isFocused ? 0.1 : isHovered ? 0.1 : isActive ? 0.02 : 0;
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
