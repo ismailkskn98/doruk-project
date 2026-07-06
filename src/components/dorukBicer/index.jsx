@@ -31,7 +31,7 @@ export default function DorukBicerMain() {
         </div>
       </MotionLeftView>
       <MotionRightView className="w-full flex items-start justify-between py-[clamp(14px,4vw,50px)] font-helvetica-neue">
-        <p className="max-w-[824px] text-base sm:text-lg lg:text-[20px] font-minion-pro leading-5.5 lg:leading-6 tracking-[-0.015em]">
+        <p className="max-w-[824px] text-base sm:text-lg lg:text-[20px] font-minion-pro -mt-1 leading-5.5 lg:leading-6 tracking-[-0.015em]">
           Doruk Biçer, born and raised in Istanbul. I was first impressed by the idea of shaping material during my childhood, which I spent in my grandfather’s carpentry shop. My college
           years started with studying a business degree, and later, I decided to follow my interests and began my design adventure without knowing it would become my passion. The university
           education I received in different fields and countries allowed me to learn and observe through various cultures and design perspectives. Throughout my journey, I have always aimed

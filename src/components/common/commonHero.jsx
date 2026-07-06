@@ -53,7 +53,7 @@ export default function CommonHero({ video, image, alt, title, lightTitle, subti
               </div>
             ))}
           </article>
-          <p className="max-w-175 text-[clamp(14px,4vw,20px)] font-minion-pro tracking-[-0.015em] sm:leading-6 lg:leading-5.7">{description}</p>
+          <p className="max-w-175 text-[clamp(14px,4vw,20px)] font-minion-pro tracking-[-0.015em] sm:leading-6 lg:leading-5.7 -mt-1">{description}</p>
         </article>
         <article className="hidden md:flex flex-col items-end gap-[clamp(14px,4vw,50px)]">
           {sideInfo.map((info, index) => (

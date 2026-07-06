@@ -12,12 +12,12 @@ export default function Navbar() {
   return (
     <nav className="w-full flex items-center justify-between gap-4 sm:gap-8 lg:gap-10 py-12.5">
       {navItems.map((item) => (
-        <Link key={item.name} href={item.href} className="uppercase font-bold text-[clamp(16px,4vw,24px)]">
-          {item.name}
+        <Link key={item.name} href={item.href} className="uppercase font-bold text-[clamp(16px,4vw,24px)] leading-none">
+          <span className="text-center">{item.name}</span>
         </Link>
       ))}
       <SearchMain>
-        <button className="uppercase font-bold text-[clamp(16px,4vw,24px)] cursor-pointer">Search</button>
+        <button className="uppercase font-bold text-[clamp(16px,4vw,24px)] cursor-pointer leading-none">Search</button>
       </SearchMain>
     </nav>
   );
